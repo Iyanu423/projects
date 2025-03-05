@@ -1,0 +1,190 @@
+#user-login-form-section{
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    max-width: 500px;
+    margin: 50px auto;
+}
+form{
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 0 10px 0 lightgray;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+form label,
+.error-msg{
+    position: absolute;
+}
+form fieldset{
+    position: relative;
+    height: auto;
+    flex: 1 500px;
+    display: flex;
+    border: none;
+}
+form label{
+    inset-block-start: 50%;
+    translate: 20px -50%;
+    transition-duration: .2s;
+    font-weight: 200;
+}
+.error-msg{
+    inset-block-start: 100%;
+    translate: 0 10px ;
+    font-size: .6rem;
+    font-weight: 500;
+    color: red;
+    display: none;
+}
+form input{
+    padding: 0 1rem;
+    flex: 1;
+    height: 40px;
+    outline: none;
+}
+form input::-webkit-input-placeholder{
+    color: white;
+}
+form input::-moz-placeholder{
+    color: white;
+}
+form input:-ms-input-placeholder{
+    color: white;
+}
+form input::-ms-input-placeholder{
+    color: white;
+}
+form input::placeholder{
+    color: white;
+}
+
+/*--These styles control the transition of the input label-starts here--*/
+#user-email:focus+label,
+#user-password:focus+label,
+#user-email:focus-visible+label,
+#user-password:focus-visible+label,
+#user-email:not(:placeholder-shown)+label,
+#user-password:not(:placeholder-shown)+label
+{
+    inset-block-start: 0;
+    font-size: .7rem;
+    font-weight: 500;
+    background: white;
+}
+
+/*--And ends here--*/
+#submit-form-btn{
+    display: block;
+    width: 100%;
+    height: 40px;
+    -webkit-margin-before: 30px;
+    margin-block-start: 30px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition-duration: .1s;
+    background: var(--generic-purple);
+}
+#submit-form-btn:hover{
+    box-shadow: 0 0 10px 0 var(--generic-purple);
+}
+#form-intro h1{
+   color: var(--generic-purple);
+   font-size: 2rem;
+}
+#form-intro span{
+    color: lightslategray;
+    font-weight: 500;
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    display: block;
+}
+#password-icon{
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    inset: 50% 0 0 90%;
+    translate: 0 -50%;
+}
+#forgot-password-link{
+    position: absolute;
+    inset: 100% 0 0 0;
+    translate: 0 30px;
+    font-size: .8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.just-or-text{
+    width: 100%;
+    -webkit-margin-before: -20px;
+    margin-block-start: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    font-weight: 500;
+}
+.just-or-text span{
+    display: block;
+    height: 1px;
+    background: lightslategray;
+    flex: 1;
+    position: relative;
+    inset-block-start: 3px;
+}
+.sign-in-option{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 2px solid gray;
+    border-radius: 15px;
+    font-weight: 600;
+    color: gray;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+.sign-in-option:hover{
+    box-shadow: 0 0 5px 0 gray;
+}
+.sign-in-option img{
+    width: 40px;
+    border-radius: 50%;
+}
+footer{
+    height: auto;
+    padding: 1rem;
+    -webkit-padding-after: 2rem;
+    padding-block-end: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+footer span:first-of-type>b{
+    background: var(--ltr-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+footer span{
+    color: gray;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+footer span:not(:first-of-type):hover{
+    background: var(--ltr-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    scale: 1.1;
+}

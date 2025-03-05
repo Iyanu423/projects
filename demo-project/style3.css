@@ -1,0 +1,405 @@
+body{
+    background: whitesmoke;
+}
+#wrapper{
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    gap: 3rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-item:first-child ul{
+    list-style: none;
+}
+.wrapper-item:first-child ul li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+}
+.description span{
+    display: block;
+}
+.description span:first-child{
+    font-size: small;
+    color: white;
+    font-weight: 500;
+}
+.description span:last-child{
+    -webkit-margin-before: 5px;
+    margin-block-start: 5px;
+    color: white;
+    font-size: .8rem;
+}
+.list-number{
+    height: 30px;
+    width: 30px;
+    padding: .5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    display: grid;
+    place-content: center;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    outline: 1px solid white;
+    transition-duration: .2s;
+}
+.list-number:hover{
+    outline-offset: 5px;
+    background: skyblue;
+}
+.wrapper-item:first-child{
+    background: url('user-form/assets/images/bg-sidebar-desktop.svg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+    flex: 1;
+    flex-basis: 200px;
+    border-radius: inherit;
+    padding: 1.5rem;
+}
+
+/*--styles for step 1--*/
+.wrapper-item:nth-child(2)  {
+    flex: 2 1;
+    flex-basis: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.wrapper-item:nth-child(2)  h1{
+    color: var(--generic-purple);
+    font-size: 2rem;
+}
+.wrapper-item:nth-child(2) span{
+    font-size: .9rem;
+    color: gray;
+    font-weight: 600;
+    position: relative;
+    inset-block-start: -20px;
+}
+.wrapper-item:nth-child(2) fieldset{
+     flex: 1 400px;
+     height: auto;
+     position: relative;
+     display: grid;
+     height: 40px;
+     border: none;
+}
+.wrapper-item:nth-child(2)  fieldset label{
+    position: absolute;
+    inset: -20px 0 0 0;
+    font-size: .7rem;
+    color: gray;
+    font-weight: 700;
+   
+}
+.wrapper-item:nth-child(2) fieldset input{
+    height: 40px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.wrapper-item:nth-child(2) fieldset input:focus{
+    outline: 2px solid var(--generic-purple);
+}
+.submit-btn{
+    width: 100px;
+    padding: .6rem 0;
+    background: var(--generic-purple);
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    inset-block-start: -10px;
+    position: relative;
+  }
+  .submit-btn:hover{
+     box-shadow: 0 0 5px 0 var(--generic-purple);
+  }
+
+
+/*--styles for step 2--*/
+.wrapper-item:nth-child(3){
+    flex: 2 1;
+    flex-basis: 500px;
+    height: auto;   
+}
+.wrapper-item:nth-child(3)  h1{
+    color: var(--generic-purple);
+    font-size: 2rem;
+}
+.wrapper-item:nth-child(3) span{
+    font-size: .9rem;
+    color: gray;
+    font-weight: 600;
+    position: relative;
+}
+#billing-plans{
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(3,1fr);
+   -webkit-margin-before: 20px;
+   margin-block-start: 20px;
+}
+.plans{
+    border-radius: 10px;
+    border: 1px solid var(--generic-purple);
+    padding: 1rem;
+    transition-duration: .2s;
+}
+.plans:hover{
+    background: rgba(200,200,200,.5);
+}
+.plan-info span{
+    display: block;
+}
+.plan-info{
+    -webkit-margin-before: 10px;
+     margin-block-start: 10px;
+}
+#billing-plans input[type='radio']{
+    display: none;
+}
+#billing-plans input[type='radio']:checked+label{
+    background: rgba(200,200,200,.5);
+    box-shadow: 0 0 0 2.5px var(--generic-purple);
+}
+.wrapper-item:nth-child(3) .submit-btn{
+    inset-block-start: 20px;
+}
+.price span{
+    display: inline;
+}
+#billing-cycle{
+    height: auto;
+    width: 100%;
+    background: rgba(200,200,200,.3);
+    padding: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+}
+#billing-cycle input{
+    display: none;
+}
+#billing-cycle input:checked + label > #circle {
+    -webkit-margin-start: 16px;
+     margin-inline-start: 16px;
+}
+#billing-cycle label{
+    width: 30px;
+    height: auto;
+    padding: .1rem;
+    background: blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#billing-cycle label #circle{
+    height: 10px;
+    width: 10px;
+    -webkit-margin-before: .5px;
+    margin-block-start: .5px;
+    border-radius: 50%;
+    background: white;
+    display: block;
+    transition-duration: .2s;
+}
+#billing-cycle span{
+    font-size: .8rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#billing-cycle span:first-child{
+    color: blue;
+}
+
+
+/*--styles for step 3--*/
+.wrapper-item:nth-child(4){
+    flex: 2 1;
+    flex-basis: 400px;
+    height: auto;   
+}
+.wrapper-item:nth-child(4) h1{
+    font-size: 2rem;
+    color: var(--generic-purple);
+    -webkit-margin-before: 30px;
+    margin-block-start: 30px;
+}
+.wrapper-item:nth-child(4){
+    font-size: .9rem;
+    color: gray;
+    font-weight: 600;
+    position: relative;
+    inset-block-start: -30px;
+}
+#add-ons{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60px;
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+}
+.add-on-item{
+    border: 1px solid var(--generic-purple);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.add-on-item:hover{
+    background: rgba(128,0,128,.6);
+    color: white;
+}
+.add-on-item:hover .add-on-price{
+    color: white;
+} 
+.add-on-option{
+    accent-color: var(--generic-purple);
+    scale: 1.05;
+}
+.add-on-description span{
+    display: block;
+    font-weight: 400;
+}
+.add-on-description span:first-child{
+    font-weight: 700;
+}
+.add-on-price{
+    margin-left: auto;
+    color: var(--generic-purple);
+    font-weight: bold;
+}
+.wrapper-item:nth-child(4) .submit-btn{
+    inset-block-start: 20px;
+}
+
+/*--styles for step 3--*/
+#plan-summary{
+    height: auto;
+    background: rgba(200,200,200,.3);
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    color: steelblue;
+    font-weight: 700;
+    font-size: .8rem;
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+}
+.add-on-summary{
+    height: auto;
+    background: rgba(200,200,200,.3);
+    width: 100%;
+    display: flex;
+    padding: 0;
+    color: steelblue;
+    font-weight: 700;
+    font-size: .8rem;
+    -webkit-margin-before: 5px;
+    margin-block-start: 5px;
+}
+.price-summary{
+    margin-left: auto;
+}
+#total{
+    display: flex;
+    padding: 1rem;
+    color: steelblue;
+    font-weight: 700;
+    font-size: .8rem;
+}
+.total-sum{
+    margin-left: auto;
+    color: blue;
+    font-size: 1rem;
+}
+
+dialog{
+  position: absolute;
+  inset: 50% 0 0 50%;
+  translate: -50% -50%;
+  padding: 1rem;
+  border-radius: 15px;
+  background: white;
+  text-align: center;
+  width: 400px;
+  height: 300px;
+  border: none;
+}
+dialog span{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: steelblue;
+}
+dialog p{
+  -webkit-margin-before: 15px;
+  margin-block-start: 15px;
+  color: gray;
+  font-weight: 500;
+  text-wrap: balance;
+}
+dialog p a{
+  color: steelblue;
+  font-weight: 500;
+}
+#close-dialog{
+    display: block;
+    width: 20px;
+    cursor: pointer;
+}
+/*--styles for the billing cycle selection--*/
+@media (max-width: 680px){
+
+    .wrapper-item:first-child{
+        background: url('user-form/assets/images/bg-sidebar-mobile.svg') no-repeat center;
+        background-size: cover;
+        height: auto;
+        -webkit-padding-before: 0;
+        padding-block-start: 0;
+    }
+    .wrapper-item:first-child ul{
+        display: flex;
+        justify-content: center;
+        -webkit-margin-before: 5px;
+        margin-block-start: 5px;
+    }
+    .description span{
+        display: none;
+    }
+    #wrapper{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    #billing-plans{
+        grid-template-columns: 1fr;
+    }
+    .plans{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .plan-info{
+        -webkit-margin-before: 0;
+        margin-block-start: 0;
+    }
+  dialog{
+    width: 300px;
+  }
+  
+}

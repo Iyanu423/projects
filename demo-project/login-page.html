@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>huddle.io login-page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <img  id="menu-icon"   src="chat-app/images/menu-icon.jpg">
+        <nav>
+            <img id="exit-icon"    src="chat-app/images/exit-icon.png">
+            <span style="background: var(--generic-purple);color: white;">Home</span>       
+            <span>About</span>
+            <span>Products</span>
+            <span>Contact</span>
+            <span>Offers</span>
+        </nav>
+       <a href="index.html">huddle.io </a>
+    </header>
+
+<!--User Login form-->
+<section id="user-login-form-section">
+    <form>
+<div id="form-intro">
+    <h1>Sign in</h1>
+    <span>Welcome back to huddle.io </span>
+</div>
+        <fieldset>
+          
+            <input id="user-email" type="email" autocomplete="on"  placeholder="email"  >
+            <label for="user-email">Email address</label>
+            <span class="error-msg">Please provide a valid email adress</span>
+        </fieldset>
+
+        <fieldset>
+            
+            <input style="padding-inline-end: 3rem;"  id="user-password" type="password" autocomplete="on" placeholder="password">
+            <label for="user-password">Password</label>
+            <span class="error-msg">This field is required</span>
+            <img id="password-icon"   src="chat-app/images/hide-password-icon.png">
+            <a  href=""  id="forgot-password-link">Forgot your password ?</a>
+        </fieldset>
+
+        <button id="submit-form-btn">Sign in</button>
+
+<!--This is simply the 'or' text below the sign up buuton-->
+        <div class="just-or-text">
+            <span class="line"></span>or<span class="line"></span>
+        </div>
+        
+
+
+<!--Other sign in options-->
+        <div class="sign-in-option">
+          <img src="chat-app/images/google-icon.png">
+          <span>Sign in with Google</span>
+
+        </div>
+        <div class="sign-in-option">
+            <img src="chat-app/images/apple-icon.png">
+            <span>Sign in with Apple</span>
+  
+          </div>
+
+    </form>
+</section>
+
+<!--Footer section-->
+<footer>
+    <span><b>huddle</b> &copy;2024</span>
+    <span>User Agreements</span>
+    <span>Privacy Policy</span>
+    <span>Community Guidelines</span>
+    <span>Cookies Policy</span>
+    <span>Copyright Policy</span>
+    <span>Send Feedback</span>
+</footer>
+
+
+
+
+
+
+
+    <script src="code.js"></script>
+</body>
+</html>

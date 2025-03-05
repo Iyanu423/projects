@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <a id="refresh-page"href=""></a>
+  <header>
+    <img  id="menu-icon"   src="chat-app/images/menu-icon.jpg">
+    <nav>
+        <img id="exit-icon"    src="chat-app/images/exit-icon.png">
+        <span style="background: var(--generic-purple);color: white;">Home</span>       
+        <span>About</span>
+        <span>Products</span>
+        <span>Contact</span>
+        <span>Offers</span>
+    </nav>
+   <a href="index.html">huddle.io </a>
+</header>
+
+
+<!--This section is for the get started form-->
+<section id="wrapper">
+
+   <div class="wrapper-item">
+    <ul>
+      <li>
+        <span class="list-number">1</span>
+        <div class="description">
+          <span>Step 1</span>
+          <span>YOUR INFO</span>
+        </div>
+      </li>
+      <li>
+        <span class="list-number">2</span>
+        <div class="description">
+          <span>Step 2</span>
+          <span>SELECT PLAN</span>
+        </div>
+      </li> 
+      <li>
+        <span class="list-number">3</span>
+        <div class="description">
+          <span>Step 3</span>
+          <span>ADD-ONS</span>
+        </div>
+      </li> 
+      <li>
+        <span class="list-number">4</span>
+        <div class="description">
+          <span>Step 4</span>
+          <span>SUMMARY</span>
+        </div>
+      </li> 
+    </ul>
+   </div>
+
+
+ <!--Step 1 section-->
+   <section class="wrapper-item">
+     <h1>Personal info</h1>
+     <span >Please provide your name,email address and phone number.</span>
+
+     <fieldset>
+      <label for="user-name">Name</label>
+     <input id="user-name" type="name" autocomplete="on" placeholder="e.g Stephen King">
+    
+     </fieldset>
+
+     <fieldset>
+      <label for="user-email">Email Address</label>
+     <input id="user-email" type="email" autocomplete="on" placeholder="e.g stephenking@gmail.com">
+   
+    </fieldset>
+
+    <fieldset>
+      <label for="user-tel">Phone Number</label>
+     <input id="user-tel" type="text" autocomplete="on" placeholder="e.g +1 234567890 ( at least 10 digits )">
+
+    </fieldset>
+     <button class="submit-btn">Next Step
+    
+     </button>
+    
+   </section>
+
+
+   <!--Step 2 section-->
+   <section class="wrapper-item">
+    <h1>Select your plan</h1>
+    <span >You have the option of monthly or yearly billing.</span>
+
+    <div id="billing-plans">
+      
+      <input id="Arcade-price" type="radio" value="Arcade" name="plan">
+       <label for="Arcade-price"  class="plans">
+        <img src="user-form/assets/images/icon-arcade.svg">
+        <div class="plan-info">
+           <span>Arcade</span>
+           <div class="price"><span>$</span><span>9</span><span>/mon</span></div>
+        </div>
+      </label>
+
+       <input id="Advanced-price" type="radio" value="Advanced" name="plan">
+       <label for="Advanced-price"  class="plans">
+        <img src="user-form/assets/images/icon-advanced.svg">
+        <div class="plan-info">
+          <span>Advanced</span>
+          <span class="price"><span>$</span><span>12</span><span>/mon</span></span>
+       </div>
+       </label>
+
+       <input id="Pro-price" type="radio" value="Pro" name="plan">
+       <label for="Pro-price"  class="plans">
+        <img src="user-form/assets/images/icon-pro.svg">
+        <div class="plan-info">
+          <span>Pro</span>
+          <span class="price"><span>$</span><span>15</span><span>/mon</span></span>
+       </div>
+       </label>
+
+    </div>
+    <div id="billing-cycle">
+      <span>Monthly</span>
+      <input id="toggle-billing-cycle" type="checkbox">
+      <label for="toggle-billing-cycle">
+        <div id="circle"></div>
+      </label>
+    
+      <span>Yearly</span>
+    </div>
+    <button class="submit-btn">Next Step
+      
+    </button>
+   
+  </section>
+
+
+<!--Step 3 section-->
+  <section class="wrapper-item">
+    <h1>Pick add-ons</h1>
+    <span >Add-ons help enhance your gaming ecperience (optional).</span>
+
+        <section id="add-ons">
+             <div class="add-on-item">
+              <input class="add-on-option" type="checkbox" value="Online-service">
+              <div class="add-on-description">
+                <span>Online service</span>
+                <span>Access to multiplayer games</span>
+              </div>
+              <span class="add-on-price"><span>$</span><span>1</span><span>/mon</span></span>
+             </div>
+
+
+             <div class="add-on-item">
+              <input class="add-on-option" type="checkbox" value="Larger storage">
+              <div class="add-on-description">
+                <span>Larger storage</span>
+                <span>Extra 1TB of cloud save</span>
+              </div>
+              <span class="add-on-price"><span>$</span><span>2</span><span>/mon</span></span>
+             </div>
+
+             <div class="add-on-item">
+              <input class="add-on-option" type="checkbox" value="Customizable profile">
+              <div class="add-on-description">
+                <span>Customizable profile</span>
+                <span>Custom theme on your profile</span>
+              </div>
+              <span class="add-on-price"><span>$</span><span>2</span><span>/mon</span></span>
+             </div>
+
+        </section>
+    <button class="submit-btn">Next Step</button>
+</section>
+
+<!--Step 4 section-->
+<section class="wrapper-item">
+  <h1>Finishing up</h1>
+  <span >Double-check everything looks okay before submitting.</span>
+
+      <section id="plan-summary">
+          <span></span>
+          <span class="price-summary"></span>
+      </section>
+
+      <section class="add-on-summary" id="first-add-on-summary">
+        <span></span>
+        <span class="price-summary"></span>
+      </section>
+
+      <section class="add-on-summary" id="second-add-on-summary">
+        <span></span>
+        <span class="price-summary"></span>
+      </section>
+
+      <section class="add-on-summary" id="third-add-on-summary">
+        <span></span>
+        <span class="price-summary"></span>
+      </section>
+
+      <section id="total">
+        <span>Total(per month)</span>
+        <span class="total-sum"></span>
+      </section>
+
+  <button class="submit-btn">Submit</button>
+ 
+</section>
+  <dialog>
+    <img id="close-dialog"  src="chat-app/images/exit-icon.png">
+    <img style="display: block;margin: 0 auto;"  src="user-form/assets/images/icon-thank-you.svg">
+     <span>Thank you</span>
+    <p>Thank you for confirming your subscription!.
+      We hope you have fun using our platform.
+      If you ever need support please feel free to email us at
+      <a href="">support@iyanu423@gmail.com</a>
+    </p>
+  </dialog>
+
+<script src="code2.js" defer></script>
+</body>
+</html>
