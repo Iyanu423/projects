@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <!--The header section-->
+  <aside id="atc-notification" class="visible"></aside>
+  <header>
+    <img id="menu-icon" src="images/icon-menu.svg">
+    <h1><span class="fancy-text" style="color: hsl(26, 100%, 55%);font-weight: 600;">hyuga</span>Sneakers</h1>
+
+    <nav>
+      <img id="exit-icon" src="images/icon-close.svg">
+      <span class="nav-option">Collection</span>
+      <span class="nav-option">Women</span>
+      <span class="nav-option">About</span>
+      <span class="nav-option">Contact</span>
+    </nav>
+    <input name="search-input" type="search" placeholder="Explore our Collection...">
+    <div class="icon-wrapper">
+      <img id="cart-icon" src="images/icon-cart.svg">
+      <img id="avatar-icon" src="images/image-avatar.png">
+
+      <!--This is the pop up that shows when the cart icon is clicked-->
+      <ul id="cart-summary">
+        <li>Cart summary</li>
+
+        <button class="checkout-btn">Checkout</button>
+      </ul>
+    </div>
+
+  </header>
+
+  <!--This is the bar that follows the users cursor when the nav-options are hovered on-->
+  <div id="track-bar-wrapper">
+    <div id="track-bar"></div>
+  </div>
+
+  <main>
+
+    <section class="product-gallery-main-wrapper">
+
+      <img src="images/image-product-1.jpg" class="main-photo"></img>
+      <div class="other-photos-grid">
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+      </div>
+    </section>
+
+    <section class="product-description-wrapper">
+      <h1>HYUGA SNEAKERS</h1>
+      <h2>Fall Limited Editon Sneakers</h2>
+      <p>These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable outer sole,they'll withstand everything the weather throws at it.
+        Yeah they're that good!.
+      </p>
+
+      <div class="current-price-wrapper">
+        <span>$</span>
+        <span>143.00</span>
+        <span>-50%</span>
+      </div>
+      <span class="previous-price">
+        $250.00
+      </span>
+
+      <div class="counter-and-atcBtn-wrapper">
+        <div class="counter-wrapper">
+          <span>-</span>
+          <span class="counter-value"></span>
+          <span>+</span>
+        </div>
+        <button class="atcBtn">
+          <img src="images/icon-cart.svg">
+          <span>Add to cart</span>
+        </button>
+      </div>
+
+    </section>
+  </main>
+  <li style="display: none;" class="selected-product">
+    <div class="selected-prod-image"></div>
+    <div class="selected-prod-info">
+      <span class="selected-prod-name">
+        Fall Limited Edition Sneakers
+      </span>
+      <div class="total-cost-wrapper">
+        <span class="selected-prod-cost"></span>
+        <span style="color: slategrey;">*</span>
+        <span style="color: slategray;"></span>
+        <span class="total-cost">$300</span>
+      </div>
+    </div>
+    <img id="delete-icon" src="images/icon-delete.svg">
+  </li>
+
+
+
+
+  <script src="code.js" defer></script>
+</body>
+
+</html>
