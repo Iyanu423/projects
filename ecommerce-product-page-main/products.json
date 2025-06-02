@@ -1,0 +1,378 @@
+[
+  {
+    "shortName": "Ankara Dress",
+    "fullName": "Elegant Ankara Print Dress",
+    "description": "A vibrant and stylish Ankara print dress perfect for any occasion.",
+    "price": 4500.00,
+    "oldPrice": 6000.00,
+    "image": "images/ankara-dress.jpg"
+  },
+  {
+    "shortName": "Dashiki Shirt",
+    "fullName": "Traditional Dashiki Shirt",
+    "description": "Comfortable and colorful Dashiki shirt made from high-quality fabric.",
+    "price": 3500.00,
+    "oldPrice": 4800.00,
+    "image": "images/dashiki-shirt.jpg"
+  },
+  {
+    "shortName": "Kente Skirt",
+    "fullName": "Handwoven Kente Cloth Skirt",
+    "description": "Authentic handwoven Kente cloth skirt with vibrant patterns.",
+    "price": 5200.00,
+    "oldPrice": 7000.00,
+    "image": "images/kente-skirt.jpg"
+  },
+  {
+    "shortName": "Buba Top",
+    "fullName": "Traditional Buba Blouse",
+    "description": "Elegant Buba blouse with intricate embroidery details.",
+    "price": 4000.00,
+    "oldPrice": 5500.00,
+    "image": "images/buba-top.jpg"
+  },
+  {
+    "shortName": "Agbada Robe",
+    "fullName": "Majestic Agbada Robe for Men",
+    "description": "Luxurious Agbada robe made with premium fabric for special occasions.",
+    "price": 12000.00,
+    "oldPrice": 15000.00,
+    "image": "images/agbada-robe.jpg"
+  },
+  {
+    "shortName": "Iro Wrapper",
+    "fullName": "Classic Iro Wrapper Skirt",
+    "description": "Traditional Iro wrapper skirt with beautiful patterns.",
+    "price": 4800.00,
+    "oldPrice": 6500.00,
+    "image": "images/iro-wrapper.jpg"
+  },
+  {
+    "shortName": "Gele Headwrap",
+    "fullName": "Stylish Gele Headwrap",
+    "description": "Perfectly designed Gele headwrap to complement your outfit.",
+    "price": 1500.00,
+    "oldPrice": 2200.00,
+    "image": "images/gele-headwrap.jpg"
+  },
+  {
+    "shortName": "Kaftan Dress",
+    "fullName": "Flowy Kaftan Dress",
+    "description": "Comfortable and elegant Kaftan dress suitable for casual and formal wear.",
+    "price": 5300.00,
+    "oldPrice": 7000.00,
+    "image": "images/kaftan-dress.jpg"
+  },
+  {
+    "shortName": "Senegalese Kaftan",
+    "fullName": "Traditional Senegalese Kaftan",
+    "description": "Beautifully embroidered Senegalese Kaftan for men.",
+    "price": 9000.00,
+    "oldPrice": 11000.00,
+    "image": "images/senegalese-kaftan.jpg"
+  },
+  {
+    "shortName": "Zulu Beaded Necklace",
+    "fullName": "Authentic Zulu Beaded Necklace",
+    "description": "Handcrafted Zulu beaded necklace with vibrant colors.",
+    "price": 2500.00,
+    "oldPrice": 3200.00,
+    "image": "images/zulu-beaded-necklace.jpg"
+  },
+  {
+    "shortName": "Ankara Jumpsuit",
+    "fullName": "Chic Ankara Print Jumpsuit",
+    "description": "Modern Ankara jumpsuit with a flattering fit.",
+    "price": 6000.00,
+    "oldPrice": 7500.00,
+    "image": "images/ankara-jumpsuit.jpg"
+  },
+  {
+    "shortName": "Kitenge Shirt",
+    "fullName": "Colorful Kitenge Shirt",
+    "description": "Bright and comfortable Kitenge shirt for everyday wear.",
+    "price": 3800.00,
+    "oldPrice": 5000.00,
+    "image": "images/kitenge-shirt.jpg"
+  },
+  {
+    "shortName": "Dashiki Dress",
+    "fullName": "Vibrant Dashiki Print Dress",
+    "description": "Eye-catching Dashiki dress with traditional patterns.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/dashiki-dress.jpg"
+  },
+  {
+    "shortName": "Aso Oke Wrapper",
+    "fullName": "Handwoven Aso Oke Wrapper",
+    "description": "Elegant Aso Oke wrapper for special ceremonies.",
+    "price": 7000.00,
+    "oldPrice": 9000.00,
+    "image": "images/aso-oke-wrapper.jpg"
+  },
+  {
+    "shortName": "Ndebele Skirt",
+    "fullName": "Colorful Ndebele Patterned Skirt",
+    "description": "Traditional skirt with vibrant Ndebele patterns.",
+    "price": 4500.00,
+    "oldPrice": 6000.00,
+    "image": "images/ndebele-skirt.jpg"
+  },
+  {
+    "shortName": "Boubou Dress",
+    "fullName": "Flowy Boubou Dress",
+    "description": "Comfortable and stylish Boubou dress for women.",
+    "price": 5200.00,
+    "oldPrice": 6800.00,
+    "image": "images/boubou-dress.jpg"
+  },
+  {
+    "shortName": "Fulani Hat",
+    "fullName": "Traditional Fulani Hat",
+    "description": "Handcrafted Fulani hat with intricate designs.",
+    "price": 1800.00,
+    "oldPrice": 2500.00,
+    "image": "images/fulani-hat.jpg"
+  },
+  {
+    "shortName": "Igbo Wrapper",
+    "fullName": "Classic Igbo Wrapper Skirt",
+    "description": "Beautifully designed Igbo wrapper skirt.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/igbo-wrapper.jpg"
+  },
+  {
+    "shortName": "Kuba Cloth Shirt",
+    "fullName": "Authentic Kuba Cloth Shirt",
+    "description": "Handwoven Kuba cloth shirt with traditional patterns.",
+    "price": 5300.00,
+    "oldPrice": 7000.00,
+    "image": "images/kuba-cloth-shirt.jpg"
+  },
+  {
+    "shortName": "Mudcloth Jacket",
+    "fullName": "Stylish Mudcloth Jacket",
+    "description": "Unique mudcloth jacket with cultural significance.",
+    "price": 6500.00,
+    "oldPrice": 8500.00,
+    "image": "images/mudcloth-jacket.jpg"
+  },
+  {
+    "shortName": "Ankara Skirt",
+    "fullName": "Floral Ankara Print Skirt",
+    "description": "Bright and colorful Ankara skirt with floral patterns.",
+    "price": 4200.00,
+    "oldPrice": 5800.00,
+    "image": "images/ankara-skirt.jpg"
+  },
+  {
+    "shortName": "Kente Dress",
+    "fullName": "Elegant Kente Cloth Dress",
+    "description": "Handwoven Kente cloth dress with vibrant colors.",
+    "price": 7200.00,
+    "oldPrice": 9000.00,
+    "image": "images/kente-dress.jpg"
+  },
+  {
+    "shortName": "Zulu Beaded Bracelet",
+    "fullName": "Authentic Zulu Beaded Bracelet",
+    "description": "Handcrafted Zulu beaded bracelet with traditional colors.",
+    "price": 1500.00,
+    "oldPrice": 2100.00,
+    "image": "images/zulu-beaded-bracelet.jpg"
+  },
+  {
+    "shortName": "Dashiki Pants",
+    "fullName": "Comfortable Dashiki Print Pants",
+    "description": "Stylish and comfortable Dashiki pants for casual wear.",
+    "price": 4000.00,
+    "oldPrice": 5500.00,
+    "image": "images/dashiki-pants.jpg"
+  },
+  {
+    "shortName": "Aso Oke Hat",
+    "fullName": "Traditional Aso Oke Hat",
+    "description": "Handwoven Aso Oke hat for special occasions.",
+    "price": 2000.00,
+    "oldPrice": 2800.00,
+    "image": "images/aso-oke-hat.jpg"
+  },
+  {
+    "shortName": "Kitenge Dress",
+    "fullName": "Bright Kitenge Print Dress",
+    "description": "Colorful Kitenge dress perfect for celebrations.",
+    "price": 4800.00,
+    "oldPrice": 6300.00,
+    "image": "images/kitenge-dress.jpg"
+  },
+  {
+    "shortName": "Igbo Beaded Necklace",
+    "fullName": "Traditional Igbo Beaded Necklace",
+    "description": "Handcrafted Igbo beaded necklace with cultural designs.",
+    "price": 2300.00,
+    "oldPrice": 3000.00,
+    "image": "images/igbo-beaded-necklace.jpg"
+  },
+  {
+    "shortName": "Mudcloth Skirt",
+    "fullName": "Unique Mudcloth Patterned Skirt",
+    "description": "Stylish mudcloth skirt with traditional patterns.",
+    "price": 4600.00,
+    "oldPrice": 6100.00,
+    "image": "images/mudcloth-skirt.jpg"
+  },
+  {
+    "shortName": "Buba Wrapper",
+    "fullName": "Elegant Buba Wrapper Set",
+    "description": "Traditional Buba wrapper set with intricate embroidery.",
+    "price": 5500.00,
+    "oldPrice": 7200.00,
+    "image": "images/buba-wrapper.jpg"
+  },
+  {
+    "shortName": "Fulani Necklace",
+    "fullName": "Handcrafted Fulani Necklace",
+    "description": "Beautiful Fulani necklace with traditional beads.",
+    "price": 2700.00,
+    "oldPrice": 3500.00,
+    "image": "images/fulani-necklace.jpg"
+  },
+  {
+    "shortName": "Kuba Cloth Skirt",
+    "fullName": "Authentic Kuba Cloth Skirt",
+    "description": "Handwoven Kuba cloth skirt with vibrant patterns.",
+    "price": 4800.00,
+    "oldPrice": 6300.00,
+    "image": "images/kuba-cloth-skirt.jpg"
+  },
+  {
+    "shortName": "Ankara Headwrap",
+    "fullName": "Stylish Ankara Headwrap",
+    "description": "Perfect Ankara headwrap to complement your outfit.",
+    "price": 1600.00,
+    "oldPrice": 2200.00,
+    "image": "images/ankara-headwrap.jpg"
+  },
+  {
+    "shortName": "Dashiki Hat",
+    "fullName": "Traditional Dashiki Hat",
+    "description": "Colorful Dashiki hat with cultural significance.",
+    "price": 1900.00,
+    "oldPrice": 2600.00,
+    "image": "images/dashiki-hat.jpg"
+  },
+  {
+    "shortName": "Kente Wrapper",
+    "fullName": "Handwoven Kente Wrapper",
+    "description": "Elegant Kente wrapper for special occasions.",
+    "price": 7000.00,
+    "oldPrice": 9000.00,
+    "image": "images/kente-wrapper.jpg"
+  },
+  {
+    "shortName": "Boubou Set",
+    "fullName": "Stylish Boubou Set",
+    "description": "Comfortable and elegant Boubou set for women.",
+    "price": 6000.00,
+    "oldPrice": 7800.00,
+    "image": "images/boubou-set.jpg"
+  },
+  {
+    "shortName": "Fulani Earrings",
+    "fullName": "Traditional Fulani Earrings",
+    "description": "Handcrafted Fulani earrings with intricate designs.",
+    "price": 1400.00,
+    "oldPrice": 1900.00,
+    "image": "images/fulani-earrings.jpg"
+  },
+  {
+    "shortName": "Igbo Hat",
+    "fullName": "Classic Igbo Hat",
+    "description": "Beautifully designed Igbo hat for special occasions.",
+    "price": 2100.00,
+    "oldPrice": 2800.00,
+    "image": "images/igbo-hat.jpg"
+  },
+  {
+    "shortName": "Mudcloth Dress",
+    "fullName": "Unique Mudcloth Dress",
+    "description": "Stylish mudcloth dress with traditional patterns.",
+    "price": 5800.00,
+    "oldPrice": 7500.00,
+    "image": "images/mudcloth-dress.jpg"
+  },
+  {
+    "shortName": "Ankara Blouse",
+    "fullName": "Elegant Ankara Blouse",
+    "description": "Bright and colorful Ankara blouse with floral patterns.",
+    "price": 4300.00,
+    "oldPrice": 5900.00,
+    "image": "images/ankara-blouse.jpg"
+  },
+  {
+    "shortName": "Kitenge Wrapper",
+    "fullName": "Colorful Kitenge Wrapper",
+    "description": "Traditional Kitenge wrapper with vibrant colors.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/kitenge-wrapper.jpg"
+  },
+  {
+    "shortName": "Dashiki Necklace",
+    "fullName": "Handcrafted Dashiki Necklace",
+    "description": "Beautiful Dashiki necklace with cultural significance.",
+    "price": 2600.00,
+    "oldPrice": 3400.00,
+    "image": "images/dashiki-necklace.jpg"
+  },
+  {
+    "shortName": "Kuba Cloth Dress",
+    "fullName": "Authentic Kuba Cloth Dress",
+    "description": "Handwoven Kuba cloth dress with traditional patterns.",
+    "price": 6800.00,
+    "oldPrice": 8500.00,
+    "image": "images/kuba-cloth-dress.jpg"
+  },
+  {
+    "shortName": "Buba Dress",
+    "fullName": "Traditional Buba Dress",
+    "description": "Elegant Buba dress with intricate embroidery.",
+    "price": 5200.00,
+    "oldPrice": 6700.00,
+    "image": "images/buba-dress.jpg"
+  },
+  {
+    "shortName": "Fulani Bracelet",
+    "fullName": "Handcrafted Fulani Bracelet",
+    "description": "Beautiful Fulani bracelet with traditional beads.",
+    "price": 1700.00,
+    "oldPrice": 2300.00,
+    "image": "images/fulani-bracelet.jpg"
+  },
+  {
+    "shortName": "Igbo Necklace",
+    "fullName": "Traditional Igbo Necklace",
+    "description": "Handcrafted Igbo necklace with cultural designs.",
+    "price": 2400.00,
+    "oldPrice": 3100.00,
+    "image": "images/igbo-necklace.jpg"
+  },
+  {
+    "shortName": "Mudcloth Hat",
+    "fullName": "Unique Mudcloth Hat",
+    "description": "Stylish mudcloth hat with traditional patterns.",
+    "price": 1900.00,
+    "oldPrice": 2600.00,
+    "image": "images/mudcloth-hat.jpg"
+  },
+  {
+    "shortName": "Ankara Pants",
+    "fullName": "Comfortable Ankara Pants",
+    "description": "Bright and colorful Ankara pants for casual wear.",
+    "price": 4200.00,
+    "oldPrice": 5800.00,
+    "image": "images/ankara-pants.jpg"
+  }
+]
