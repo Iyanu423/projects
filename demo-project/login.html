@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!--
+  loginpage.html - Login page for TeamInbox web app
+  This page provides a user interface for staff to log into their accounts.
+  It includes form fields for Staff-ID and Password, with validation messages.
+  The page supports theme toggling and a help menu for login assistance.
+-->
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale = 1, user-scalable = no">
+    <meta charset="UTF-8">
+
+    <title>Login into your account</title>
+
+    <!-- Google fonts link for consistent typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet for login page -->
+    <link rel="stylesheet" href="loginpage-styles.css">
+
+    <!-- Dark mode stylesheet, disabled by default -->
+    <link id="darkmode-style" rel="stylesheet" href="loginpage-darkmode.css" disabled>
+    <!-- Login page JavaScript file -->
+    <script src="applogin.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <!-- LOGO -->
+        <span style="color: hsl(26, 100%, 55%);">Afri<str style="color: steelblue;">Mart</str></span>
+
+        <!-- Support icon for help menu -->
+        <img src="icons/icons8-online-support-100.png" alt="Support Icon">
+
+        <!-- Theme toggle icon for switching light/dark mode -->
+        <img id="theme-toggle" src="icons/icons8-dark-mode-100.png" alt="Theme Toggle">
+
+        <!-- Help menu with login assistance options -->
+        <aside>
+            <span>Unable to login ?</span>
+            <span>Chat with support</span>
+            <span>Make a suggestion</span>
+            <span>⚠ Report an error</span>
+        </aside>
+    </header>
+
+    <!-- Successful login notification -->
+    <aside id="notifications">
+        <b>Successfully logged in ✔ </b>
+        <p>Please wait while you are being redirected.  <span class="load"></span></p>
+    </aside>
+
+
+
+    <!-- Profile setup form-->
+
+    <!-- All fields contain dummy data at the moment... 
+         All input fields are also disabled since no backend vaidation is required at the moment
+     -->
+
+    <!-- Login form -->
+
+    <!-- Welcome messages -->
+    <h1>Hello</h1>
+    <h2>Welcome back!</h2>
+
+    <form id="login-form">
+        <h3>Login Account</h3>
+        <h4>When you sign in, your details would be synced automatically across other devices you've logged into.</h4>
+
+        <!--Each input field contains dummy data at the moment. You can clear the input fields to test error handling -->
+
+        <!-- Staff-ID input field -->
+        <fieldset>
+            <label for="staff-ID-field">Email-address</label>
+            <input id="staff-ID-field" type="text" placeholder="Email address" value="iyanu423@gmail.com"
+                autocomplete="on">
+            <img src="icons/icons8-user-96.png" alt="User Icon">
+        </fieldset>
+        <!-- Error message for Staff-ID validation -->
+        <span id="staffIDError" class="error-msg">⚠ This field is required</span>
+
+        <!-- Password input field -->
+        <fieldset>
+            <label for="staff-password-field">Password</label>
+            <input id="staff-password-field" type="password" placeholder="Password" value="123456789"
+                autocomplete="off">
+            <img src="icons/icons8-padlock-96 (1).png" alt="Password Icon">
+        </fieldset>
+        <!-- Error message for Password validation -->
+        <span id="passwordError" class="error-msg">⚠ This field is required</span>
+
+        <!-- Clear all fields clickable span element -->
+        <span id="reset-fields">Clear all fields</span>
+
+        <!-- Remember-me checkbox and forgot password link -->
+        <fieldset>
+            <div id="rmb-wrapper">
+                <input id="remember-user" type="checkbox" value="remember-user" checked>
+                <label for="remember-user">Stay signed in</label>
+            </div>
+
+            <a href="">Forgot password ?</a>
+        </fieldset>
+
+        <!-- Login and register buttons -->
+        <button id="login-btn" type="submit"><span>Login Account</span> <span class="loader"></span> </button>
+        <button id="register-btn" type="button">Create new account</button>
+
+    </form>
+</body>
+
+</html>

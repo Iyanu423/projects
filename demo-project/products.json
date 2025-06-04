@@ -1,0 +1,434 @@
+[
+  {
+    "shortName": "Ankara Running Shoes",
+    "fullName": "African Ankara Running Shoes",
+    "description": "Lightweight and breathable running shoes featuring vibrant Ankara fabric accents, designed for everyday use with excellent support and comfort inspired by African artistry.",
+    "price": 4500.00,
+    "oldPrice": 6000.00,
+    "image": "images/IMG-20250604-WA0096.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Dashiki Leather Bag",
+    "fullName": "Stylish Dashiki Leather Bag",
+    "description": "Durable and fashionable leather bag crafted with high-quality materials and adorned with traditional Dashiki patterns, perfect for carrying your essentials in African style.",
+    "price": 3500.00,
+    "oldPrice": 4800.00,
+    "image": "images/IMG-20250604-WA0097.jpg",
+    "category": "shirts"
+  },
+  {
+    "shortName": "Kente Casual Shirt",
+    "fullName": "Comfortable Kente Casual Shirt",
+    "description": "Soft cotton shirt featuring authentic Kente cloth patterns, perfect for casual outings and showcasing African heritage with breathability and comfort.",
+    "price": 5200.00,
+    "oldPrice": 7000.00,
+    "image": "images/IMG-20250604-WA0099.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Buba Gold Necklace",
+    "fullName": "Elegant Buba Gold Necklace",
+    "description": "Beautifully crafted gold necklace inspired by traditional Buba attire, adding elegance and sophistication to any outfit for special occasions and everyday wear.",
+    "price": 4000.00,
+    "oldPrice": 5500.00,
+    "image": "images/IMG-20250604-WA0100.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Agbada Wristwatch",
+    "fullName": "Classic Agbada Wristwatch",
+    "description": "Timeless wristwatch featuring a leather strap and design elements inspired by the Agbada robe, combining style and functionality for punctuality and fashion.",
+    "price": 12000.00,
+    "oldPrice": 15000.00,
+    "image": "images/IMG-20250604-WA0103.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Iro Summer Skirt",
+    "fullName": "Lightweight Iro Summer Skirt",
+    "description": "Flowy skirt made from breathable fabric inspired by the traditional Iro wrapper, keeping you cool and stylish during warm weather.",
+    "price": 4800.00,
+    "oldPrice": 6500.00,
+    "image": "images/IMG-20250604-WA0106.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Gele Diamond Earrings",
+    "fullName": "Sparkling Gele Diamond Earrings",
+    "description": "Elegant earrings featuring sparkling diamonds and inspired by the traditional Gele headwrap, designed to enhance your look for formal events.",
+    "price": 1500.00,
+    "oldPrice": 2200.00,
+    "image": "images/IMG-20250604-WA0107.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kaftan Denim Jacket",
+    "fullName": "Classic Kaftan Denim Jacket",
+    "description": "Stylish denim jacket with design influences from the Kaftan dress, perfect for casual wear with durability and timeless African fashion.",
+    "price": 5300.00,
+    "oldPrice": 7000.00,
+    "image": "images/IMG-20250604-WA0108.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Senegalese Leather Boots",
+    "fullName": "Durable Senegalese Leather Boots",
+    "description": "High-quality leather boots designed for all terrains, inspired by traditional Senegalese styles, providing comfort, protection, and style.",
+    "price": 9000.00,
+    "oldPrice": 11000.00,
+    "image": "images/IMG-20250604-WA0111.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Zulu Pearl Necklace",
+    "fullName": "Elegant Zulu Pearl Necklace",
+    "description": "Classic pearl necklace inspired by Zulu beadwork, adding sophistication and grace to any outfit for formal events and special occasions.",
+    "price": 2500.00,
+    "oldPrice": 3200.00,
+    "image": "images/IMG-20250604-WA0112.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Ankara Sports Shoes",
+    "fullName": "Lightweight Ankara Sports Shoes",
+    "description": "Breathable sports shoes featuring vibrant Ankara fabric accents, offering excellent support and cushioning for enhanced performance.",
+    "price": 6000.00,
+    "oldPrice": 7500.00,
+    "image": "images/IMG-20250604-WA0113.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kitenge Formal Shirt",
+    "fullName": "Elegant Kitenge Formal Shirt",
+    "description": "Perfect formal shirt made from high-quality fabric with Kitenge patterns, ensuring comfort and a polished African appearance.",
+    "price": 3800.00,
+    "oldPrice": 5000.00,
+    "image": "images/IMG-20250604-WA0123.jpg",
+    "category": "shirts"
+  },
+  {
+    "shortName": "Dashiki Evening Dress",
+    "fullName": "Stylish Dashiki Evening Dress",
+    "description": "Elegant evening dress crafted from luxurious materials featuring traditional Dashiki designs, perfect for special occasions.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/IMG-20250604-WA0114.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Aso-Oke Travel Bag",
+    "fullName": "Spacious Aso-Oke Travel Bag",
+    "description": "Durable travel bag featuring multiple compartments and adorned with traditional Aso-Oke fabric patterns for organized style.",
+    "price": 7000.00,
+    "oldPrice": 9000.00,
+    "image": "images/IMG-20250604-WA0116.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Ndebele Pleated Skirt",
+    "fullName": "Elegant Ndebele Pleated Skirt",
+    "description": "Classic pleated skirt inspired by Ndebele patterns, suitable for both formal and casual wear with beautiful draping and comfort.",
+    "price": 4500.00,
+    "oldPrice": 6000.00,
+    "image": "images/IMG-20250604-WA0122.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Boubou Cocktail Dress",
+    "fullName": "Chic Boubou Cocktail Dress",
+    "description": "Perfect cocktail dress featuring stylish cuts and elegant fabric inspired by traditional Boubou attire, designed to make you stand out.",
+    "price": 5200.00,
+    "oldPrice": 6800.00,
+    "image": "images/IMG-20250604-WA0120.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Fulani Sun Hat",
+    "fullName": "Wide Brim Fulani Sun Hat",
+    "description": "Protective and stylish sun hat inspired by Fulani designs, offering shade and comfort while complementing your summer outfits.",
+    "price": 1800.00,
+    "oldPrice": 2500.00,
+    "image": "images/IMG-20250604-WA0121.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Igbo Pleated Skirt",
+    "fullName": "Elegant Igbo Pleated Skirt",
+    "description": "Classic pleated skirt inspired by Igbo traditional patterns, suitable for formal and casual wear with high-quality fabric and comfort.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/IMG-20250604-WA0106.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kuba Cotton Shirt",
+    "fullName": "Comfortable Kuba Cotton Shirt",
+    "description": "Soft and breathable cotton shirt featuring Kuba cloth patterns, perfect for everyday wear with African style and comfort.",
+    "price": 5300.00,
+    "oldPrice": 7000.00,
+    "image": "images/IMG-20250604-WA0129.jpg",
+    "category": "shirts"
+  },
+  {
+    "shortName": "Mudcloth Leather Jacket",
+    "fullName": "Classic Mudcloth Leather Jacket",
+    "description": "Stylish leather jacket inspired by Mudcloth designs, suitable for all seasons with durability and timeless African fashion.",
+    "price": 6500.00,
+    "oldPrice": 8500.00,
+    "image": "images/IMG-20250604-WA0126.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Ankara Floral Skirt",
+    "fullName": "Bright Ankara Floral Skirt",
+    "description": "Colorful skirt featuring floral patterns inspired by Ankara fabric, perfect for adding vibrant African style to your wardrobe.",
+    "price": 4200.00,
+    "oldPrice": 5800.00,
+    "image": "images/IMG-20250604-WA0128.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kente Silk Dress",
+    "fullName": "Elegant Kente Silk Dress",
+    "description": "Smooth and luxurious silk dress featuring Kente cloth designs, providing comfort and elegance for special occasions.",
+    "price": 7200.00,
+    "oldPrice": 9000.00,
+    "image": "images/IMG-20250604-WA0127.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Zulu Beaded Bracelet",
+    "fullName": "Handcrafted Zulu Beaded Bracelet",
+    "description": "Beautiful bracelet made with traditional Zulu beads, perfect for adding a unique and stylish African accessory to your outfit.",
+    "price": 1500.00,
+    "oldPrice": 2100.00,
+    "image": "images/IMG-20250604-WA0130.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Dashiki Cargo Pants",
+    "fullName": "Comfortable Dashiki Cargo Pants",
+    "description": "Durable cargo pants featuring traditional Dashiki patterns, designed for comfort and practicality with African style.",
+    "price": 4000.00,
+    "oldPrice": 5500.00,
+    "image": "images/IMG-20250604-WA0131.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Aso-Oke Fedora Hat",
+    "fullName": "Stylish Aso-Oke Fedora Hat",
+    "description": "Classic fedora hat adorned with Aso-Oke fabric patterns, offering a fashionable and sophisticated African look.",
+    "price": 2000.00,
+    "oldPrice": 2800.00,
+    "image": "images/IMG-20250604-WA0133.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kitenge Party Dress",
+    "fullName": "Elegant Kitenge Party Dress",
+    "description": "Perfect party dress featuring Kitenge fabric and stylish cuts, designed to make you stand out with African elegance.",
+    "price": 4800.00,
+    "oldPrice": 6300.00,
+    "image": "images/IMG-20250604-WA0134.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Igbo Beaded Necklace",
+    "fullName": "Handcrafted Igbo Beaded Necklace",
+    "description": "Beautiful necklace made with colorful Igbo beads, perfect for adding a unique and stylish African accessory to your outfit.",
+    "price": 2300.00,
+    "oldPrice": 3000.00,
+    "image": "images/IMG-20250604-WA0148.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Mudcloth Denim Skirt",
+    "fullName": "Classic Mudcloth Denim Skirt",
+    "description": "Stylish denim skirt featuring Mudcloth patterns, perfect for casual wear with timeless African fashion.",
+    "price": 4600.00,
+    "oldPrice": 6100.00,
+    "image": "images/IMG-20250604-WA0135.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Buba Set",
+    "fullName": "Elegant Buba Set",
+    "description": "Traditional Buba set featuring intricate embroidery, perfect for special occasions and cultural African events.",
+    "price": 5500.00,
+    "oldPrice": 7200.00,
+    "image": "images/IMG-20250604-WA0136.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Fulani Beaded Necklace",
+    "fullName": "Handcrafted Fulani Beaded Necklace",
+    "description": "Beautiful necklace made with colorful Fulani beads, perfect for adding a unique and stylish African accessory to your outfit.",
+    "price": 2700.00,
+    "oldPrice": 3500.00,
+    "image": "images/IMG-20250604-WA0137.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Kuba Plaid Skirt",
+    "fullName": "Classic Kuba Plaid Skirt",
+    "description": "Stylish plaid skirt featuring Kuba cloth patterns, suitable for all seasons with comfort and timeless African fashion.",
+    "price": 4800.00,
+    "oldPrice": 6300.00,
+    "image": "images/IMG-20250604-WA0138.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Ankara Sun Hat",
+    "fullName": "Wide Brim Ankara Sun Hat",
+    "description": "Protective and stylish sun hat featuring Ankara fabric, providing shade and comfort during sunny days with African flair.",
+    "price": 1600.00,
+    "oldPrice": 2200.00,
+    "image": "images/IMG-20250604-WA0139.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Dashiki Baseball Cap",
+    "fullName": "Casual Dashiki Baseball Cap",
+    "description": "Comfortable baseball cap featuring Dashiki patterns, perfect for everyday wear with African style and sun protection.",
+    "price": 1900.00,
+    "oldPrice": 2600.00,
+    "image": "images/IMG-20250604-WA0140.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kente Wool Scarf",
+    "fullName": "Warm Kente Wool Scarf",
+    "description": "Cozy wool scarf featuring Kente cloth designs, perfect for keeping warm during cold weather with African elegance.",
+    "price": 7000.00,
+    "oldPrice": 9000.00,
+    "image": "images/IMG-20250604-WA0141.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Boubou Evening Gown",
+    "fullName": "Elegant Boubou Evening Gown",
+    "description": "Perfect evening gown crafted from luxurious materials featuring traditional Boubou designs, providing comfort and style.",
+    "price": 6000.00,
+    "oldPrice": 7800.00,
+    "image": "images/IMG-20250604-WA0142.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Fulani Hoop Earrings",
+    "fullName": "Stylish Fulani Hoop Earrings",
+    "description": "Trendy hoop earrings inspired by Fulani designs, adding elegance and style to any outfit with African flair.",
+    "price": 1400.00,
+    "oldPrice": 1900.00,
+    "image": "images/IMG-20250604-WA0143.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Igbo Winter Hat",
+    "fullName": "Warm Igbo Winter Hat",
+    "description": "Cozy winter hat featuring Igbo traditional patterns, perfect for cold weather with stylish African design.",
+    "price": 2100.00,
+    "oldPrice": 2800.00,
+    "image": "images/IMG-20250604-WA0144.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Mudcloth Maxi Dress",
+    "fullName": "Flowy Mudcloth Maxi Dress",
+    "description": "Comfortable maxi dress featuring Mudcloth designs, suitable for casual and formal wear with African style.",
+    "price": 5800.00,
+    "oldPrice": 7500.00,
+    "image": "images/IMG-20250604-WA0145.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Ankara Silk Blouse",
+    "fullName": "Elegant Ankara Silk Blouse",
+    "description": "Soft and luxurious silk blouse featuring Ankara fabric, designed to provide comfort and style for any occasion.",
+    "price": 4300.00,
+    "oldPrice": 5900.00,
+    "image": "images/IMG-20250604-WA0146.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Kitenge Wool Wrap",
+    "fullName": "Cozy Kitenge Wool Wrap",
+    "description": "Warm wool wrap featuring Kitenge cloth designs, perfect for chilly days and adding a stylish African layer to your outfit.",
+    "price": 4700.00,
+    "oldPrice": 6200.00,
+    "image": "images/IMG-20250604-WA0147.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Dashiki Beaded Necklace",
+    "fullName": "Handcrafted Dashiki Beaded Necklace",
+    "description": "Beautiful beaded necklace featuring Dashiki patterns, perfect for adding a unique and stylish African accessory to your outfit.",
+    "price": 2600.00,
+    "oldPrice": 3400.00,
+    "image": "images/IMG-20250604-WA0148.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Kuba Denim Dress",
+    "fullName": "Classic Kuba Denim Dress",
+    "description": "Stylish denim dress featuring Kuba cloth patterns, perfect for casual wear with timeless African fashion.",
+    "price": 6800.00,
+    "oldPrice": 8500.00,
+    "image": "images/IMG-20250604-WA0118.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Buba Dress",
+    "fullName": "Traditional Buba Dress",
+    "description": "Elegant Buba dress featuring intricate embroidery, perfect for special occasions and cultural African events.",
+    "price": 5200.00,
+    "oldPrice": 6700.00,
+    "image": "images/IMG-20250604-WA0150.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Fulani Beaded Bracelet",
+    "fullName": "Handcrafted Fulani Beaded Bracelet",
+    "description": "Beautiful bracelet made with traditional Fulani beads, perfect for adding a unique and stylish African accessory to your outfit.",
+    "price": 1700.00,
+    "oldPrice": 2300.00,
+    "image": "images/IMG-20250604-WA0151.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Igbo Silver Necklace",
+    "fullName": "Elegant Igbo Silver Necklace",
+    "description": "Beautiful silver necklace featuring Igbo designs, adding elegance and style to your look for all occasions.",
+    "price": 2400.00,
+    "oldPrice": 3100.00,
+    "image": "images/IMG-20250604-WA0152.jpg",
+    "category": "necklaces"
+  },
+  {
+    "shortName": "Mudcloth Wool Hat",
+    "fullName": "Warm Mudcloth Wool Hat",
+    "description": "Cozy wool hat featuring Mudcloth patterns, perfect for cold weather and adding a stylish African touch to your outfit.",
+    "price": 1900.00,
+    "oldPrice": 2600.00,
+    "image": "images/IMG-20250604-WA0153.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Ankara Casual Pants",
+    "fullName": "Comfortable Ankara Casual Pants",
+    "description": "Perfect casual pants featuring Ankara fabric accents, offering comfort and style with African flair for everyday wear.",
+    "price": 4200.00,
+    "oldPrice": 5800.00,
+    "image": "images/IMG-20250604-WA0131.jpg",
+    "category": "clothing"
+  },
+  {
+    "shortName": "Dashiki Leather Bag",
+    "fullName": "Stylish Dashiki Leather Bag",
+    "description": "Durable and fashionable leather bag crafted with high-quality materials and adorned with traditional Dashiki patterns, perfect for carrying your essentials in African style.",
+    "price": 3500.00,
+    "oldPrice": 4800.00,
+    "image": "images/IMG-20250604-WA0154.jpg",
+    "category": "shirts"
+  }
+]

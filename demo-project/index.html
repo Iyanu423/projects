@@ -1,181 +1,135 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>huddle.io </title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale = 1 , user-scalable  = no" />
+    <title>Product Page - AfriMart</title>
+
+    <!-- Google fnts for consistent typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="landingpage.css" />
 </head>
+
 <body>
-<div id="layer"></div>
-<header>
-    <img  id="menu-icon"   src="chat-app/images/menu-icon.jpg">
-    <nav>
-        <img id="exit-icon"    src="chat-app/images/exit-icon.png">
-        <span style="background: var(--generic-purple);color: white;">Home</span>       
-        <span>About</span>
-        <span>Products</span>
-        <span>Contact</span>
-        <span>Offers</span>
-    </nav>
-   <a href="index.html">huddle.io </a>
-</header>
 
-<main>
-    <section id="cell-phone">
-        <div id="cell-phone-camera-area">
-            <div id="profile-area">
-                <img src="chat-app/images/avatar.jpg">
-                <div id="name-and-avail-status">
+    <!-- Header section with site title and navigation links -->
+    <header>
+        <h1>
+            <span class="fancy-text" style="color: hsl(26, 100%, 55%); font-weight: 600;">Afri</span>Mart
+        </h1>
+        <a href="login.html">Log in</a>
+        <a href="">Sign up</a>
+    </header>
 
- <!--the name and available-status shorthand (n-and-s)-->
-                  <span class="n-and-s">Samuel Green</span>
-                  <span class="n-and-s">Available to walk</span> 
-                </div>
-            </div>
-        </div>
 
-<!--text-messages section-->
-        <section id="text-message-area">
 
-         <div class="usr-text-msg">That sounds great. i'd be happy to discuss more.</div>
-         <div class="usr-text-msg"> Could you send over some pictures of your dog, please ?</div>
-         
-<!--I added inline animation styles here because the (of-type) selector refused to respond in the css file-->
-         <div style="
-             animation: fade-in linear forwards;
-             animation-timeline: scroll();
-             animation-range: 10px 11px;
-             background: none;margin-block-start: 15px;
-             justify-content: center;
-             "
-             class="client-txt-msg">
-            <img src="chat-app/images/dog-image-1.jpg">
-            <img src="chat-app/images/dog-image-2.jpg">
-            <img src="chat-app/images/dog-image-3.jpg">
-         </div>
-         <div style="
-             animation: fade-in linear forwards;
-             animation-timeline: scroll();
-             animation-range: 10px 11px;
-             "    
-             class="client-txt-msg">Here are a few pictures. She's a happy girl</div>
-         <div style="
-             animation: fade-in linear forwards;
-             animation-timeline: scroll();
-             animation-range: 10px 11px;
-             "    
-             class="client-txt-msg">Can you make it ?</div>
 
-         <div style="
-             animation: fade-in-second linear forwards;
-             animation-timeline: scroll();
-             animation-range: 100px 110px;
-             opacity: 0;
-             "  
-             class="usr-text-msg">She looks so happy!,The time we discussed works.How long shall i take her out for</div>
-
-         <div  style="
-             animation: fade-in-second linear forwards;
-             animation-timeline: scroll();
-             animation-range: 200px 210px;
-             "  
-             class="pricing-msg">
-            <span class="pricing-item"></span>
-            <span class="pricing-item">30 minute walk</span>
-            <span class="pricing-item">$29</span>
-         </div>
-         <div style=" 
-             animation: fade-in-second linear forwards;
-             animation-timeline: scroll();
-             animation-range: 250px 260px; 
-             "
-             class="pricing-msg">
-            <span class="pricing-item"></span>
-            <span class="pricing-item">1 hour walk</span>
-            <span class="pricing-item">$49</span>
-         </div>
-
-         <section id="input-wrapper">
-
-<!--dummy message input box-->
-            <input type="text" type="text" placeholder="Type a message..." disabled>
-        </section>
-    </section>
- </section>
-
-<!--product description section-->
-    <section id="intro">
-        <h1>Simple booking</h1>
+    <main>
+        <h1>Welcome to <span class="fancy-text" style="color: hsl(26, 100%, 55%);">Afri</span>Mart
+        </h1>
         <p>
-            Stay in touch with our dog walkers through the chat interface.
-            This makes it easy to discuss arrangements and make bookings.
-            Once the walk has been completed you can rate your walker and book again through the chat.
+            Your one-stop online shop for a wide range of quality clothing items at unbeatable prices.
+            Shop with ease and enjoy fast delivery right to your doorstep.
         </p>
 
- <!--call to action button-->
-        <a href="get-started.html">Get Started
-            <img src="chat-app/images/puppy-icon.jpeg">
-        </a>
-        <h2 style="
-            margin-block-start: 20px;
-            background: var(--ltr-gradient);
-            background-clip: text;
-            color: transparent;
-        ">Already have an account?</h2>
-        
-<!--sign in button-->
-        <a style="margin-block-start: 20px;" href="login-page.html">Sign in
-            <img src="chat-app/images/puppy-icon.jpeg">
-        </a>
+        <a href="index.html">Start Shopping<img id="cart-icon" src="images/icon-cart.svg" alt="Cart" /></a>
+    </main>
+
+
+
+    <section id="display-prod">
+        <aside>
+            <h1>NEW ARRIVALS</h1>
+            <h2>JUST FOR</h2>
+            <h3>you.</h3>
+        </aside>
+
+        <img src="images/Gemini_Generated_Image_6f2r016f2r016f2r-removebg-preview.png">
+
+        <aside>
+            <h1>Royal Ankara Dress</h1>
+            <p>
+                Bright and bold, this Ankara dress features intricate swirling patterns in vibrant colors, offering a
+                stylish and culturally rich look. Perfect for both casual and formal settings.
+            </p>
+            <h2> 30% <br>OFF</h2>
+            <a href="login.html">Buy Now <str>➡</str></a>
+
+        </aside>
+
     </section>
-</main>
-
-<!--Footer section-->
-<footer>
-    <span><b>huddle</b> &copy;2024</span>
-    <span>User Agreements</span>
-    <span>Privacy Policy</span>
-    <span>Community Guidelines</span>
-    <span>Cookies Policy</span>
-    <span>Copyright Policy</span>
-    <span>Send Feedback</span>
-</footer>
 
 
-<script src="code.js" defer></script>
+    <footer>
+        <h1>Afri<str>Mart</str>
+        </h1>
+        <p>Celebrating African heritage through authentic fashion. Quaity garments that tell your story.</p>
+
+        <nav>
+            <img src="images/wired-outline-2540-logo-facebook-hover-pinch.gif">
+            <img src="images/wired-outline-2542-logo-instagram-hover-pinch.gif">
+            <img src="images/wired-outline-2543-logo-whatsapp-hover-pinch.gif">
+            <img src="images/wired-outline-2546-logo-tiktok-hover-pinch.gif">
+            <img src="images/wired-outline-2714-logo-x-hover-pinch.gif">
+        </nav>
+
+        <ul>
+            <h2>Shop</h2>
+            <li>Men's Collection</li>
+            <li>Women's Collection</li>
+            <li>Accessories</li>
+            <li>Traditional Wear</li>
+            <li>Modern Designs</li>
+        </ul>
+
+        <ul>
+            <h2>Support</h2>
+            <li>Men's Collection</li>
+            <li>Women's Collection</li>
+            <li>Accessories</li>
+            <li>Traditional Wear</li>
+            <li>Modern Designs</li>
+        </ul>
+
+        <ul>
+            <h2>Contact</h2>
+            <li>Lagos, Nigeria</li>
+            <li>+234 123-456-789</li>
+            <li>support@afrimart.com</li>
+        </ul>
+
+        <aside>
+            <span>&copy; AfriMart. All rights reserved</span>
+
+            <span>
+                <str>Privacy Policy</str>
+                <str>Terms of Service</str>
+                <str>User Agreement</str>
+            </span>
+        </aside>
+    </footer>
+
+
 </body>
-</html> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
 </html>
