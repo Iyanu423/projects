@@ -1,0 +1,1899 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Onest", Roboto, system-ui;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --auto-height: auto;
+    --nice-border-radius: 20px;
+    --bold-font: bold;
+    --faded-gray: rgba(200, 200, 200, .5);
+    --smooth-transition: .2s;
+    --global-light-purple: rgba(72, 56, 214, 0.5);
+    --global-deep-purple: rgb(61, 18, 245);
+    --light-mode-gradient: linear-gradient(to right, rgba(175, 225, 205, .5), rgba(137, 30, 124, .1));
+}
+
+body {
+    height: 1300px;
+}
+
+header {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 1.5rem;
+    position: relative;
+    border-bottom: 3px solid var(--faded-gray);
+}
+
+#logo {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--global-deep-purple);
+}
+
+/*--- Email status menu wrapper ---*/
+#status-wrapper {
+    position: absolute;
+    inset: 69% 0 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    -webkit-padding-end: 1.5rem;
+    padding-inline-end: 1.5rem;
+}
+
+/*--- Email status icon ( visible on pc and tablet devices ) ---*/
+.status-icon {
+    position: relative;
+    cursor: pointer;
+    background: var(--faded-gray);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem 1.2rem;
+    border-radius: var(--nice-border-radius);
+    box-shadow: 0 0 0 2.5px gray;
+    transition-duration: var(--smooth-transition);
+}
+
+.status-icon:hover {
+    box-shadow: 0 0 0 2.5px var(--global-deep-purple);
+}
+
+#status-wrapper img {
+    position: relative;
+    inset-block-start: 1.5px;
+    width: 15px;
+    transition-duration: var(--smooth-transition);
+}
+
+#statusMenuWrapper {
+    position: relative;
+}
+
+
+/*--- Email status menu ( displayed after the email status icon is clcked ) ---*/
+.profile-menu {
+    position: absolute;
+    z-index: 10;
+    inset: 10px 0 0 90%;
+    translate: -90%;
+    list-style: none;
+    background: white;
+    width: 250px;
+    height: max-content;
+    box-shadow: 0 0 0 2px gray;
+    scale: 0;
+    border-radius: calc(var(--nice-border-radius) - 12px);
+    transition-duration: var(--smooth-transition);
+}
+
+
+/*--- Email status menu options ---*/
+.profile-menu li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: var(--bold-font);
+    color: gray;
+    padding: .5rem;
+    border-bottom: 2px solid gray;
+    transition-duration: var(--smooth-transition);
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-menu li:not(.profile-menu li:first-child, .profile-menu li:last-child):hover {
+    background: var(--faded-gray);
+}
+
+.profile-menu li:first-child {
+    padding-block: .2rem;
+    font-size: .7rem;
+}
+
+.profile-menu li:last-child {
+    height: 40px;
+    background: gray;
+    color: whitesmoke;
+    font-size: .95rem;
+}
+
+.profile-menu li:last-child:hover {
+    background: steelblue;
+}
+
+.profile-menu li:last-child img {
+    filter: invert(100%);
+}
+
+
+/*--- Custom email status menu ---*/
+#custom-status-menu {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    z-index: 10;
+    width: 500px;
+    height: 280px;
+    border: none;
+    outline: none;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    box-shadow: 0 0 0 3px gray;
+    padding: 1rem;
+}
+
+#custom-status-menu::-webkit-scrollbar {
+    display: none;
+}
+
+#custom-status-menu b:first-of-type {
+    margin-block-start: 20px;
+    display: block;
+    font-size: .7rem;
+    padding-inline-start: .3rem;
+    padding-block-end: .5rem;
+    border-bottom: 2px solid lightgray;
+}
+
+/*--- Custom email status input ---*/
+#write-status {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-block-end: .5rem;
+    padding-inline: .4rem;
+    border-bottom: 2px solid var(--global-deep-purple);
+    background: none;
+    font-size: .9rem;
+}
+
+#write-status::placeholder {
+    font-size: .9rem;
+}
+
+/*--- Custom email status preset oprions ---*/
+#custom-presets {
+    list-style: none;
+    margin-block-start: 0;
+}
+
+#custom-presets li {
+    font-size: .95rem;
+    font-weight: 600;
+    padding: .3rem;
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+    border-radius: calc(var(--nice-border-radius) - 15px);
+}
+
+#custom-presets li:hover {
+    background: var(--global-light-purple);
+    color: white;
+}
+
+/*--- Custom email status save and cancel buttons ---*/
+.btn-wrapper {
+    margin-block-start: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    border-top: 2px solid lightgray;
+    padding-block-start: 1rem;
+}
+
+.btn-wrapper button {
+    color: whitesmoke;
+    width: 80px;
+    padding-block: .5rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    cursor: pointer;
+    font-weight: var(--bold-font);
+    border: none;
+    transition-duration: var(--smooth-transition);
+}
+
+.btn-wrapper button:hover {
+    scale: .95;
+}
+
+.btn-wrapper button:first-child {
+    background: indianred;
+}
+
+.btn-wrapper button:last-child {
+    background: var(--global-deep-purple);
+}
+
+#mobile-menu-icon {
+    width: 30px;
+    display: none;
+    cursor: pointer;
+    padding: .1rem;
+}
+
+/*-- The menu layer prevents the user from interacting with the rest of the page while the mobile menu is open --*/
+#menu-layer {
+    background: rgba(200, 200, 200, .6);
+    height: inherit;
+    width: 100vw;
+    position: absolute;
+    inset: 0;
+    z-index: 11;
+    display: none;
+}
+
+/*-- User profile at the top right corner of the page --*/
+#user-profile-wrapper {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    padding: .5rem;
+    -webkit-padding-end: 1.5rem;
+    padding-inline-end: 1.5rem;
+    border-radius: 10px;
+    background: var(--light-mode-gradient);
+    box-shadow: 0 0 0 3px var(--faded-gray);
+}
+
+#user-profile-wrapper img:last-child {
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#edit-profile-btn {
+    background: var(--global-deep-purple);
+}
+
+#update-profile-btn {
+    background: var(--global-light-purple);
+}
+
+#user-profile-image {
+    width: 40px;
+    aspect-ratio: 1;
+    outline: 2px solid var(--global-light-purple);
+    border-radius: 50%;
+    background: url('icons/icons8-test-account-96.png') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#user-email-address {
+    font-weight: var(--bold-font);
+    font-size: 1.1rem;
+    color: var(--global-deep-purple);
+    position: relative;
+    inset-block-start: 6px;
+}
+
+#user-email-address::before {
+    content: 'Signed in as:';
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    color: gray;
+    position: absolute;
+    inset-block-start: -18px;
+}
+
+
+/*-- Main user interface --*/
+main {
+    height: var(--auto-height);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    padding: 1rem;
+}
+
+
+/*-- Notifications area --*/
+#notifications {
+    width: 98%;
+    height: 50px;
+    margin: auto;
+    box-shadow: 0 0 0 3px gray;
+    background: var(--global-light-purple);
+    color: white;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    padding: 0 .1rem 0 1.5rem;
+    -webkit-margin-before: -20px;
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    -webkit-padding-start: 1rem;
+    padding-inline-start: 1rem;
+    font-size: 1.2rem;
+    font-weight: var(--bold-font);
+    position: -webkit-sticky;
+    position: sticky;
+    inset-block-start: 10px;
+    z-index: 8;
+    -webkit-margin-before: 50px;
+    margin-block-start: 10px;
+}
+
+#notifications img {
+    width: 25px;
+    border-radius: 50%;
+    position: relative;
+    inset-block-start: 1px;
+    mix-blend-mode: multiply
+}
+
+
+/*-- Wrapper for the search input and compose email button --*/
+#settings-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 98%;
+    height: auto;
+    margin: auto;
+    box-shadow: 0 0 0 3px lightgrey;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    padding: .5rem;
+    -webkit-margin-before: 10px;
+    margin-block-start: 25px;
+}
+
+#settings-wrapper img {
+    width: 30px;
+}
+
+#settings-wrapper fieldset {
+    flex: 1 300px;
+    display: grid;
+    position: relative;
+    border: none;
+}
+
+#search-input {
+    height: 40px;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    flex: 1;
+    outline: 2px solid black;
+    transition-duration: var(--smooth-transition);
+}
+
+#search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+#search-input:focus {
+    outline: 3px solid var(--global-deep-purple);
+}
+
+#search-input:focus+img {
+    rotate: 90deg;
+}
+
+#search-input::-webkit-input-placeholder {
+    font-size: 1rem;
+}
+
+#search-input::-moz-placeholder {
+    font-size: 1rem;
+}
+
+#search-input:-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+#search-input::-ms-input-placeholder {
+    font-size: 1rem;
+}
+
+#search-input::placeholder {
+    font-size: 1rem;
+}
+
+#search-icon {
+    cursor: pointer;
+    position: absolute;
+    inset: 9px 0 0 10px;
+    border-radius: 50%;
+    width: 10px;
+    transition-duration: var(--smooth-transition);
+    background: white;
+}
+
+#compose-mail {
+    margin-left: auto;
+    background: var(--faded-gray);
+    padding: .7rem;
+    border-radius: calc(var(--nice-border-radius) + 30px);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px gray;
+    transition-duration: var(--smooth-transition);
+}
+
+#compose-mail:hover {
+    box-shadow: 0 0 0 3px var(--global-deep-purple);
+}
+
+
+/*-- Email filter options wrapper  --*/
+#filter-options {
+    white-space: nowrap;
+    place-content: center;
+    width: 98%;
+    height: 0;
+    overflow: scroll;
+    margin: auto;
+    padding-inline: .5rem;
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    transition-duration: var(--smooth-transition);
+}
+
+#filter-options::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*-- Email filter options by category/label ( inbox, spam . sent , draft , unread ) --*/
+.filter-option {
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    padding: .3rem 1rem;
+    font-weight: var(--bold-font);
+    color: var(--global-deep-purple);
+    border: 3px solid gray;
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    transition-duration: var(--smooth-transition);
+    cursor: pointer;
+    position: relative;
+    margin-inline-start: .3rem;
+}
+
+.filter-option:hover {
+    background: var(--faded-gray);
+}
+
+.filter-option input {
+    display: none;
+}
+
+.filter-option input:checked+.filter-layer {
+    display: block;
+}
+
+/*-- Filter layer is displayed when a filter option is clicked --*/
+.filter-layer {
+    mix-blend-mode: multiply;
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: var(--global-light-purple);
+    height: auto;
+    width: auto;
+    border-radius: calc(var(--nice-border-radius) - 13px);
+}
+
+
+/*-- Close/Open sidebar menu icon on pc and desktop devices --*/
+#collapse-menu-desktop {
+    position: absolute;
+    inset: 30px 0 0 90%;
+    translate: -100%;
+    cursor: pointer;
+    rotate: 180deg;
+    border-radius: 50%;
+    outline: 4px solid black;
+    outline-offset: 2px;
+    transition-duration: var(--smooth-transition);
+}
+
+#collapse-menu-desktop:hover {
+    outline: 5px solid var(--global-light-purple);
+    outline-offset: 5px;
+}
+
+
+/*-- Close sidebar menu on mobile devices --*/
+#mobile-exit-icon {
+    padding: .3rem;
+    position: absolute;
+    inset: 20px .3rem;
+    cursor: pointer;
+    display: none;
+}
+
+#side-bar-menu {
+    position: relative;
+    padding: 5rem 1rem 1rem 1rem;
+    height: auto;
+    width: 300px;
+    transition-duration: var(--smooth-transition);
+    border-radius: var(--nice-border-radius);
+    overflow: hidden;
+    background: var(--light-mode-gradient);
+    box-shadow: 0 0 0 3px var(--faded-gray);
+}
+
+
+/*-- Highlight-layer is displayed when a sidebar-menu option is selected  --*/
+.highlight-input:checked+label {
+    background: rgba(72, 56, 214, .3);
+}
+
+#settings-icon {
+    border-radius: 0 0 10px 10px;
+    border-top: 2px solid gray;
+}
+
+#Theme-switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    -webkit-margin-before: 5px;
+    margin-block-start: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    transition-duration: .2s;
+    cursor: pointer;
+    position: relative;
+    -webkit-padding-start: 5px;
+    padding-inline-start: 5px;
+}
+
+#Theme-switcher:hover {
+    background: rgba(72, 56, 214, .2);
+    scale: 1.05;
+}
+
+#Theme-switcher img {
+    position: relative;
+}
+
+#Theme-switcher img:last-of-type {
+    width: 20px;
+    margin-left: auto;
+    transition-duration: var(--smooth-transition);
+}
+
+#theme-switcher-menu {
+    height: 0;
+    overflow: hidden;
+    transition-duration: var(--smooth-transition);
+}
+
+#theme-switcher-menu label {
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+}
+
+#theme-switcher-menu label:hover {
+    scale: 1;
+}
+
+
+/*-- Theme layer is displayed when a theme option is selected --*/
+.theme-layer {
+    display: none;
+    height: inherit;
+    width: 100%;
+    background: var(--global-deep-purple);
+    opacity: .7;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    mix-blend-mode: multiply;
+}
+
+.theme-option:checked+.theme-layer {
+    display: initial;
+}
+
+
+/*-- Email status icon ( visible on mobile devices ) --*/
+#mobile-status-icon {
+    display: none;
+}
+
+
+/*-- Sidebar menu options --*/
+.menu-option {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    -webkit-margin-before: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+    -webkit-padding-start: 4px;
+    padding-inline-start: 4px;
+    border-radius: 10px;
+    transition-duration: .2s;
+    color: black;
+    cursor: pointer;
+}
+
+.menu-option:first-of-type {
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    border-top: 2px solid gray;
+    border-radius: 0 0 10px 10px;
+}
+
+.menu-option:hover {
+    background: rgba(72, 56, 214, .2);
+    scale: 1.05;
+}
+
+.menu-option img {
+    position: relative;
+    inset-block-start: 3.2px;
+}
+
+
+/*-- Total number of emails in an email category --*/
+.email-count {
+    margin-left: auto;
+    position: relative;
+    inset-block-start: -.5px;
+}
+
+
+/*-- Sidebar menu-option icons --*/
+#side-bar-menu img {
+    width: 30px;
+}
+
+
+/*--Styling for the main UI for each email category--*/
+
+.mail-description {
+    position: absolute;
+    inset-block-start: -60px;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.mail-description>span {
+    font-size: 1.5rem;
+    font-weight: var(--bold-font);
+    color: white;
+    padding: .3rem 1.5rem;
+    border-radius: 20px 20px 0 20px;
+    background: var(--global-light-purple);
+}
+
+/*--Inbox user interface--*/
+#inbox-UI {
+    padding: 1rem;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    min-height: var(--auto-height);
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+}
+
+/*-- Main wrapper for emails --*/
+.template-emails {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 0 0 2px gray;
+    padding: .4rem;
+    -webkit-padding-end: 1rem;
+    padding-inline-end: 1rem;
+    border-radius: calc(var(--nice-border-radius) + 10px) 10px 10px 30px;
+    -webkit-margin-before: 20px;
+    margin-block-start: 20px;
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+    position: relative;
+}
+
+.template-emails:hover {
+    background: var(--faded-gray);
+}
+
+.template-mail-content {
+    height: 26px;
+    flex: 1;
+    overflow: hidden;
+    font-weight: 500;
+    position: relative;
+    inset-block-start: .7rem;
+}
+
+.template-sender-email {
+    position: absolute;
+    inset: 5px 0 0 62px;
+    color: var(--global-deep-purple);
+    font-weight: 500;
+    white-space: nowrap;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.template-sender-pic {
+    font-size: 1.5rem;
+    font-weight: var(--bold-font);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--global-light-purple);
+    display: grid;
+    place-content: center;
+    background-color: var(--faded-gray);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.delete-mail {
+    width: 23px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration: var(--smooth-transition);
+}
+
+.delete-mail:hover {
+    scale: .9;
+}
+
+.date-sent {
+    color: gray;
+    font-size: .7rem;
+    font-weight: var(--bold-font);
+    white-space: nowrap;
+}
+
+.mrk-as-spam {
+    width: 25px;
+    transition-duration: var(--smooth-transition);
+}
+
+.mrk-as-spam:hover {
+    scale: .9;
+}
+
+
+/*-- These email properties would become visible when an email is clicked --*/
+.email-subject,
+.email-isRead,
+.email-status,
+.file-attached,
+.cc-input-field,
+.bcc-input-field {
+    display: none;
+}
+
+
+/*--Sent user interface--*/
+#sent-mail-UI {
+    padding: 1rem;
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    height: var(--auto-height);
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+}
+
+/*--Drafts user interface--*/
+#drafts-UI {
+    padding: 1rem;
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    height: auto;
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+}
+
+/*--Spam user interface--*/
+#spam-UI {
+    padding: 1rem;
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    height: var(--auto-height);
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+}
+
+#spam-UI aside {
+    box-shadow: 0 0 0 2px red;
+}
+
+/*-- Empty email image and text ( displayed when an email ui is empty ) --*/
+.empty-text {
+    width: inherit;
+    height: 550px;
+    text-align: center;
+    place-content: center;
+    justify-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    position: absolute;
+    inset: 0;
+    display: none;
+}
+
+.empty-image {
+    display: block;
+    width: 300px;
+}
+
+
+/*-- Search user interface --*/
+#search-UI {
+    padding: 1rem;
+    display: none;
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+    height: auto;
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+    border-top: 2px solid lightgray;
+}
+
+/*-- Compose new email user interface --*/
+#write-mail-UI {
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    height: max-content;
+    flex: 1 300px;
+    position: relative;
+    background: white;
+}
+
+#write-mail-UI nav {
+    height: var(--auto-height);
+    padding: .5rem .5rem .5rem 1rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border-bottom: 2px solid rgba(200, 200, 200, .5);
+}
+
+#write-mail-UI nav span {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-weight: var(--bold-font);
+    font-size: .9rem;
+    background: var(--faded-gray);
+    padding: .3rem 1rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#write-mail-UI nav span:first-of-type {
+    margin-left: auto;
+}
+
+#write-mail-UI nav span:hover {
+    background: var(--global-light-purple);
+}
+
+#discard-icon {
+    margin-right: auto;
+    width: 20px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+
+/*-- Fieldsets in the write new email user interface --*/
+.from-and-to {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 1.1rem;
+}
+
+.from-and-to>b+span {
+    color: var(--global-deep-purple);
+    font-weight: 500;
+    padding: .5rem 1rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#email-subject::placeholder {
+    font-weight: 500;
+}
+
+.from-and-to:nth-of-type(2)>b+span {
+    padding-inline-start: 2.4rem;
+}
+
+.from-and-to:nth-of-type(2) span {
+    box-shadow: 0 0 0 2px var(--faded-gray);
+    border-radius: var(--nice-border-radius);
+}
+
+/*---Styling for the dropdown menu icon that displays the cc and bcc field---*/
+.from-and-to>b+span+img {
+    width: 15px;
+    cursor: pointer;
+}
+
+.from-and-to:first-of-type {
+    -webkit-margin-before: 50px;
+    margin-block-start: 20px;
+    position: relative;
+}
+
+#email-subject {
+    padding-inline: .2rem;
+    font-weight: 400;
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+
+
+/*-- CC and BCC fields wrapper --*/
+#cc-wrapper {
+    height: 0;
+    overflow: hidden;
+}
+
+.cc-bcc {
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
+    height: 50px;
+    font-size: 1.1rem;
+    -webkit-padding-start: .5rem;
+    padding-inline-start: 1rem;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.cc-bcc:last-of-type {
+    gap: 2.4rem
+}
+
+.cc-bcc span {
+    border: none;
+    outline: none;
+    height: auto;
+    width: 300px;
+    font-weight: 500;
+    color: var(--global-deep-purple);
+}
+
+
+/*-- Loading animation ( displayed when email is being sent ) --*/
+#new-mail-loader {
+    height: 100%;
+    width: inherit;
+    z-index: 3;
+    position: absolute;
+    inset: 0;
+    background: rgba(200, 200, 200, .5);
+    border-radius: inherit;
+    justify-items: center;
+    place-content: start;
+    -webkit-padding-before: 7rem;
+    padding-block-start: 7rem;
+    scale: 0;
+}
+
+#new-mail-loader span {
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    display: block;
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+}
+
+
+/*-- Settings user interface --*/
+#settings-UI {
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    height: var(--auto-height);
+    flex: 1 300px;
+    position: relative;
+    inset-block-start: 65px;
+    padding: 1rem;
+    padding-block-start: 0;
+    background: transparent;
+}
+
+.setting-option {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+    -webkit-margin-before: 30px;
+    margin-block-start: 30px;
+}
+
+.setting-option:hover {
+    color: var(--global-deep-purple);
+}
+
+
+/*-- Settings option icon --*/
+.setting-option img {
+    position: relative;
+    inset-block-start: -2.5px;
+    width: 30px;
+}
+
+
+/*-- Dropdown menu arrow for the applayout setting option --*/
+.setting-option:nth-of-type(2) img:last-of-type {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    inset-block-start: 6px;
+    transition-duration: var(--smooth-transition);
+}
+
+
+/*-- Staff's profile user interface --*/
+#account-mgt-UI {
+    position: absolute;
+    inset: 0;
+    height: max-content;
+    width: inherit;
+    background: white;
+    border-radius: inherit;
+    padding: 2rem;
+    display: none;
+}
+
+#exit-wrapper {
+    width: 300px;
+    -webkit-margin-before: -20px;
+    margin-block-start: -15px;
+    position: relative;
+    inset-inline-start: -1rem;
+}
+
+#exit-icon {
+    cursor: pointer;
+    width: 20px;
+}
+
+#account-mgt-UI h2 {
+    display: block;
+    font-weight: var(--bold-font);
+    font-size: 1.5rem;
+    color: var(--global-deep-purple);
+    text-align: center;
+}
+
+#account-mgt-UI fieldset {
+    position: relative;
+    margin: 45px auto;
+    max-width: 600px;
+    height: 40px;
+    display: grid;
+    border: none;
+    position: relative;
+}
+
+#account-mgt-UI fieldset>label {
+    position: absolute;
+    inset-block-start: -30px;
+    font-weight: var(--bold-font);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#account-mgt-UI fieldset:nth-of-type(2) {
+    margin-block-start: 100px;
+}
+
+#account-mgt-UI fieldset>label:hover {
+    color: var(--global-deep-purple);
+}
+
+#account-mgt-UI fieldset>label img {
+    width: 10px;
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#account-mgt-UI fieldset input {
+    padding: .7rem 1rem;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    font-size: 1.01rem;
+    font-weight: 500;
+    border: 2px solid var(--global-deep-purple);
+    outline: none;
+    position: relative;
+}
+
+
+/*-- Change staff email button--*/
+#edit-staff-email {
+    position: absolute;
+    inset: 50px 0 0 0;
+    background: var(--global-deep-purple);
+    height: max-content;
+    width: fit-content;
+    color: whitesmoke;
+    font-weight: var(--bold-font);
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#edit-staff-email:hover {
+    scale: .95;
+}
+
+
+/*-- Change email address pop-up modal --*/
+#email-change {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    width: 400px;
+    padding: .5rem;
+    border-radius: calc(var(--nice-border-radius) - 14px);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 3px gray;
+    z-index: 10;
+}
+
+#email-change b {
+    font-size: .9rem;
+    color: indianred;
+}
+
+#email-change span {
+    display: block;
+    margin-block-start: 10px;
+    font-size: .75rem;
+    font-weight: var(--bold-font);
+    color: var(--global-deep-purple);
+    padding-inline-start: .2rem;
+}
+
+
+/*-- Remove default scrollbar in change email pop-up modal --*/
+#email-change::-webkit-scrollbar {
+    display: none;
+}
+
+#email-change input {
+    background: transparent;
+    width: 100%;
+    padding: .5rem;
+    font-size: .9rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-bottom: 2.5px solid var(--global-deep-purple);
+}
+
+#email-change input::placeholder {
+    font-weight: 500;
+}
+
+
+/*-- Apply and cancel changes buttons --*/
+#email-change button {
+    cursor: pointer;
+    display: block;
+    margin-block-start: 10px;
+    width: 100%;
+    height: max-content;
+    color: white;
+    font-weight: var(--bold-font);
+    padding: .7rem 1rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    border: none;
+    transition-duration: var(--smooth-transition);
+}
+
+#email-change button:hover {
+    box-shadow: 0 0 0 2px black;
+}
+
+/*--Save buuton--*/
+#email-change button:first-of-type {
+    background: var(--global-deep-purple);
+}
+
+/*--Cancel buuton--*/
+#email-change button:last-of-type {
+    background: indianred;
+}
+
+/*---  User profile wrapper ---*/
+.acc-wrapper {
+    max-width: 600px;
+    margin: 10px auto;
+    height: 600px;
+    padding: 1rem;
+}
+
+#exit-icon:hover {
+    outline-offset: 1px;
+}
+
+
+/*--Styling for the app layout menu--*/
+.applayout-menu {
+    list-style: none;
+    background: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 0;
+    overflow: hidden;
+    margin: 10px 0 0 3px;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    transition-duration: var(--smooth-transition);
+}
+
+.applayout-menu li {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border-bottom: 2px solid var(--faded-gray);
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+    padding: .5rem;
+    transition-duration: var(--smooth-transition);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+.applayout-menu li:hover {
+    background: var(--global-light-purple);
+    color: white;
+}
+
+.applayout-menu li img {
+    width: 30px;
+}
+
+
+/* --- View email user-interface ---*/
+#view-email-UI {
+    display: none;
+    box-shadow: 0 0 0 2px rgba(200, 200, 200, .5);
+    height: max-content;
+    flex: 1 300px;
+    position: relative;
+    background: white;
+    border-radius: calc(var(--nice-border-radius) - 10px);
+}
+
+#view-email-UI nav {
+    height: var(--auto-height);
+    padding: .5rem .5rem .5rem 1rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border-bottom: 2px solid rgba(200, 200, 200, .5);
+}
+
+#view-email-UI nav span {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-weight: var(--bold-font);
+    font-size: .9rem;
+    background: var(--faded-gray);
+    padding: .3rem 1rem;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#view-email-UI nav span:first-of-type {
+    margin-left: auto;
+}
+
+#view-email-UI nav span:hover {
+    background: var(--global-light-purple);
+}
+
+/*--- Exit icon of the view email UI ---*/
+#view-email-UI nav img:first-of-type {
+    width: 20px;
+    cursor: pointer;
+}
+
+#view-subject {
+    padding: 1rem;
+
+}
+
+#email-details {
+    height: var(--auto-height);
+    border-bottom: .1px solid rgba(200, 200, 200, .5);
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/*--- Email profile picture ---*/
+#email-details span:first-child {
+    font-size: 1.5rem;
+    font-weight: var(--bold-font);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--global-light-purple);
+    display: grid;
+    place-content: center;
+    background-color: var(--faded-gray);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#email-details span:nth-child(2) b {
+    display: block;
+}
+
+#email-details span:nth-child(2) b:first-child {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+/*--- Email address ---*/
+#email-details span:nth-child(2) b:last-child {
+    color: var(--global-deep-purple);
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*--- Email date ---*/
+#email-details span:last-child {
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: auto;
+    white-space: nowrap;
+    position: relative;
+    inset-block-start: -1px;
+}
+
+/*--- Email content ---*/
+#view-content {
+    padding: 1rem;
+    font-weight: 500;
+    height: var(--auto-height);
+}
+
+
+/*--- Log out modal ---*/
+#log-out-modal {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    z-index: 10;
+    width: 300px;
+    height: max-content;
+    border: none;
+    outline: none;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    box-shadow: 0 0 0 3px gray;
+    padding: 1rem;
+}
+
+#log-out-modal h1 {
+    font-size: 1.5rem;
+}
+
+#log-out-modal b {
+    font-size: .8rem;
+    margin-block-start: 20px;
+    display: block;
+    color: indianred;
+}
+
+/*--- Logout and cancel buttons ---*/
+#log-out-modal button {
+    margin-block-start: -50px;
+    padding: .5rem 1rem;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: inherit;
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+#log-out-modal button:hover {
+    scale: .95;
+}
+
+#log-out-modal button:first-of-type {
+    background: var(--global-deep-purple);
+}
+
+#log-out-modal button:last-of-type {
+    background: indianred;
+    margin-inline-start: .4rem;
+}
+
+
+/*--Styling for the loading animation--*/
+#settings-loader {
+    height: inherit;
+    width: inherit;
+    z-index: 3;
+    position: absolute;
+    inset: 0;
+    background: rgba(200, 200, 200, .5);
+    border-radius: inherit;
+    justify-items: center;
+    scale: 0;
+}
+
+#settings-loader span {
+    -webkit-margin-before: 10px;
+    margin-block-start: 10px;
+    display: block;
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+}
+
+.spinner {
+    -webkit-margin-before: 50px;
+    margin-block-start: 50px;
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--global-deep-purple);
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    -webkit-animation: l3 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes l3 {
+    to {
+        transform: rotate(1 turn);
+    }
+}
+
+@keyframes l3 {
+    to {
+        transform: rotate(1 turn);
+    }
+}
+
+
+/*-- Styling for tablet devices --*/
+@media (max-width: 768px) {
+
+    header,
+    #status-wrapper {
+        padding-inline: .5rem;
+    }
+
+    #settings-wrapper img {
+        width: 30px;
+    }
+
+    #settings-UI {
+        -webkit-padding-start: .5rem;
+        padding-inline-start: .5rem;
+    }
+
+    #mobile-menu-icon,
+    #mobile-exit-icon {
+        display: block;
+        rotate: 180deg;
+    }
+
+    main {
+        padding-inline: 0;
+        -webkit-margin-before: 50px;
+        margin-block-start: 10px;
+    }
+
+    #settings-wrapper {
+        -webkit-margin-before: 10px;
+        margin-block-start: 10px;
+    }
+
+    #user-profile-wrapper {
+        margin-left: auto;
+        display: flex;
+        gap: 1.3rem;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        padding: .5rem;
+        border-radius: 50%;
+        box-shadow: none;
+        position: relative;
+        background: none;
+    }
+
+    #user-email-address {
+        display: none;
+    }
+
+    #side-bar-menu {
+        position: absolute;
+        inset: 0;
+        background: whitesmoke;
+        z-index: 12;
+        border-radius: 0;
+        height: 1300px;
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+        transition-duration: 0;
+    }
+
+    .menu-option,
+    #Theme-switcher {
+        font-size: 1.1rem;
+    }
+
+    .template-sender-email {
+        width: 100px;
+    }
+
+    #Theme-switcher img {
+        padding: .2rem;
+    }
+
+    #Theme-switcher img:last-of-type {
+        display: none;
+    }
+
+    .menu-option img {
+        padding: .2rem;
+        inset-block-start: -.1px;
+    }
+
+    #collapse-menu-desktop {
+        display: none;
+    }
+
+    .setting-option {
+        font-size: 1rem;
+    }
+
+    .setting-option:nth-of-type(2) {
+        display: none;
+    }
+
+    #search-input {
+        -webkit-padding-start: 3rem;
+        padding-inline-start: 3rem;
+    }
+
+    .applayout-menu {
+        display: none;
+    }
+
+    .mail-description {
+        inset-block-start: -50px;
+    }
+
+    .mail-description>span {
+        font-size: 1rem;
+    }
+
+    #account-mgt-UI {
+        padding-inline: 0;
+    }
+
+    .setting-option img {
+        width: 22px;
+        inset-block-start: -1.6px;
+    }
+
+
+    #inbox-UI,
+    #sent-mail-UI,
+    #drafts-UI,
+    #spam-UI,
+    #settings-UI,
+    #search-UI {
+        border-radius: 20px 20px 0 0;
+    }
+
+    #inbox-UI,
+    #sent-mail-UI,
+    #drafts-UI,
+    #spam-UI,
+    #search-UI {
+        border-top: .5px solid lightgray;
+        padding-inline: .5rem;
+        box-shadow: none;
+    }
+
+    #settings-UI {
+        border-top: .5px solid gray;
+        box-shadow: none;
+    }
+
+    #write-mail-UI {
+        border-radius: 0;
+        border-top: .5px solid gray;
+        box-shadow: none;
+    }
+
+    #write-mail-UI {
+        height: 100vh;
+    }
+
+    .template-mail-content {
+        inset-block-start: 10px;
+        height: 17px;
+    }
+
+    .from-and-to:nth-of-type(3) {
+        padding-block: .2rem;
+    }
+
+    .from-and-to:nth-of-type(3) input {
+        border-radius: 0;
+        border: none;
+        background: none;
+    }
+
+    .cc-bcc {
+        padding-inline: 1rem;
+    }
+
+    #exit-wrapper {
+        inset-inline-start: 1rem;
+    }
+}
+
+/*--- Aesthetic styling for medium screen mobile devices ---*/
+@media (max-width: 614px) {
+    #settings-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .template-emails img:not(img:first-of-type) {
+        width: 20px;
+    }
+
+    .from-and-to>b {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    #search-icon {
+        display: none;
+    }
+
+}
+
+/*Styling for small screen mobile devices--*/
+@media (max-width: 434px) {
+    header {
+        height: 70px;
+    }
+
+    #logo {
+        font-size: 1.7rem;
+    }
+
+    .from-and-to:nth-of-type(2) img {
+        width: 15px;
+    }
+
+    .status-icon {
+        display: none;
+    }
+
+    #mobile-status-icon {
+        display: flex;
+    }
+
+    #notifications {
+        font-size: 1rem;
+        width: 95%;
+        padding: 1rem;
+        height: 20px;
+        -webkit-padding-start: .5rem;
+        padding-inline-start: .5rem;
+        gap: .5rem;
+    }
+
+    #search-input {
+        padding-inline-start: 1.5rem;
+    }
+
+    #compose-mail {
+        border-radius: calc(var(--nice-border-radius) - 10px);
+    }
+
+    #settings-wrapper {
+        box-shadow: none;
+    }
+
+    #notifications img {
+        width: 20px;
+    }
+
+    .menu-option,
+    #Theme-switcher {
+        font-size: .9rem;
+    }
+
+    #compose-mail {
+        font-size: .9rem;
+    }
+
+    #write-mail-UI {
+        padding: 0;
+        position: absolute;
+        inset: 0;
+        z-index: 12;
+        width: 100vw;
+    }
+
+    #view-email-UI {
+        height: 100vh;
+    }
+
+    #email-subject {
+        padding-block: .3rem;
+    }
+
+    #email-details span:nth-child(2) b:last-child {
+        max-width: 150px;
+    }
+
+    #email-subject::placeholder {
+        font-size: 1rem;
+    }
+
+    .from-and-to>b {
+        font-size: 1.1rem;
+    }
+
+    .cc-bcc {
+        font-size: 1.1rem;
+    }
+
+    .cc-bcc span {
+        padding-inline-end: 3.5rem;
+    }
+
+    #new-mail-loader {
+        -webkit-padding-before: 14rem;
+        padding-block-start: 14rem;
+    }
+
+    .empty-text {
+        font-size: 1.5rem;
+    }
+
+    .date-sent {
+        display: none;
+    }
+
+    #account-mgt-UI h2 {
+        font-size: 1.5rem;
+        -webkit-margin-before: 60px;
+        margin-block-start: 60px;
+    }
+}

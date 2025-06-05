@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale = 1, user-scalable = no">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+  <title>Team Inbox</title>
+
+  <!--Rich text editor plugin stylesheet and javacsript files-->
+  <link rel="stylesheet" href="richtexteditor/rte_theme_default.css" defer>
+  <script type="text/javascript" src="richtexteditor/rte.js" defer></script>
+  <script type="text/javascript" src='richtexteditor/plugins/all_plugins.js' defer></script>
+  <script type="text/javascript" src='res/patch.js' defer></script>
+
+  <!-- Google fonts link for consistent typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Main and darkmode stylesheets -->
+  <link rel="stylesheet" href="appstyle.css">
+  <link id="darkmode-style" rel="stylesheet" href="darkmode.css" disabled>
+
+  <!-- Main JavaScript files -->
+  <script src="app.js" defer></script>
+  <script src="searchFilter.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Layer for menu overlay on mobile devices -->
+  <div id="menu-layer"></div>
+
+  <!-- Custom email status pop-up menu -->
+  <dialog id="custom-status-menu">
+    <input id="write-status" type="text" autocomplete="off" placeholder="Write custom status...">
+    <b>📜 Suggestions</b>
+
+    <!-- Custom email status presets -->
+    <ul id="custom-presets">
+      <li>In a meeting</li>
+      <li>On vacation</li>
+      <li>In transit</li>
+      <li>Out on Lunch break</li>
+    </ul>
+
+    <!-- Save and Cancel buttons -->
+    <div class="btn-wrapper">
+      <button>Cancel</button>
+      <button>Save</button>
+    </div>
+  </dialog>
+
+
+
+
+  <header>
+
+    <!-- Loading animation for email status menu -->
+    <div id="settings-loader">
+      <div class="spinner"></div>
+      <span>Fetching status options...</span>
+    </div>
+
+    <!-- Mobile menu icon to open and close the sidebar menu on mobile devices -->
+    <img id="mobile-menu-icon" src="icons/1000062694-removebg-preview.png">
+
+    <!-- Logo (Can be used to reload the page) -->
+    <a id="logo" href="app.html"><b>TeamInbox</b></a>
+
+    <!-- User profile picture and email address (at the top right corner of the app) -->
+    <section id="user-profile-wrapper">
+      <div id="user-profile-image"></div>
+      <div id="user-email-address">iyanu423@team.com</div>
+    </section>
+
+
+    <div id="status-wrapper">
+      <!-- Email status icon with dropdown arrow -->
+      <span class="status-icon"><span>Active</span><img src="icons/icons8-arrow-down-60.png"></span>
+    </div>
+  </header>
+
+  <!-- Status menu dropdown for selecting user email status -->
+  <section id="statusMenuWrapper">
+
+    <!-- Email status options -->
+    <ul class="profile-menu">
+      <li>Choose a preset email status</li>
+      <li style="color: green;">Active</li>
+      <li style="color: indianred;">Away</li>
+      <li style="border-bottom: none;" id="custom-icon">Add a custom status <img style="width: 15px;"
+          src="icons/icons8-pencil-100.png"></li>
+    </ul>
+  </section>
+
+
+  <!-- This section displays notification messages and visual feedback -->
+  <section id="notifications">
+    <img src="icons/icons8-notification.gif">
+    <span> New messages available</span>
+  </section>
+
+
+
+  <!-- Search input and compose mail button wrapper -->
+  <section id="settings-wrapper">
+
+    <!-- Search input -->
+    <fieldset>
+      <input id="search-input" type="search" placeholder="Search mail" autocomplete="off">
+      <img id="search-icon" src="icons/icons8-search-64.png">
+    </fieldset>
+
+    <!-- Compose mail button -->
+    <div id="compose-mail"><img style="width: 15px;" src="icons/icons8-pencil-100.png">Compose mail</div>
+  </section>
+
+
+  <!-- Email filter options -->
+  <section id="filter-options">
+    <label for="filter_1" id="inbox-filter" class="filter-option">Inbox<input id="filter_1" type="checkbox">
+      <div class="filter-layer"></div>
+    </label>
+    <label for="filter_2" id="sent-filter" class="filter-option">Sent<input id="filter_2" type="checkbox">
+      <div class="filter-layer"></div>
+    </label>
+    <label for="filter_3" id="drafts-filter" class="filter-option">Draft<input id="filter_3" type="checkbox">
+      <div class="filter-layer"></div>
+    </label>
+    <label for="filter_4" id="spam-filter" class="filter-option">Spam<input id="filter_4" type="checkbox">
+      <div class="filter-layer"></div>
+    </label>
+    <label for="filter_5" id="unread-filter" class="filter-option">Unread<input id="filter_5" type="checkbox">
+      <div class="filter-layer"></div>
+    </label>
+  </section>
+
+
+  <!-- Main user interface... It holds all email user interfaces and sidebar menu -->
+  <main>
+    <!-- Sidebar menu for navigation -->
+    <aside id="side-bar-menu">
+      <img id="mobile-exit-icon" src="icons\1000062693-removebg-preview.png">
+      <img id="collapse-menu-desktop" src="icons/icons8-arrow-90.png">
+
+      <!-- Sidebar menu options -->
+      <input style="display: none;" id="select-inbox" name="highlight-option" type="radio" class="highlight-input"
+        checked>
+      <label for="select-inbox" class="menu-option">
+        <img src="icons/icons8-envelope-96.png"><b>Inbox</b><b class="email-count"></b>
+      </label>
+
+      <input style="display: none;" id="select-sent" name="highlight-option" type="radio" class="highlight-input">
+      <label for="select-sent" class="menu-option">
+        <img src="icons/icons8-sent-90.png"><b>Sent</b><b class="email-count"></b>
+      </label>
+
+      <input style="display: none;" id="select-drafts" name="highlight-option" type="radio" class="highlight-input">
+      <label for="select-drafts" class="menu-option">
+        <img src="icons/icons8-bookmark-96.png"><b>Drafts</b><b class="email-count"></b>
+      </label>
+
+      <input style="display: none;" id="select-spam" name="highlight-option" type="radio" class="highlight-input">
+      <label for="select-spam" class="menu-option">
+        <img src="icons/icons8-spam-50.png"><b>Spam</b><b class="email-count"></b>
+      </label>
+
+      <input style="display: none;" id="select-settings" name="highlight-option" type="radio" class="highlight-input">
+      <label for="select-settings" id="settings-icon" class="menu-option">
+        <img src="icons/icons8-settings-100.png"><b>Settings</b>
+      </label>
+
+      <input style="display: none;" id="select-status" name="highlight-option" type="radio" class="highlight-input">
+      <label for="select-status" class="menu-option" id="mobile-status-icon">
+        <img src="icons/icons8-reply-64.png"><b>Email status</b>
+      </label>
+
+
+      <!-- Theme switcher option -->
+      <span id="Theme-switcher">
+        <img src="icons/pallette.png"> <b>Themes</b><img src="icons/icons8-sort-down-100.png">
+      </span>
+
+      <!--Dropdown menu that allows the user to switch the app themes-->
+      <div id="theme-switcher-menu">
+
+        <!-- Light mode option -->
+        <label class="menu-option" id="light-mode"> <img src="icons/icons8-light-mode-78.png"><b>Light mode</b>
+          <input style="display: none;" class="theme-option" name="theme" type="radio" checked>
+          <div class="theme-layer"></div>
+        </label>
+        <!-- Dark mode option -->
+        <label class="menu-option" id="dark-mode"> <img src="icons/icons8-dark-mode-100.png"><b>Dark mode</b>
+          <input style="display: none;" class="theme-option" name="theme" type="radio">
+          <div class="theme-layer"></div>
+        </label>
+      </div>
+
+    </aside>
+
+
+    <!--Emails for each UI is auto-populated from the emails.JSON file-->
+
+    <!--Inbox emails user interface-->
+    <section id="inbox-UI">
+      <div class="mail-description"><span>Inbox</span></div>
+
+      <!-- Message shown when inbox ui is empty -->
+      <span class="empty-text">
+        <img src="icons/1000043206-removebg-preview.png" class="empty-image">No emails here yet...</span>
+    </section>
+
+
+    <!--Sent emails user interface-->
+    <section id="sent-mail-UI">
+      <div class="mail-description"><span>Sent</span></div>
+
+      <!-- Message shown when sent ui is empty -->
+      <span class="empty-text">
+        <img src="icons/1000043206-removebg-preview.png" class="empty-image">No emails here yet...</span>
+    </section>
+
+
+    <!--Draft emails user interface-->
+    <section id="drafts-UI">
+      <div class="mail-description"><span>Drafts</span></div>
+
+      <!-- Message shown when draft ui is empty -->
+      <span class="empty-text"><img src="icons/1000043206-removebg-preview.png" class="empty-image">No emails
+        here yet...</span>
+    </section>
+
+
+    <!--Spam emails user interface-->
+    <section id="spam-UI">
+      <div class="mail-description"><span>Spam</span></div>
+
+      <!-- Message shown when spam ui is empty -->
+      <span class="empty-text"><img src="icons/1000043206-removebg-preview.png" class="empty-image">No emails
+        here yet...</span>
+    </section>
+
+
+    <!--The search UI displays email search results when the user types into the search input -->
+    <section id="search-UI">
+      <div class="mail-description"><span>Search mail</span>
+    </section>
+
+
+    <!-- Write new email user interface -->
+    <section id="write-mail-UI">
+
+      <!-- Loading animation when an email is being sent -->
+      <div id="new-mail-loader">
+        <div class="spinner"></div>
+        <span></span>
+      </div>
+
+      <!-- Navigation icons for discard, save as draft and send email -->
+      <nav>
+        <img style="rotate: 180deg;" id="discard-icon" src="icons/4808244.png">
+        <span id="save-as-draft">Draft <img style="width: 13px;" src="icons/icons8-save-100.png"></span>
+        <span id="send-icon">Send <img style="width: 13px;" src="icons/icons8-sent-90.png"></span>
+      </nav>
+
+
+      <!-- Sender email address -->
+      <fieldset class="from-and-to">
+        <b>From:</b>
+        <span id="senders-email">iyanu423@team.com</span>
+      </fieldset>
+
+      <!-- Recipient email input field -->
+      <fieldset class="from-and-to">
+        <b>To:</b>
+        <span style="outline: none;" id="recievers-email" contenteditable="true">stephen@team.com</span><img
+          style="position: relative;inset-block-start: 1px;" src="icons/icons8-sort-down-100.png">
+      </fieldset>
+
+
+      <!-- CC and BCC input fields -->
+      <aside id="cc-wrapper">
+
+        <!-- CC field -->
+        <div id="cc-input" class="cc-bcc">
+          <b>Cc:</b>
+          <span contenteditable="true">isaiah.okunsanya@team.com</span>
+        </div>
+
+        <!-- BCC field -->
+        <div id="bcc-input" class="cc-bcc">
+          <b>Bcc:</b>
+          <span contenteditable="true">johndoe@team.com</span>
+        </div>
+      </aside>
+
+      <!-- Email subject field -->
+      <fieldset class="from-and-to">
+        <input id="email-subject" type="text" placeholder="Subject" autocomplete="off" value="TeamInbox Description">
+      </fieldset>
+
+
+      <!-- Email content textarea.....
+           Powered by rich-text-editor plugin
+
+           Dummy text added to demonstrate sending email functionaity
+      -->
+      <textarea style="height: 500px;background: none;border-radius: 0;" id="email-content">
+             <h4>Hello Team,</h4>
+             <p>TeamInbox is a modern, web-based email client application designed to provide users with an intuitive and efficient way to manage their emails. It features multiple email categories such as inbox, sent, drafts, and spam, along with capabilities for composing, sending, saving drafts, and managing email statuses.
+               The app offers a responsive interface with theme switching and advanced email filtering options.</p>
+      </textarea>
+    </section>
+
+
+    <!-- Settings user interface -->
+    <section id="settings-UI">
+
+      <div class="mail-description"><span>Settings</span></div>
+
+      <!-- Setting options -->
+      <span class="setting-option"><img src="icons/icons8-user-96.png">User Profile</span>
+      <span class="setting-option"><img src="icons/1162631.png">App layout<img
+          src="icons/icons8-sort-down-100.png"></span>
+
+      <!-- Dropdown menu to display app layout options -->
+      <ul style="display: none;" class="applayout-menu">
+        <li><img src="icons/9802581.png">Side bar to left</li>
+        <li><img src="icons/9802571.png">Side bar to right</li>
+      </ul>
+
+      <!-- Fullscreen mode option -->
+      <span id="fullscreen-icon" class="setting-option"><img src="icons/icons8-full-screen-96.png"><b
+          style="font-weight: var(--bold-font);">Fullscreen
+          mode</b></span>
+
+      <span class="setting-option"><img src="icons/icons8-online-support-100.png">Contact Support</span>
+      <span id="log-out" class="setting-option"><img src="icons/icons8-logout-64.png">Log out</span>
+
+
+      <!--Staff profile user interface-->
+      <aside id="account-mgt-UI">
+
+        <!-- Exit icon -->
+        <div id="exit-wrapper">
+          <img style="rotate: 180deg;" id="exit-icon" src="icons\4808244.png">
+        </div>
+
+        <h2>User profile</h2>
+
+        <!-- 'Signed in as' field -->
+        <div class="acc-wrapper">
+          <fieldset style="margin-block-start: 30px;border-bottom: 2px solid gray;">
+            <label style="inset-block-start: -20px;">Signed in as:</label>
+            <input style="color: blue;font-weight: 700; border: none;padding: 0;background: transparent;"
+              id="user-email-edit" type="text" value="iyanu423@team.com" disabled>
+
+            <!-- Change email address button -->
+            <button id="edit-staff-email">Use another email</button>
+          </fieldset>
+
+
+          <!-- Change email address pop-up modal -->
+          <dialog id="email-change">
+            <input type="text" placeholder="Write new email..." autocomplete="off">
+            <span> <b>⚠</b> Please input the email name only, the system automatically adds the "@team.com"
+              post-fix.</span>
+
+            <!-- Apply and cancel changes buttons -->
+            <button>Apply changes</button>
+            <button>Cancel</button>
+          </dialog>
+
+
+          <!-- Name field -->
+          <fieldset>
+            <label id="lb-name" for="user-name-edit">Name</label>
+            <input id="user-name-edit" type="text" value="Adesanya Iyanuoluwa" disabled>
+          </fieldset>
+
+          <!-- Role field -->
+          <fieldset style="margin-block-start: 50px;">
+            <label id="lb-role" for="user-role-edit">Role</label>
+            <input id="user-role-edit" type="text" disabled value="Developer">
+          </fieldset>
+
+          <!-- Department field -->
+          <fieldset>
+            <label id="lb-department" for="user-dept-edit"> Department</label>
+            <input id="user-department-edit" type="text" value="IT/Design" disabled>
+          </fieldset>
+
+          <!-- Email status field -->
+          <fieldset>
+            <label id="lb-status" for="user-email-status-edit">Email-status</label>
+            <input id="user-email-status-edit" type="text"
+              placeholder="Add a custom status or select from the dropdown menu..." value="Active" autocomplete="off"
+              disabled>
+          </fieldset>
+
+        </div>
+      </aside>
+
+    </section>
+
+
+    <!-- View email user interface
+         This ui allows the user to view the full content of an email when it is clicked  
+    -->
+    <section id="view-email-UI">
+
+      <!-- Navigation menu  -->
+      <nav>
+        <img style="rotate: 180deg;" src="icons\4808244.png">
+        <span>Fwrd <img style="width: 10px;" src="icons/icons8-reply-100.png"></span>
+        <span>Reply <img style="width: 10px;" src="icons/icons8-sent-90.png"></span>
+      </nav>
+
+      <!-- Email subject -->
+      <h1 id="view-subject"></h1>
+
+      <!-- Senders profile picture and email address -->
+      <div id="email-details">
+        <span id="view-picture"></span>
+
+        <span id="view-sender">
+          <b>
+
+            <!-- Email label e.g (inbox,spam) and senders email adress are displayed here -->
+            <str></str>
+          </b><b></b></span>
+
+        <span id="view-date"></span>
+
+      </div>
+
+      <!-- View email content -->
+      <aside id="view-content"></aside>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- Log out pop-up modal -->
+  <dialog id="log-out-modal">
+    <h1>Confirm Logout ?</h1>
+    <b>⚠ You would need to login again to access your account </b>
+    <br>
+
+    <button>Log out</button>
+    <button>Cancel</button>
+  </dialog>
+
+</body>
+
+</html>

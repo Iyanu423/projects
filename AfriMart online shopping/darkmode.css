@@ -1,0 +1,38 @@
+* {
+    transition-duration: .5s;
+}
+
+body,
+header,
+.extra-settings {
+    background: black !important;
+}
+
+.extra-settings img {
+    filter: invert(100%);
+}
+
+
+.current-price-wrapper span:is(:first-child, :nth-child(2)),
+.counter-value {
+    color: whitesmoke;
+}
+
+.other-product button {
+    box-shadow: none;
+}
+
+#cart-summary li:first-child {
+    color: white;
+    background: black;
+    box-shadow: 0 0 0 2px gray;
+}
+
+#cart-summary li {
+    background: black;
+    box-shadow: 0 0 0 2px gray;
+}
+
+.total-cost {
+    color: white;
+}

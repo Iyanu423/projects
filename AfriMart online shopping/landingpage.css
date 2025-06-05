@@ -1,0 +1,305 @@
+/* Global styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* CSS variables for colors, fonts, and sizes */
+:root {
+    --primary-blue: steelblue;
+    --grayish-text: hsl(219, 9%, 45%);
+    --generic-orange: hsl(26, 100%, 55%);
+    --nice-radius: 20px;
+    --bold-font: bold;
+}
+
+/* Body background color */
+body {
+    background: rgb(247, 244, 244);
+}
+
+/* Header styles: sticky top bar with flex layout */
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    position: sticky;
+    inset: 0;
+    z-index: 10;
+    background: white;
+    border-bottom: 2px solid lightgray;
+}
+
+header h1 {
+    color: var(--primary-blue);
+}
+
+header a {
+    background: var(--generic-orange);
+    color: white;
+    font-weight: var(--bold-font);
+    height: auto;
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: calc(var(--nice-radius));
+    text-decoration: none;
+    transition-duration: .2s;
+}
+
+header a:hover {
+    scale: .95;
+}
+
+header a:first-of-type {
+    margin-left: auto;
+    background: var(--primary-blue);
+}
+
+main {
+    margin: 50px auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+main h1 {
+    color: var(--primary-blue);
+    font-size: 2.7rem;
+}
+
+main p {
+    color: var(--grayish-text);
+    font-weight: 600;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+main a {
+    margin: 30px auto;
+    margin-block-start: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: var(--generic-orange);
+    color: white;
+    font-weight: var(--bold-font);
+    height: auto;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: calc(var(--nice-radius) + 10px);
+    text-decoration: none;
+    transition-duration: .2s;
+}
+
+main a:hover {
+    scale: 1.05;
+    box-shadow: 0 0 10px 0 var(--generic-orange);
+}
+
+
+
+#display-prod {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#display-prod aside {
+    flex: 1 300px;
+    position: relative;
+}
+
+#display-prod aside:first-of-type h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: lightslategray;
+}
+
+#display-prod aside:first-of-type h2 {
+    font-weight: 900;
+    font-size: 5rem;
+    font-family: "Montserrat";
+    letter-spacing: .5rem;
+    line-height: 4rem;
+}
+
+#display-prod aside:first-of-type h3 {
+    line-height: 1rem;
+    font-family: "Pacifico";
+    font-size: 4rem;
+    color: var(--generic-orange);
+    position: absolute;
+    inset: 90% 0 0 50%;
+    translate: -10%;
+    rotate: -20deg;
+}
+
+#display-prod img {
+    width: 400px;
+    border-radius: 0 0 200px 200px;
+}
+
+#display-prod aside:last-of-type {
+    text-align: right;
+}
+
+#display-prod aside:last-of-type h1 {
+    font-weight: var(--bold-font);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--grayish-text);
+    padding-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+#display-prod aside:last-of-type p {
+    color: var(--grayish-text);
+    font-weight: 600;
+    margin-block-start: 1rem;
+    border-bottom: 2px solid var(--grayish-text);
+    padding-bottom: 1rem;
+}
+
+#display-prod aside:last-of-type h2 {
+    font-weight: 900;
+    font-size: 5rem;
+    font-family: "Montserrat";
+    letter-spacing: .5rem;
+    line-height: 4.5rem;
+    margin-block-start: 1rem;
+    color: var(--generic-orange);
+}
+
+#display-prod aside:last-of-type a {
+    background: var(--primary-blue);
+    color: white;
+    font-weight: var(--bold-font);
+    height: max-content;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    border-radius: calc(var(--nice-radius) + 10px);
+    text-decoration: none;
+    transition-duration: .2s;
+    display: flex;
+    gap: .2rem;
+    margin: 1rem 0;
+}
+
+#display-prod aside:last-of-type a:hover {
+    scale: 1.05;
+    box-shadow: 0 0 10px 0 var(--primary-blue);
+}
+
+#display-prod aside:last-of-type a img {
+    width: 0;
+    height: 50px;
+}
+
+
+footer {
+    background: var(--generic-orange);
+    color: white;
+    padding: 1rem;
+    margin-block-start: 5rem;
+}
+
+footer p {
+    font-weight: 600;
+    margin-block-start: 1rem;
+}
+
+footer h1 {
+    color: var(--primary-blue);
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.5rem;
+}
+
+footer nav img {
+    width: 30px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+footer ul {
+    margin-block-start: 1.5rem;
+    list-style: none;
+}
+
+footer ul li {
+    margin-block-start: .5rem;
+    font-weight: 500;
+}
+
+footer aside {
+    border-top: 2px solid var(--grayish-text);
+    padding-block: 1rem;
+    margin-block-start: 1.5rem;
+    font-weight: 500;
+}
+
+footer aside span {
+    display: block;
+}
+
+footer aside span:last-child {
+    display: flex;
+    gap: 1rem;
+    margin-block-start: 1rem;
+}
+
+footer aside span:last-child str {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+@media (max-width: 768px) {
+    #display-prod {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #display-prod img {
+        width: 320px;
+    }
+
+    #display-prod aside:first-of-type h3 {
+        inset-block-start: 50%;
+    }
+
+    #display-prod aside:first-of-type {
+        text-align: center;
+    }
+
+    #display-prod aside:last-of-type {
+        margin-block-start: 2rem;
+        text-align: center;
+    }
+
+    #display-prod aside:last-of-type a {
+        margin-inline: auto;
+    }
+
+    footer aside {
+        text-align: center;
+    }
+
+    footer aside span:last-child {
+        justify-content: center;
+    }
+}

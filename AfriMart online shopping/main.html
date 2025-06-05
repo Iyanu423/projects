@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale = 1 , user-scalable  = no" />
+  <title>Product Page - AfriMart</title>
+
+  <!-- Google fnts for consistent typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Dark mode stylesheet, initially disabled -->
+  <link id="darkmodeStyle" rel="stylesheet" href="darkmode.css" disabled />
+</head>
+
+<body>
+  <!-- Extra settings panel with theme and fullscreen toggles -->
+  <aside class="extra-settings">
+    <img id="theme-icon" src="images/icons8-dark-mode-100.png" alt="Toggle Dark Mode" />
+    <img id="full-screen" src="images/icons8-full-screen-96.png" alt="Toggle Fullscreen" />
+    <img src="images/icons8-online-support-100.png" alt="Online Support" />
+    <img src="images/arrow.png" alt="move-to-top" />
+  </aside>
+
+  <!-- Header section with navigation and cart -->
+  <aside id="atc-notification" class="visible"></aside>
+  <header>
+    <!-- Menu icon for mobile navigation -->
+    <img id="menu-icon" src="images/icon-menu.svg" alt="Menu" />
+    <!-- Site title with styled span -->
+    <h1>
+      <span class="fancy-text" style="color: hsl(26, 100%, 55%); font-weight: 600;">Afri</span>Mart
+    </h1>
+
+    <!-- Navigation menu -->
+    <nav>
+      <img id="exit-icon" src="images/icon-close.svg" alt="Close Menu" />
+      <span class="nav-option">Collection</span>
+      <span class="nav-option">Accessories</span>
+      <span class="nav-option">Traditional</span>
+      <span class="nav-option">Trending</span>
+    </nav>
+
+    <!-- Icons wrapper containing cart and avatar -->
+    <div class="icon-wrapper">
+      <img id="cart-icon" src="images/icon-cart.svg" alt="Cart" />
+      <img id="avatar-icon" src="images/icons8-test-account-96.png" alt="User Avatar" />
+
+      <!-- Cart summary popup shown when cart icon is clicked -->
+      <ul id="cart-summary">
+        <li>Cart summary</li>
+        <button class="checkout-btn">Checkout</button>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Track bar that follows cursor on nav option hover -->
+  <div id="track-bar-wrapper">
+    <div id="track-bar"></div>
+  </div>
+
+  <!-- Specials banner with promotional message -->
+  <marquee class="specials">
+    ⭐ Click here to check out our special offers. Valid 7th June 2025 - 30th June 2025.
+    ⭐ Outfit giveaways this month , Don't miss out on the freebies you can snag for yourself
+  </marquee>
+
+  <main>
+    <!-- Product gallery section -->
+    <section class="product-gallery-main-wrapper">
+      <!-- Main product image -->
+      <img src="images/IMG-20250604-WA0096.jpg" class="main-photo" alt="Main Product Photo" />
+      <!-- Thumbnail images grid -->
+      <div style="display: none;" class="other-photos-grid">
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+        <div class="product-photo"></div>
+      </div>
+    </section>
+
+    <!-- Product description and purchase section -->
+    <section class="product-description-wrapper">
+      <h1>ANKARA RUNNING SHOES</h1>
+      <h2>Limited Edition Running Shoes</h2>
+      <p>
+        Lightweight and breathable running shoes featuring vibrant Ankara fabric accents, designed for everyday use with
+        excellent support and comfort inspired by African artistry.
+      </p>
+
+      <!-- Current price display with discount -->
+      <div class="current-price-wrapper">
+        <span>N</span>
+        <span>23,000.00</span>
+        <span>-50%</span>
+      </div>
+      <!-- Previous price display -->
+      <span class="previous-price">N34,000.00</span>
+
+      <!-- Quantity counter and Add to Cart button -->
+      <div class="counter-and-atcBtn-wrapper">
+        <div class="counter-wrapper">
+          <span>-</span>
+          <span class="counter-value"></span>
+          <span>+</span>
+        </div>
+        <button class="atcBtn">
+          <img src="images/icon-cart.svg" alt="Add to Cart" />
+          <span>Add to cart</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Hidden template for selected product in cart -->
+  <li style="display: none;" class="selected-product">
+    <div class="selected-prod-image"></div>
+    <div class="selected-prod-info">
+      <span class="selected-prod-name">Fall Limited Edition Sneakers</span>
+      <div class="total-cost-wrapper">
+        <span class="selected-prod-cost"></span>
+        <span style="color: slategrey;">*</span>
+        <span style="color: slategray;"></span>
+        <span class="total-cost">N300</span>
+      </div>
+    </div>
+    <img id="delete-icon" src="images/icon-delete.svg" alt="Delete Item" />
+  </li>
+
+  <h1 class="grid-header">Trending Outfits</h1>
+
+  <fieldset id="search-fieldset">
+    <span>☹ No results found</span>
+    <input id="search-products" type="text" placeholder="Search...">
+  </fieldset>
+
+  <!-- Other products grid section -->
+  <section id="other-products-grid"></section>
+
+  <!-- JavaScript files -->
+  <script src="code.js" defer></script>
+  <script src="products.js" defer></script>
+  <script>
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+* {
+    transition-duration: var(--smooth-transition);
+}
+
+:root {
+    --global-light-purple: rgba(187, 134, 252, 0.5);
+    --global-deep-purple: rgb(61, 18, 245);
+    --nice-border-radius: 20px;
+    --bold-font: bold;
+    --faded-gray: rgba(150, 150, 150, 0.5);
+    --smooth-transition: 0.3s;
+    --default-text-color: whitesmoke;
+    --form-background: #1e1e1e;
+    --input-background: #121212;
+    --input-border-color: #333333;
+    --button-primary-bg: rgba(61, 18, 245, 0.8);
+    --button-primary-color: white;
+    --button-secondary-bg: rgba(200, 200, 200, 0.3);
+    --button-secondary-color: whitesmoke;
+    --error-color: #ff6b6b;
+}
+
+/* Body styles for dark background and light text */
+body {
+    background: var(--input-background);
+    color: var(--default-text-color);
+}
+
+/* Headings styled with light text colors for readability */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--default-text-color);
+}
+
+h1 {
+    color: var(--global-deep-purple);
+}
+
+h2 {
+    color: var(--global-deep-purple);
+}
+
+/* Header styles with dark background and light text */
+header>span {
+    color: var(--global-deep-purple);
+}
+
+/* Invert icons in header for dark mode */
+header img {
+    filter: invert(100%);
+}
+
+/* Remove outline from last header image */
+header img:last-of-type {
+    outline: none;
+}
+
+/* Help menu styles with dark background and subtle border */
+header aside {
+    box-shadow: 0 0 0 2px var(--global-deep-purple);
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    background: var(--form-background);
+}
+
+/* Help menu item borders and colors */
+header aside span:not(aside span:last-of-type) {
+    border-bottom: 1px solid var(--faded-gray);
+}
+
+header aside span {
+    color: var(--default-text-color);
+}
+
+/* Help menu item hover effect */
+header aside span:hover {
+    background: var(--global-light-purple);
+    color: white;
+}
+
+/* Staff login form heading styles */
+h3 {
+    font-size: 1.6rem;
+    color: var(--global-deep-purple);
+}
+
+h4 {
+    font-size: 0.7rem;
+    color: var(--default-text-color);
+}
+
+/* Form container styles with dark background and shadow */
+form {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .7);
+    background: var(--form-background);
+}
+
+/* Form labels styled with light text */
+form fieldset:not(form fieldset:last-of-type)>label {
+    color: var(--default-text-color);
+}
+
+/* Form input fields styled for dark mode */
+form fieldset:not(form fieldset:last-of-type) input {
+    box-shadow: 0 0 0 2px var(--input-border-color);
+    color: var(--default-text-color);
+    background-color: var(--input-background);
+}
+
+/* Input focus styles with purple outline */
+form fieldset:not(form fieldset:last-of-type) input:focus {
+    outline: 2px solid var(--global-deep-purple);
+    background-color: var(--input-background);
+}
+
+/* Placeholder text styled with faded gray */
+form fieldset:not(form fieldset:last-of-type) input::placeholder {
+    color: var(--faded-gray);
+}
+
+/* Invert icons in form fields for dark mode */
+form fieldset:not(form fieldset:last-of-type) img {
+    filter: invert(100%);
+}
+
+/* Error message color for validation */
+.error-msg {
+    color: var(--error-color);
+}
+
+/* Reset fields link color */
+#reset-fields {
+    color: var(--global-deep-purple);
+}
+
+/* Remember me wrapper styles */
+#rmb-wrapper {
+    color: var(--default-text-color);
+}
+
+/* Link color in last form fieldset */
+form fieldset:last-of-type a {
+    color: var(--global-deep-purple);
+}
+
+/* Button hover shadow effect */
+form button:hover {
+    box-shadow: 0 0 5px 0 var(--faded-gray);
+}
+
+/* Primary button styles */
+form button:first-of-type {
+    color: var(--button-primary-color);
+    background: var(--button-primary-bg);
+}
+
+/* Secondary button styles */
+form button:last-of-type {
+    color: var(--button-secondary-color);
+    background: var(--button-secondary-bg);
+}
+
+/* Dark mode styles for Profile setup dialog */
+#profile-setup {
+    background: var(--form-background);
+    border: 2px solid var(--input-border-color);
+    color: var(--default-text-color);
+}
+
+#profile-setup h1 {
+    color: var(--global-deep-purple);
+}
+
+#profile-setup fieldset label {
+    color: var(--default-text-color);
+}
+
+#profile-setup fieldset input {
+    background-color: var(--input-background);
+    box-shadow: 0 0 0 2px var(--input-border-color);
+    color: var(--default-text-color);
+}
+
+#profile-setup fieldset input:focus {
+    outline: 2px solid var(--global-deep-purple);
+    background-color: var(--input-background);
+}
+
+#profile-setup button {
+    background: var(--button-primary-bg);
+    color: var(--button-primary-color);
+}
+
+#profile-setup button:hover {
+    box-shadow: 0 0 5px 0 var(--faded-gray);
+}
+
+#profile-setup fieldset img,
+#quick-actions span:last-child img {
+    filter: invert(100%);
+}
+
+.profile-error {
+    color: var(--error-color);
+}

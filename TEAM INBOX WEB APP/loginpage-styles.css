@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Onest", Roboto, system-ui;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --global-light-purple: rgba(72, 56, 214, 0.5);
+    --global-deep-purple: rgb(61, 18, 245);
+    --nice-border-radius: 20px;
+    --bold-font: bolder;
+    --faded-gray: rgba(200, 200, 200, .3);
+    --smooth-transition: .2s;
+    --default-text-color: gray;
+    --light-mode-gradient: linear-gradient(rgba(175, 225, 205, .1), rgba(137, 30, 124, .1));
+}
+
+
+/* Body styles including fixed height, background gradient for light mode, and horizontal padding */
+body {
+    height: 1100px;
+    background: var(--light-mode-gradient);
+    padding-inline: 1rem;
+}
+
+#notifications {
+    border-radius: inherit;
+    background: rgb(220, 248, 220);
+    height: max-content;
+    color: green;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+#notifications p {
+    font-weight: 500
+}
+
+/* Headings (h1 to h4) are centered with specific colors and font sizes for visual hierarchy */
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+h1 {
+    margin-block-start: 30px;
+    color: var(--global-deep-purple);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--global-deep-purple);
+    font-weight: 600;
+}
+
+/* Header styles for layout and appearance */
+header {
+    position: relative;
+    padding-block: 1rem;
+    padding-inline: .5rem;
+    border-bottom: 2px solid var(--faded-gray);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Header span styles for branding */
+header>span {
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+    font-size: 1.5rem;
+}
+
+/* Header first image (support icon) aligned to the right */
+header img:first-of-type {
+    margin-left: auto;
+}
+
+/* Header last image (theme toggle) outlined for focus */
+header img:last-of-type {
+    outline: 3px solid var(--global-deep-purple);
+}
+
+/* Header images styled for size, shape, and interaction */
+header img {
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline-offset: .2rem;
+    transition-duration: var(--smooth-transition);
+}
+
+/* Aside (help menu) styles for positioning and appearance */
+header aside {
+    position: absolute;
+    inset: 70px 0 0 95%;
+    translate: -100%;
+    height: max-content;
+    width: fit-content;
+    box-shadow: 0 0 2px 0 gray;
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    background: white;
+    transition-duration: var(--smooth-transition);
+    scale: 0;
+}
+
+/* Aside spans except last have bottom border */
+header aside span:not(aside span:last-of-type) {
+    border-bottom: 1px solid gray;
+}
+
+/* Aside spans styled for font, color, size, and interaction */
+header aside span {
+    display: block;
+    font-size: .9rem;
+    font-weight: var(--bold-font);
+    color: var(--default-text-color);
+    width: 200px;
+    padding: .3rem .65rem;
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+    place-content: center;
+}
+
+/* Aside span hover effect */
+header aside span:hover {
+    background: var(--global-light-purple);
+    color: white;
+}
+
+/* Staff login form heading styles */
+h3 {
+    font-size: 1.6rem;
+    color: var(--global-deep-purple);
+}
+
+h4 {
+    font-size: .7rem;
+    color: var(--default-text-color);
+    margin-inline: auto;
+    margin-block-start: 10px;
+    width: 90%;
+}
+
+/* Form container styles */
+form {
+    box-shadow: 0 0 20px 0 lightgray;
+    height: max-content;
+    max-width: 500px;
+    padding: 1rem;
+    padding-block-start: 2rem;
+    margin: 50px auto;
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    background: white;
+    transition-duration: var(--smooth-transition);
+}
+
+/* Margin for first and second fieldsets */
+form fieldset:first-of-type {
+    margin-block-start: 70px;
+}
+
+form fieldset:nth-of-type(2) {
+    margin-block-start: 45px;
+}
+
+/* Fieldsets except last styled for layout and cursor */
+form fieldset:not(form fieldset:last-of-type) {
+    position: relative;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+/* Labels positioned above inputs */
+form fieldset:not(form fieldset:last-of-type)>label {
+    position: absolute;
+    inset: -30px 0 0 2%;
+    color: rgba(61, 18, 245, .8);
+    font-weight: var(--bold-font);
+    font-size: .8rem;
+}
+
+/* Input fields styled for padding, size, border radius, and font */
+form fieldset:not(form fieldset:last-of-type) input {
+    padding-inline: 2rem;
+    flex: 1;
+    height: 50px;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    border: none;
+    box-shadow: 0 0 0 2px gray;
+    font-weight: var(--bold-font);
+    font-size: .9rem;
+    color: var(--default-text-color);
+}
+
+/* Input focus outline */
+form fieldset:not(form fieldset:last-of-type) input:focus {
+    outline: 2px solid var(--global-deep-purple);
+    border-color: initial;
+}
+
+/* Placeholder text styling */
+form fieldset:not(form fieldset:last-of-type) input::placeholder {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--default-text-color);
+}
+
+/* Icons inside fieldsets positioned */
+form fieldset:not(form fieldset:last-of-type) img {
+    width: 20px;
+    position: absolute;
+    inset: 15px 0 0 95%;
+    translate: -100%;
+    cursor: pointer;
+}
+
+/* Last fieldset styles for layout */
+form fieldset:last-of-type {
+    display: flex;
+    gap: 2rem;
+    margin-block-start: 20px;
+    border: none;
+    padding-inline: .7rem;
+}
+
+/* Error message styles */
+.error-msg {
+    display: none;
+    color: red;
+    font-size: .7rem;
+    font-weight: var(--bold-font);
+    margin: 10px 0 0 10px;
+}
+
+/* Reset fields link styles */
+#reset-fields {
+    color: var(--global-deep-purple);
+    font-size: .9rem;
+    font-weight: var(--bold-font);
+    display: block;
+    margin: 30px 0 0 10px;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    padding-block-end: 1rem;
+}
+
+/* Remember me wrapper styles */
+#rmb-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    color: var(--default-text-color);
+    font-size: .8rem;
+    font-weight: var(--bold-font);
+}
+
+/* Checkbox accent color */
+#rmb-wrapper input {
+    accent-color: var(--global-deep-purple);
+}
+
+/* Label cursor pointer */
+#rmb-wrapper label {
+    cursor: pointer;
+}
+
+/* Link styles in last fieldset */
+form fieldset:last-of-type a {
+    margin-left: auto;
+    font-weight: var(--bold-font);
+    color: var(--global-deep-purple);
+    font-size: .9rem;
+}
+
+/* Button styles */
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    border: none;
+    outline: none;
+    font-size: .95rem;
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+}
+
+/* Button hover shadow */
+form button:hover {
+    box-shadow: 0 0 5px 0 gray;
+}
+
+/* Primary button styles */
+form button:first-of-type {
+    color: white;
+    margin-block-start: 20px;
+    background: rgba(61, 18, 245, .8);
+}
+
+/* Secondary button styles */
+form button:last-of-type {
+    margin-block-start: 10px;
+    color: var(--default-text-color);
+    background: var(--faded-gray);
+}
+
+
+/*-- Profile setup dialog --*/
+
+#profile-setup {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    width: 500px;
+    height: max-content;
+    padding: 1rem;
+    border-radius: calc(var(--nice-border-radius) - 10px);
+    border: 2px solid gray;
+    background: white;
+    transition-duration: var(--smooth-transition);
+    overflow: visible;
+    scale: 0;
+}
+
+#profile-setup::backdrop {
+    background: rgba(200, 200, 200, .5);
+}
+
+#profile-setup h1 {
+    font-size: 1.5rem;
+    margin-block-start: 1rem;
+}
+
+#profile-setup::-webkit-scrollbar {
+    display: none;
+}
+
+#profile-setup fieldset:first-of-type {
+    margin-block-start: 70px;
+}
+
+#profile-setup fieldset {
+    position: relative;
+    margin-block-start: 50px;
+    display: flex;
+    border: none;
+}
+
+#profile-setup fieldset label {
+    position: absolute;
+    inset: -30px 0 0 2%;
+    color: rgba(61, 18, 245, .8);
+    font-weight: var(--bold-font);
+    font-size: .8rem;
+}
+
+#profile-setup fieldset input {
+    padding-inline: 2rem;
+    flex: 1;
+    height: 50px;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    border: none;
+    box-shadow: 0 0 0 2px gray;
+    font-weight: var(--bold-font);
+    font-size: .9rem;
+    color: var(--default-text-color);
+}
+
+#profile-setup fieldset input:focus {
+    outline: 2px solid var(--global-deep-purple);
+}
+
+#profile-setup fieldset img {
+    width: 20px;
+    position: absolute;
+    inset: 15px 0 0 95%;
+    translate: -100%;
+    cursor: pointer;
+}
+
+#profile-setup button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    width: 100%;
+    padding-block: 1rem;
+    border-radius: calc(var(--nice-border-radius) + 10px);
+    border: none;
+    outline: none;
+    font-size: .95rem;
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    transition-duration: var(--smooth-transition);
+    color: white;
+    margin-block-start: 20px;
+    background: rgba(61, 18, 245, .8);
+}
+
+#profile-setup button:hover {
+    box-shadow: 0 0 5px 0 gray;
+}
+
+#quick-actions {
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    margin-block-start: 20px;
+    font-weight: var(--bold-font);
+    font-size: .9rem;
+}
+
+#quick-actions span:first-child {
+    color: var(--global-deep-purple);
+    cursor: pointer;
+}
+
+#quick-actions span:last-child {
+    color: indianred;
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+#quick-actions span:last-child img {
+    rotate: 180deg;
+    width: 10px;
+}
+
+
+
+/* --- Loading animation to indicate form processing --- */
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation:
+        l20-1 0.8s infinite linear alternate,
+        l20-2 1.6s infinite linear;
+}
+
+form .loader {
+    display: none;
+}
+
+#profile-setup .loader {
+    display: none;
+}
+
+@keyframes l20-1 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%)
+    }
+
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%)
+    }
+}
+
+@keyframes l20-2 {
+    0% {
+        transform: scaleY(1) rotate(0deg)
+    }
+
+    49.99% {
+        transform: scaleY(1) rotate(135deg)
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(0deg)
+    }
+
+    100% {
+        transform: scaleY(-1) rotate(-135deg)
+    }
+}

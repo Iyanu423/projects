@@ -1,0 +1,254 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "from": "ayesha@yahoo.com",
+      "to": "adesanya@example.com",
+      "subject": "Project Update",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-14",
+      "content": "Hello Team, I wanted to provide you with a detailed update on the current status of our project. We have successfully completed the initial phases, including research and planning. The development team is now working on the implementation phase, and we expect to meet our deadlines. We have encountered some challenges, but the team is addressing them efficiently. Please let me know if you have any questions or need further information. Your feedback is always appreciated as we strive to deliver the best results."
+    },
+    {
+      "id": 2,
+      "from": "kelly.smith@gmail.com",
+      "to": "john.doe@example.com",
+      "subject": "Meeting Reschedule",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-13",
+      "content": "Hi John, I hope this message finds you well. Due to unforeseen circumstances, I need to reschedule our meeting that was planned for tomorrow. Please let me know your availability for later this week so we can find a suitable time. I apologize for any inconvenience this may cause and appreciate your understanding. It is important that we have this meeting to discuss the upcoming project milestones and ensure alignment among all team members."
+    },
+    {
+      "id": 3,
+      "from": "milly@yahoo.com",
+      "to": "jane.smith@example.com",
+      "subject": "Re: Meeting Reschedule",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-13",
+      "content": "Hi Jane, thank you for letting me know about the need to reschedule. I am available next week on most days except Wednesday. Please confirm which day works best for you, and I will adjust my schedule accordingly. I look forward to our meeting and discussing the project details in depth. Let me know if there are any specific topics you would like to cover so I can prepare accordingly."
+    },
+    {
+      "id": 4,
+      "from": "john.doe@yahoo.com",
+      "to": "team@example.com",
+      "subject": "New Project Announcement",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-12",
+      "content": "Hello Team, I am excited to announce the launch of our new project starting next month. This project will focus on developing innovative solutions to improve our services. I encourage everyone to participate actively and share ideas. Further details will be shared in the upcoming meetings. Let's work together to make this a success. Your dedication and creativity will be key factors in achieving our goals."
+    },
+    {
+      "id": 5,
+      "from": "rico@gmail.com",
+      "to": "john.doe@example.com",
+      "subject": "Make Money Fast",
+      "status": "Spam",
+      "isRead": false,
+      "timestamp": "2025-04-11",
+      "content": "Discover the secrets to making money fast with our exclusive program. This opportunity is designed to help you achieve financial freedom quickly and efficiently. Join thousands of satisfied clients who have transformed their lives. Act now to secure your spot and start earning today. Don't miss out on this limited-time offer. Our program provides step-by-step guidance and support to ensure your success."
+    },
+    {
+      "id": 6,
+      "from": "trippie.smith@example.com",
+      "to": "adesanya@example.com",
+      "subject": "Task Assignment",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-10",
+      "content": "Hi Adesanya, I am assigning you task XYZ which needs to be completed by Friday. Please ensure that all the requirements are met and the deliverables are submitted on time. If you encounter any issues or need assistance, feel free to reach out. Your timely completion of this task is crucial for the project's progress. Let me know if you need any additional resources or support to complete this assignment successfully."
+    },
+    {
+      "id": 7,
+      "from": "adesanya@gmail.com",
+      "to": "jane.smith@example.com",
+      "subject": "Re: Task Assignment",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-10",
+      "content": "Hi Jane, I wanted to confirm that I will complete task XYZ by Friday as assigned. I have reviewed the requirements and started working on the necessary steps. Please let me know if there are any changes or additional instructions. I will keep you updated on the progress regularly. Your guidance is appreciated to ensure the task meets expectations."
+    },
+    {
+      "id": 8,
+      "from": "sam.doe@gmail.com",
+      "to": "team@example.com",
+      "subject": "Team Meeting",
+      "status": "Inbox",
+      "isRead": false,
+      "timestamp": "2025-04-09",
+      "content": "Hello Team, I would like to schedule a team meeting for this week to discuss our ongoing projects and address any concerns. Please provide your availability so we can find a convenient time for everyone. Your participation is important to ensure we stay aligned and productive. The agenda will include project updates, challenges, and next steps to keep us on track."
+    },
+    {
+      "id": 9,
+      "from": "gani.smith@yahoo.com",
+      "to": "john.doe@example.com",
+      "subject": "Re: Team Meeting",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-09",
+      "content": "Hi John, thank you for the invitation to the team meeting. I am available on Thursday and look forward to discussing the agenda items. Please share any materials or topics you would like us to prepare in advance. Let's make this meeting productive and efficient. Your leadership is appreciated in coordinating this effort."
+    },
+    {
+      "id": 10,
+      "from": "austin@example.com",
+      "to": "jane.smith@example.com",
+      "subject": "Project Feedback",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-08",
+      "content": "Hi Jane, I have reviewed the project and would like to share my feedback. Overall, the progress is satisfactory, but there are areas that need improvement. I suggest focusing on the user interface and performance optimization. Please let me know if you need any clarification or additional support. I am happy to assist in any way to help improve the project outcomes."
+    },
+    {
+      "id": 11,
+      "from": "lebron@example.com",
+      "to": "adesanya@example.com",
+      "subject": "Re: Project Feedback",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-08",
+      "content": "Hi Adesanya, thank you for your valuable feedback on the project. I will review your suggestions carefully and work on the necessary improvements. Please keep me informed of any further observations or ideas you may have. Looking forward to our continued collaboration. Your input is essential to the success of this project."
+    },
+    {
+      "id": 12,
+      "from": "willsmith@example.com",
+      "to": "team@example.com",
+      "subject": "Weekly Report",
+      "status": "Inbox",
+      "isRead": true,
+      "timestamp": "2025-04-07",
+      "content": "Hello Team, here is the weekly report summarizing our achievements and challenges. We have made significant progress in several areas, but there are still tasks that require attention. Please review the report and provide your feedback. Let's continue working hard to meet our goals. Your dedication and teamwork are greatly appreciated."
+    },
+    {
+      "id": 13,
+      "from": "shanntel@gmail.com",
+      "to": "john.doe@example.com",
+      "subject": "Meeting Notes",
+      "status": "Inbox",
+      "isRead": false,
+      "timestamp": "2025-04-06",
+      "content": "Hi John, I am sharing the notes from our recent meeting. We discussed project timelines, resource allocation, and upcoming deadlines. Please review the notes and let me know if there are any corrections or additions. Your input is appreciated to keep everyone on the same page. Let's ensure we follow up on the action items discussed."
+    },
+    {
+      "id": 14,
+      "from": "hilarycliton@example.com",
+      "to": "adesanya@example.com",
+      "subject": "Re: Meeting Notes",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-06",
+      "content": "Hi Adesanya, thank you for sending the meeting notes. I have reviewed them and everything seems in order. If there are any further updates or action items, please keep me informed. Looking forward to our next discussion. Your thoroughness is appreciated."
+    },
+    {
+      "id": 15,
+      "from": "spammer@outlook.com",
+      "to": "jane.smith@example.com",
+      "subject": "Buy Now!",
+      "status": "Spam",
+      "isRead": false,
+      "timestamp": "2025-04-05",
+      "content": "Don't miss out on our exclusive offers! Buy now and save big on a wide range of products. Our limited-time deals are designed to give you the best value for your money. Act fast to take advantage of these incredible discounts before they're gone. We offer quality products and excellent customer service to ensure your satisfaction."
+    },
+    {
+      "id": 16,
+      "from": "donald@outlook.com",
+      "to": "team@example.com",
+      "subject": "Project Deadline",
+      "status": "Inbox",
+      "isRead": false,
+      "timestamp": "2025-04-04",
+      "content": "Hello Team, this is a reminder about the upcoming project deadline. Please ensure that all tasks are completed on time and that any issues are communicated promptly. Let's work together to deliver a successful project and meet our commitments. Your cooperation and focus are essential to achieving our goals."
+    },
+    {
+      "id": 17,
+      "from": "adesanya@example.com",
+      "to": "john.doe@example.com",
+      "subject": "Task Update",
+      "status": "Inbox",
+      "isRead": false,
+      "timestamp": "2025-04-03",
+      "content": "Hi John, I wanted to provide you with an update on task XYZ. The initial phases have been completed, and we are now moving into the next steps. I will keep you informed of any developments and ensure that the task is completed as scheduled. Please let me know if you have any questions or need additional information."
+    },
+    {
+      "id": 18,
+      "from": "hipppy@yahoo.com",
+      "to": "adesanya@example.com",
+      "subject": "Re: Task Update",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-03",
+      "content": "Hi Adesanya, thank you for the update on task XYZ. I appreciate your efforts and look forward to seeing the final results. Please let me know if there is anything I can do to assist or support you during this process. Your dedication is commendable and motivates the entire team."
+    },
+    {
+      "id": 19,
+      "from": "jadensmith@example.com",
+      "to": "team@example.com",
+      "subject": "Team Outing",
+      "status": "Sent",
+      "isRead": true,
+      "timestamp": "2025-04-02",
+      "content": "Hello Team, I would like to propose planning a team outing to foster better relationships and improve morale. We can discuss potential dates, locations, and activities that everyone would enjoy. Your input is valuable to make this event successful and enjoyable for all. Let's work together to create a memorable experience."
+    },
+    {
+      "id": 20,
+      "from": "kekepalmers@example.com",
+      "to": "john.doe@example.com",
+      "subject": "Re: Team Outing",
+      "status": "Sent",
+      "isRead": false,
+      "timestamp": "2025-04-02",
+      "content": "Hi John, I am excited about the idea of a team outing. It sounds like a great opportunity to relax and bond outside of work. Please keep me updated on the plans and let me know how I can contribute to organizing the event. I look forward to participating and helping make it a success."
+    },
+    {
+      "id": 21,
+      "from": "princesspoppy@example.com",
+      "to": "john.doe@example.com",
+      "subject": "Lose Weight Fast!",
+      "status": "Spam",
+      "isRead": false,
+      "timestamp": "2025-04-12",
+      "content": "Achieve your fitness goals quickly with our proven weight loss program. Our expert trainers and nutritionists will guide you through a personalized plan designed to help you lose weight safely and effectively. Join now and start your journey to a healthier you. Our program includes nutrition advice, exercise routines, and ongoing support to ensure your success."
+    },
+    {
+      "id": 22,
+      "from": "spammer5@yahoo.com",
+      "to": "jane.smith@example.com",
+      "subject": "Get Free Gifts!",
+      "status": "Spam",
+      "isRead": false,
+      "timestamp": "2025-04-11",
+      "content": "Don't miss out on your chance to claim free gifts with our special promotion. This limited-time offer is available to a select group of customers. Act quickly to receive your rewards and enjoy exclusive benefits. Contact us for more details and eligibility requirements. Take advantage of this opportunity before it expires."
+    },
+    {
+      "id": 23,
+      "from": "kekepalmers@example.com",
+      "to": "john.doe@example.com",
+      "subject": "Re: Team Outing",
+      "status": "Draft",
+      "isRead": false,
+      "timestamp": "2025-04-02",
+      "content": "Hi John, I am drafting some ideas for the team outing. I think it will be a great chance for everyone to unwind and connect outside of work. I will share more details as the plans develop. Let me know if you have any suggestions or preferences. Your input will help make this event enjoyable for all participants."
+    },
+    {
+      "id": 24,
+      "from": "princesspoppy@example.com",
+      "to": "john.doe@example.com",
+      "subject": "Catch up!",
+      "status": "Draft",
+      "isRead": false,
+      "timestamp": "2025-04-12",
+      "content": "Hi Fred, I just wanted to reach out and say hello. It's been a while since we last spoke, and I hope everything is going well with you. Let's catch up soon and share updates about our lives and work. Looking forward to hearing from you and reconnecting."
+    },
+    {
+      "id": 25,
+      "from": "spammer7@yahoo.com",
+      "to": "jane.smith@example.com",
+      "subject": "Get Free Gifts!",
+      "status": "Spam",
+      "isRead": false,
+      "timestamp": "2025-04-11",
+      "content": "Don't miss this opportunity to claim your free gifts. Our special promotion offers exclusive rewards to a limited number of customers. Act now to take advantage of this offer before it expires. Contact us for more information and eligibility criteria. This is a limited-time offer, so act quickly."
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+/* === Dark Mode CSS Variables === */
+:root {
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #bb86fc;
+    --primary-variant: #3700b3;
+    --secondary-color: #03dac6;
+    --text-primary: whitesmoke;
+    --text-secondary: whitesmoke;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, .7);
+    --faded-gray: rgba(150, 150, 150, .5);
+    --smooth-transition: .3s;
+    --nice-border-radius: 20px;
+    --bold-font: bold;
+    --dark-mode-gradient: linear-gradient(to right, rgba(187, 134, 252, .5), rgba(3, 218, 198, .1));
+}
+
+/* === Base Styles === */
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+main {
+    border-top-color: var(--faded-gray);
+    box-shadow: none;
+}
+
+header {
+    background-color: var(--surface-color);
+    border-bottom: 3px solid var(--faded-gray);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+/* === Utility Classes and Icons === */
+.status-icon {
+    background: var(--border-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 0 2.5px var(--border-color);
+    transition-duration: var(--smooth-transition);
+}
+
+.status-icon:hover {
+    box-shadow: 0 0 0 2.5px var(--global-deep-purple);
+}
+
+#search-icon {
+    filter: invert(100%);
+}
+
+.delete-mail,
+.mrk-as-spam,
+#notifications img,
+#status-wrapper img,
+#compose-mail>img,
+#write-mail-UI nav img,
+.from-and-to>b+span+img,
+.menu-option img,
+#Theme-switcher img,
+#collapse-menu-desktop,
+.setting-option img,
+.filter-option img,
+#exit-icon,
+#view-email-UI img,
+#write-mail-UI nav img,
+.applayout-menu li img,
+.remove-icon {
+    filter: invert(70%);
+}
+
+/* === Layout Containers === */
+#user-profile-wrapper {
+    background: var(--surface-color);
+    box-shadow: none;
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+#notifications {
+    box-shadow: 0 0 0 3px var(--border-color);
+    transition-duration: var(--smooth-transition);
+}
+
+#notifications img {
+    mix-blend-mode: difference;
+}
+
+#settings-wrapper {
+    background: var(--surface-color);
+    box-shadow: 0 0 0 3px var(--border-color);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+#side-bar-menu {
+    background: var(--background-color);
+    box-shadow: 0 0 0 3px var(--border-color);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+#write-mail-UI {
+    background: var(--background-color);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+#view-email-UI {
+    background: var(--background-color);
+}
+
+#account-mgt-UI {
+    background: var(--background-color);
+}
+
+#account-mgt-UI fieldset input {
+    color: whitesmoke;
+}
+
+#account-mgt-UI h2 {
+    color: blue;
+}
+
+#settings-loader {
+    background: transparent;
+}
+
+#settings-UI {
+    background: transparent !important;
+}
+
+#menu-layer {
+    background: var(--faded-gray);
+}
+
+#email-change {
+    background: var(--background-color);
+    box-shadow: 0 0 0 2px var(--global-deep-purple);
+}
+
+#email-change input {
+    color: whitesmoke;
+}
+
+/* === Menus and Navigation === */
+.profile-menu {
+    background: var(--background-color);
+    color: var(--text-primary);
+}
+
+.profile-menu li {
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--faded-gray);
+    transition-duration: var(--smooth-transition);
+}
+
+.profile-menu li:last-child {
+    background: transparent;
+}
+
+.profile-menu li:last-child:hover {
+    background: var(--faded-gray);
+}
+
+.menu-option {
+    color: whitesmoke;
+}
+
+.filter-option {
+    color: whitesmoke;
+    transition-duration: var(--smooth-transition);
+    border: 3px solid var(--global-deep-purple);
+}
+
+.filter-option:hover {
+    background: var(--border-color);
+}
+
+.setting-option {
+    color: whitesmoke;
+}
+
+.setting-option:hover {
+    color: var(--primary-color);
+}
+
+.applayout-menu {
+    background: var(--surface-color);
+    color: var(--primary-color);
+    border-radius: calc(var(--nice-border-radius) - 15px);
+    box-shadow: 0 0 10px 0 var(--shadow-color);
+}
+
+.applayout-menu li {
+    border-bottom: 2px solid var(--border-color);
+}
+
+.applayout-menu li:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.applayout-menu li:hover img {
+    filter: none;
+}
+
+/* === Email List and Template Styles === */
+.template-emails {
+    box-shadow: 0 0 0 2px var(--border-color);
+    background: var(--surface-color);
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+.template-emails:hover {
+    background: var(--border-color);
+}
+
+.template-sender-email {
+    color: var(--primary-color);
+}
+
+.template-sender-pic {
+    background: transparent;
+}
+
+.date-sent,
+.empty-text {
+    color: var(--text-secondary);
+}
+
+#email-details span:first-child {
+    background: transparent;
+}
+
+/* === Form Inputs and Text === */
+.from-and-to,
+.cc-bcc {
+    border-bottom: 1px solid var(--faded-gray);
+    color: var(--text-primary);
+}
+
+.from-and-to input {
+    color: var(--text-primary);
+    transition-duration: var(--smooth-transition);
+}
+
+.from-and-to input::placeholder {
+    color: var(--faded-gray);
+}
+
+.from-and-to span,
+.cc-bcc span {
+    color: var(--text-primary) !important;
+}
+
+#search-input {
+    background: var(--background-color);
+    color: var(--text-primary);
+    outline: 2px solid var(--global-deep-purple);
+    transition-duration: var(--smooth-transition);
+}
+
+#search-input:focus {
+    outline: 3px solid var(--global-deep-purple);
+}
+
+/* === Buttons and Interactive Elements === */
+#compose-mail {
+    background: var(--border-color);
+    color: whitesmoke;
+    box-shadow: 0 0 0 3px var(--border-color);
+    transition-duration: var(--smooth-transition);
+}
+
+#view-email-UI nav span,
+#write-mail-UI nav span {
+    background: var(--border-color);
+}
+
+#compose-mail:hover {
+    box-shadow: 0 0 0 3px var(--global-deep-purple);
+}
+
+.spinner {
+    background: blue;
+}
+
+/* === Miscellaneous Styles === */
+#custom-status-menu {
+    background: var(--background-color);
+    color: white;
+    box-shadow: 0 0 0 2px var(--primary-variant);
+}
+
+#log-out-modal {
+    background: var(--background-color);
+    color: white;
+    box-shadow: 0 0 0 2px var(--primary-variant);
+}
+
+#write-status {
+    color: white;
+}
+
+#search-UI {
+    border-top: 2px solid var(--faded-gray);
+}
+
+.filter-layer {
+    mix-blend-mode: screen;
+}
+
+/* === Hover and User Interaction Enhancements === */
+#collapse-menu-desktop:hover {
+    outline-color: var(--primary-variant);
+    filter: invert(50%);
+}
+
+/* === Aesthetic Styles for Small Screens === */
+@media (max-width: 768px) {
+    #settings-wrapper {
+        box-shadow: none;
+        background: none;
+    }
+
+    #mobile-menu-icon,
+    #Theme-switcher img {
+        filter: invert(100%);
+    }
+
+    .menu-option img,
+    #mobile-exit-icon {
+        filter: invert(80%);
+    }
+}
