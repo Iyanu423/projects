@@ -52,7 +52,7 @@
     },
     {
       "id": 6,
-      "from": "trippie.smith@example.com",
+      "from": "tripsmith@example.com",
       "to": "adesanya@example.com",
       "subject": "Task Assignment",
       "status": "Inbox",
@@ -132,7 +132,7 @@
     },
     {
       "id": 14,
-      "from": "hilarycliton@example.com",
+      "from": "hilary12@example.com",
       "to": "adesanya@example.com",
       "subject": "Re: Meeting Notes",
       "status": "Sent",
@@ -202,7 +202,7 @@
     },
     {
       "id": 21,
-      "from": "princesspoppy@example.com",
+      "from": "superbody@yahoo.com",
       "to": "john.doe@example.com",
       "subject": "Lose Weight Fast!",
       "status": "Spam",
@@ -222,7 +222,7 @@
     },
     {
       "id": 23,
-      "from": "kekepalmers@example.com",
+      "from": "kekepalm@example.com",
       "to": "john.doe@example.com",
       "subject": "Re: Team Outing",
       "status": "Draft",
