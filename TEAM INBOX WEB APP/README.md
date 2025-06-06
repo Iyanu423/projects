@@ -52,7 +52,7 @@ LinkdeIn: https://www.linkedin.com/in/iyanu423
 ## Acknowledgements
 - The rich text editor is powered by the open-source [Rich Text Editor](https://www.richtexteditor.com/) library.
 - Icons provided by [Icons8](https://icons8.com/).
-- Special thanks to all contributors and testers who helped improve the app.
+- UI/UX design inspired by Visual Studio Code and common email systems
 
 ---
 Thank you for using Team Inbox Web App. For any questions or support, please contact me.
