@@ -188,7 +188,8 @@ main a:hover {
     text-decoration: none;
     transition-duration: .2s;
     display: flex;
-    gap: .2rem;
+    align-items: center;
+    gap: .5rem;
     margin: 1rem 0;
 }
 
@@ -198,8 +199,8 @@ main a:hover {
 }
 
 #display-prod aside:last-of-type a img {
-    width: 0;
-    height: 50px;
+   width: 15px;
+   filter: invert(100%);
 }
 
 
