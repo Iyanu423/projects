@@ -293,6 +293,7 @@ function createProduct(imagePath, short, full, descrp, newPrice, prevPrice) {
 
     const mainWrapper = document.createElement('div');
     const prodImage = document.createElement('img');
+    prodImage.loading = 'lazy';
     const shortName = document.createElement('span');
     const fullName = document.createElement('span');
     const description = document.createElement('span');
