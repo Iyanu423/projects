@@ -159,7 +159,7 @@ RTE_DefaultConfig.linkStyles = [["Margin10", "margin:10px"], ["Padding:10", "pad
 
 RTE_DefaultConfig.toolbar_default = "{bold,italic,underline,forecolor,backcolor}|{justifyleft,justifycenter,justifyright,justifyfull}|{insertorderedlist,insertunorderedlist,indent,outdent,insertblockquote,insertemoji}"
 	+ " #{paragraphs:toggle,fontname:toggle,fontsize:toggle,inlinestyle,lineheight}"
-	+ " / {removeformat,cut,copy,paste,delete,find}|{insertlink,insertchars,inserttable,insertimage,insertvideo,inserttemplate,insertcode}|{preview,code,selectall}"
+	+ " / {removeformat,cut,copy,paste,delete,find}|{insertlink,insertchars,inserttable,insertimage,insertdocument,insertvideo,inserttemplate,insertcode}|{preview,code,selectall}"
 	+ "#{toggleborder,fullscreenexit,undo,redo,togglemore}"; // Default set of buttons that appears in the rich text editor's toolbar on desktop.
 
 RTE_DefaultConfig.toolbar_mobile = "{bold,italic,underline,forecolor|fontname:toggle,fontsize:toggle,menu_paragraphop|insertimage}";  // Default set of buttons that appears in the rich text editor's toolbar on mobile.
