@@ -232,7 +232,7 @@
     },
     {
       "id": 24,
-      "from": "princesspoppy@example.com",
+      "from": "clarabell@example.com",
       "to": "john.doe@example.com",
       "subject": "Catch up!",
       "status": "Draft",
