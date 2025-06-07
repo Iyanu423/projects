@@ -895,7 +895,7 @@ async function getEmails() {
 const logOutOption = document.querySelector('#log-out');
 const logOutModal = document.querySelector('#log-out-modal');
 const logOutBtn = document.querySelector('#log-out-modal button:first-of-type');
-const cancelLog = document.querySelector('#log-out-modal button:last-of-type');
+const cancelLogOut = document.querySelector('#log-out-modal button:last-of-type');
 
 logOutOption.addEventListener('click', () => {
     logOutModal.showModal();
@@ -910,7 +910,7 @@ logOutBtn.addEventListener('click', () => {
 });
 
 // Cancel the logout process on cancel button click
-cancelLog.addEventListener('click', () => {
+cancelLogOut.addEventListener('click', () => {
     logOutModal.close();
 });
 
