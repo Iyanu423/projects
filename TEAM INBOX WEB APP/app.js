@@ -867,9 +867,9 @@ getEmails();
 
 // Fetch emails from emails.JSON and populate UI
 async function getEmails() {
-    const res = await fetch('emails.json');
-
+    
     try {
+        const res = await fetch('emails.json');
         const data = await res.json();
         for (let i = 0; i < data.emails.length; i++) {
 
