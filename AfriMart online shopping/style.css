@@ -159,6 +159,7 @@ nav span:hover {
 }
 
 #cart-summary {
+    border-radius: 20px 20px 0 0;
     background: white;
     scale: 0;
     position: absolute;
