@@ -199,8 +199,8 @@ main a:hover {
 }
 
 #display-prod aside:last-of-type a img {
-   width: 15px;
-   filter: invert(100%);
+    width: 15px;
+    filter: invert(100%);
 }
 
 
@@ -266,7 +266,33 @@ footer aside span:last-child str {
     text-overflow: ellipsis;
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    margin: 50px auto;
+    text-align: center;
+    padding: 1rem;
+    animation: fadeIn 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+#display-prod {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    animation: fadeIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
 
 
 @media (max-width: 768px) {
