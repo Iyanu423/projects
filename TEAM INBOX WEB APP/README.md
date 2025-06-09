@@ -84,4 +84,6 @@ LinkdeIn: https://www.linkedin.com/in/iyanu423
 - Special thanks to all contributors and testers who helped improve the app.
 
 ---
-Thank you for using Team Inbox Web App. For any questions or support, please contact the development team.
+Thank you for using Team Inbox Web App. For any questions or support, please contact me.
+
+Email: iyanu423@gmail.com
