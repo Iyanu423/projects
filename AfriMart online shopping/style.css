@@ -12,6 +12,7 @@
     --generic-orange: hsl(26, 100%, 55%);
     --nice-radius: 20px;
     --bold-font: bold;
+    --very-deep-blue: hsl(218, 21%, 36%);
 }
 
 #atc-notification {
@@ -21,10 +22,10 @@
     width: 100%;
     background: var(--generic-orange);
     color: white;
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: right;
-    transition-duration: .2s;
+    box-shadow: 0 0 10px 2px rgba(166, 226, 46, 0.5);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
 }
 
 .extra-settings {
@@ -159,7 +160,7 @@ nav span:hover {
 }
 
 #cart-summary {
-    border-radius: 20px 20px 0 0;
+    border-radius:  20px 20px 0 0;
     background: white;
     scale: 0;
     position: absolute;
@@ -590,6 +591,255 @@ main {
 }
 
 
+#success-msg {
+    margin: auto;
+    margin-block-start: 2rem;
+    z-index: 10;
+    width: 500px;
+    border: none;
+    box-shadow: 0 0 0 2px var(--grayish-text);
+    border-radius: calc(var(--nice-radius) - 10px);
+    padding: 1rem;
+}
+
+#success-msg img:first-child {
+    display: block;
+    width: 30px;
+}
+
+#success-msg h1 {
+    color: var(--very-deep-blue);
+    line-height: 2.1rem;
+    margin-block-start: 1rem;
+}
+
+#success-msg p {
+    font-weight: var(--bold-font);
+    color: var(--grayish-text);
+    margin-block-start: 1rem;
+}
+
+#success-msg button {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: var(--bold-font);
+    font-size: 1.05rem;
+    padding: .5rem 1rem;
+    border-radius: inherit;
+    background: var(--generic-orange);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#success-msg button img{
+    width: 10px;
+}
+
+@media (max-width: 500px) {
+    #success-msg {
+        width: 320px;
+    }
+}
+
+#bg-layer {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    inset: 0;
+    height: 5000px;
+    width: 100vw;
+    background: rgba(200, 200, 200, .2);
+}
+
+#payment-modal {
+    display: none;
+    position: absolute;
+    inset: 0 0 0 50%;
+    translate: -50%;
+    background: white;
+    z-index: 11;
+    margin-block-start: 1rem;
+    padding: 1rem;
+    padding-block-end: 0;
+    width: 500px;
+    height: max-content;
+    border-radius: calc(var(--nice-radius) - 10px);
+    border: 2px solid var(--grayish-text);
+    overflow: hidden;
+}
+
+@media (max-width: 500px) {
+    #payment-modal {
+        width: 320px;
+    }
+}
+
+#payment-modal>img {
+    display: block;
+    margin: auto;
+    margin-block-start: .5rem;
+}
+
+#payment-modal h3 {
+    text-align: center;
+    color: var(--grayish-text);
+    margin-block-start: .5rem;
+}
+
+#payment-modal h5:first-of-type {
+    color: var(--grayish-text);
+    font-weight: var(--bold-font);
+    margin-block-start: .5rem;
+    padding: .1rem .5rem;
+}
+
+#payment-modal h6:first-of-type {
+    font-weight: var(--bold-font);
+    font-size: .8rem;
+    color: var(--very-deep-blue);
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    width: fit-content;
+    margin-block-start: 1rem;
+    cursor: pointer;
+}
+
+#payment-modal h6:first-of-type img {
+    width: 10px;
+}
+
+#payment-modal button:last-of-type {
+    width: 100%;
+    padding: .9rem;
+    margin-block-start: 1rem;
+    cursor: pointer;
+    border-radius: calc(var(--nice-radius) - 15px);
+    color: white;
+    font-weight: var(--bold-font);
+    font-size: 1.05rem;
+    background: var(--very-deep-blue);
+     border: none;
+    outline: none;
+}
+
+
+#final-products {
+    list-style: none;
+    margin-block-start: 1.5rem;
+    border-radius: calc(var(--nice-radius) - 15px);
+}
+
+#final-products::-webkit-scrollbar {
+    display: none;
+}
+
+#final-products li {
+    box-shadow: 0 0 0 2px var(--grayish-text);
+    border-radius: calc(var(--nice-radius) - 15px);
+}
+
+#final-products li:not(#final-products li:last-child) {
+    border-bottom: 2px solid lightgray;
+}
+
+#total {
+    display: block;
+    place-content: center;
+    width: 100%;
+    text-align: right;
+    border-bottom: 2px solid lightgray;
+    padding: 1rem .5rem;
+    font-size: .9rem;
+    font-weight: var(--bold-font);
+    color: var(--grayish-text);
+}
+
+#total str {
+    font-weight: var(--bold-font);
+    font-size: 1.2rem;
+    color: var(--very-deep-blue);
+}
+
+#payment-options {
+    padding: 1rem .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#payment-options span {
+    text-align: center;
+    flex: 1 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .9rem;
+    font-weight: var(--bold-font);
+    color: var(--grayish-text);
+    cursor: pointer;
+    padding: .5rem 1rem;
+    box-shadow: 0 0 0 2px var(--grayish-text);
+    border-radius: calc(var(--nice-radius) - 17px);
+    transition-duration: .2s;
+}
+
+#payment-options span:first-child {
+    background: var(--generic-orange);
+    color: white;
+}
+
+#payment-options span:hover {
+    background: var(--generic-orange);
+    color: white;
+    scale: .98;
+}
+
+#payment-details {
+    padding: 1rem .5rem;
+}
+
+#payment-details fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    margin-block-start: 1.5rem;
+    border: none;
+}
+
+#payment-details fieldset label {
+    position: absolute;
+    inset: -10px 0 0 0;
+    color: var(--grayish-text);
+    font-weight: var(--bold-font);
+    font-size: .7rem;
+}
+
+#payment-details fieldset input {
+    flex: 1 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightgray;
+    font-weight: var(--bold-font);
+    font-size: 1rem;
+    color: var(--very-deep-blue);
+    background: transparent;
+}
+
+#payment-details fieldset div {
+    position: relative;
+    flex: 1 300px;
+}
+
 
 /*-- mobile device styling--*/
 
@@ -614,7 +864,7 @@ main {
         height: 1500px;
         width: 0;
         overflow: hidden;
-        z-index: 11;
+        z-index: 12;
         padding-block-start: 2rem;
         transition-duration: .2s;
     }

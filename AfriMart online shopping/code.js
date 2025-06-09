@@ -7,6 +7,38 @@ const minusIcon = document.querySelector('.counter-wrapper span:first-child');
 const plusIcon = document.querySelector('.counter-wrapper span:last-child');
 const counterValue = document.querySelector('.counter-value');
 const checkoutBtn = document.querySelector('.checkout-btn');
+const cancelPayment = document.querySelector('#payment-modal h6:first-of-type');
+const modalBackdrop = document.querySelector('#bg-layer');
+const payNowBtn = document.querySelector('#pay-now-btn');
+const successModal = document.querySelector('#success-msg');
+const continueShpng = document.querySelector('#success-msg button');
+const paymentModal = document.getElementById('payment-modal');
+
+
+cancelPayment.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+    modalBackdrop.style.display = 'none';
+});
+
+payNowBtn.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+    modalBackdrop.style.display = 'none';
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
+    successModal.showModal();
+});
+
+continueShpng.addEventListener('click', () => {
+    successModal.close();
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
+    location.reload();
+});
+
 
 /**
  * Event listener for checkout button click
@@ -17,10 +49,39 @@ checkoutBtn.addEventListener('click', () => {
         alert('Your cart is empty.');
         return;
     }
+
+    // Append chosen products to the payment modal final products list
+    const finalProductsList = document.getElementById('final-products');
+    // Clear existing products in the payment modal
+    finalProductsList.innerHTML = '';
+
+    // Clone and append each product from prodArray to finalProductsList
+    prodArray.forEach(product => {
+        const productClone = product.cloneNode(true);
+        // Remove delete icon from cloned product in payment modal
+        const deleteIcon = productClone.querySelector('#delete-icon');
+        if (deleteIcon) {
+            deleteIcon.remove();
+        }
+        finalProductsList.appendChild(productClone);
+    });
+
+    // Calculate total sum and update the total in payment modal
     const totalSum = displaySum.reduce((acc, val) => acc + val, 0);
     const formattedTotalSum = totalSum.toLocaleString();
-    alert('Total price of all products in the cart summary: N' + formattedTotalSum);
+    const totalSpan = document.getElementById('total');
+    if (totalSpan) {
+        totalSpan.innerHTML = `TOTAL &nbsp; <str>N${formattedTotalSum}</str>`;
+    }
+
+    paymentModal.style.display = 'block';
+    modalBackdrop.style.display = 'block';
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    })
 });
+
 
 const atcBtn = document.querySelector('.atcBtn');
 const selectedProduct = document.querySelector('.selected-product');

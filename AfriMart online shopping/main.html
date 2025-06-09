@@ -22,6 +22,76 @@
 </head>
 
 <body>
+
+  <dialog id="success-msg">
+    <img src="icons/icons8-checkmark-48.png">
+
+    <h1>Thank you for your purchase!</h1>
+    <p>We are pleased to confirm your order [ORD-20250609-8934]. Your order has been
+      successfully received and is now being processed.</p>
+
+    <button>Continue Shopping <img src="images/icon-cart.svg"></button>
+
+  </dialog>
+
+  <div id="bg-layer"></div>
+  <div id="payment-modal">
+
+    <img src="images/icon-cart.svg">
+    <h3> Summary </h3>
+
+    <h6><img src="icons/4808244.png">Go Back </h6>
+
+    <ul id="final-products"></ul>
+
+    <span id="total">TOTAL &nbsp; <str>N1000</str> </span>
+
+    <h5>Pay With</h5>
+    <aside id="payment-options">
+
+      <span>💳 Visa/Master Card</span>
+      <span>Bank Transfer</span>
+
+    </aside>
+
+    <aside id="payment-details">
+
+      <fieldset>
+        <label for="card-name">CARDHOLDERS'S NAME</label>
+        <input type="text" id="card-name" value="John Doe">
+      </fieldset>
+
+      <fieldset>
+        <label for="card-num">CARD NUMBER</label>
+        <input type="text" id="card-num" value="**** **** **** 1234">
+      </fieldset>
+
+      <fieldset>
+
+        <div>
+          <label for="expiry">EXP DATE</label>
+          <input type="text" id="expiry" value="07/25">
+
+        </div>
+
+        <div>
+          <label for="cvv">CVC/CVV</label>
+          <input type="text" id="cvv" value="***">
+
+        </div>
+      </fieldset>
+
+      <button id="pay-now-btn">PAY NOW</button>
+
+
+    </aside>
+
+
+
+  </div>
+
+
+
   <!-- Extra settings panel with theme and fullscreen toggles -->
   <aside class="extra-settings">
     <img id="theme-icon" src="images/icons8-dark-mode-100.png" alt="Toggle Dark Mode" loading="lazy" />
@@ -75,7 +145,7 @@
 
   <main>
     <!-- Product gallery section -->
-  <section class="product-gallery-main-wrapper">
+    <section class="product-gallery-main-wrapper">
       <!-- Main product image -->
       <img src="images/IMG-20250604-WA0096.jpg" class="main-photo" alt="Main Product Photo" loading="lazy" />
       <!-- Thumbnail images grid -->
@@ -149,7 +219,8 @@
   <script src="code.js" defer></script>
   <script src="products.js" defer></script>
   <script>
-    
+
   </script>
 </body>
+
 </html>

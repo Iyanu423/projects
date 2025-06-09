@@ -12,7 +12,6 @@ header,
     filter: invert(100%);
 }
 
-
 .current-price-wrapper span:is(:first-child, :nth-child(2)),
 .counter-value {
     color: whitesmoke;
@@ -36,3 +35,68 @@ header,
 .total-cost {
     color: white;
 }
+
+/* Dark mode styles for payment modal */
+#payment-modal {
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid #444;
+}
+
+#payment-modal h3,
+#payment-modal h5,
+#payment-modal h6,
+#payment-modal span,
+#payment-modal label,
+#payment-modal input,
+#payment-modal aside,
+#payment-modal fieldset {
+    color: whitesmoke;
+}
+
+#payment-modal h6:first-of-type img{
+    filter: invert(100%);
+}
+
+#payment-modal input {
+    background-color: #222;
+    border: 1px solid #555;
+    color: whitesmoke;
+}
+
+#payment-modal input::placeholder {
+    color: #bbb;
+}
+
+#payment-modal #final-products {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 0.5rem;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#payment-modal #final-products li {
+    border-bottom: 1px solid gray;
+    padding: 0.3rem 0;
+    background: black;
+    box-shadow: 0 0 0 2px gray;
+}
+
+#payment-modal #final-products li .total-cost{
+    color: white;
+}
+
+#payment-modal #total {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+/* Dark mode styles for success message modal with id success-msg */
+#success-msg {
+    background-color: black;
+    color: #a6e22e; /* bright green for success */
+    box-shadow: 0 0 0 2px var(--grayish-text);
+}
+
