@@ -159,12 +159,8 @@ saveBtn.addEventListener('click', () => {
     saveLoader.style.display = 'block';
 
     setTimeout(() => {
-
         // Return elements to their intial states
         saveLoader.style.display = 'none';
-
-        // Prevent interaction with the 'back-to-login' button after clicking the save button
-        backToLogin.style.pointerEvents = 'none';
 
         // Redirect the user to the main app
         location.assign('app.html');
