@@ -132,6 +132,7 @@ fullScreenIcon.addEventListener('click', () => {
 
         // Enable fullscreen mode
         document.documentElement.requestFullscreen();
+        fullScreenIcon.children[0].src = 'icons/icons8-exit-full-screen-78.png';
         fullScreenIcon.children[1].textContent = 'Disable fullscreen';
         displayNotif('Fullscreen enabled', 2000);
 
@@ -143,6 +144,7 @@ fullScreenIcon.addEventListener('click', () => {
     else {
         // Disable fullscreen mode
         document.exitFullscreen();
+        fullScreenIcon.children[0].src = 'icons/icons8-full-screen-96.png';
         fullScreenIcon.children[1].textContent = 'Fullscreen mode';
         displayNotif('Disabled', 2000);
 
