@@ -24,13 +24,42 @@ To get started with the Team Inbox Web App locally, follow these steps:
 
 
 ## Features
-- Centralized inbox for managing emails collaboratively.
-- Rich text editor for composing and formatting emails.
-- Advanced search and filter functionality to quickly find emails.
-- Dark mode support for better usability in different lighting conditions.
-- Responsive design compatible with various screen sizes.
-- User profile and email status management
-- Local JSON-based mock data for easy testing and development.
+
+### Composing Emails
+1. Click the "Compose" button located beside or below the search bar.
+2. A new email composition window will open with a rich text editor.
+3. Enter the recipient's email address in the "To" field.
+4. Add a subject line in the "Subject" field.
+5. Use the rich text editor toolbar to format your email body as needed.
+6. Once your email is ready, click the "Send" button to send the email.
+
+### Viewing Email Categories
+1. Locate the email categories panel located in the sidebar menu.
+2. Click on any category such as "Inbox", "Sent", "Drafts", or "Spam" to view emails in that category.
+3. The email list will update to show only emails belonging to the selected category.
+
+### Viewing / Reading Emails
+1. From the email list, click on the email you want to read.
+2. The email content will be displayed in a separate window.
+3. Scroll through the email to read the full message and any attachments.
+
+### Changing Themes
+1. Find the theme toggle option located in the sidebar menu.
+2. Click the toggle to switch between light mode and dark mode themes.
+3. The interface will update immediately to reflect the selected theme.
+
+### Editing User Profile (Email Address)
+1. Click on the user profile icon or name, usually located at the top right corner.
+2. Select "Profile" or "Settings" from the dropdown menu.
+3. In the profile settings, locate the email address field.
+4. Edit the email address as needed.
+5. Save the changes by clicking the "Save" button.
+
+### Searching / Filtering Emails
+1. Locate the search bar at the top of the inbox or email list.
+2. Enter keywords, sender email address, email subject or email content to search for specific emails.
+3. Use available filter options (email category or read/unread status) to narrow down results.
+4. The email list will update dynamically to show matching emails based on your search and filter criteria.
 
 
 ## Known Issues and Their Fixes
@@ -52,8 +81,7 @@ LinkdeIn: https://www.linkedin.com/in/iyanu423
 ## Acknowledgements
 - The rich text editor is powered by the open-source [Rich Text Editor](https://www.richtexteditor.com/) library.
 - Icons provided by [Icons8](https://icons8.com/).
-- UI/UX design inspired by Visual Studio Code and common email systems
+- Special thanks to all contributors and testers who helped improve the app.
 
 ---
-Thank you for using Team Inbox Web App. For any questions or support, please contact me.
-Email: iyanu423@gmail.com
+Thank you for using Team Inbox Web App. For any questions or support, please contact the development team.
