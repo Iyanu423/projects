@@ -718,14 +718,10 @@ function displayEmail(subject, pic, label, content, date, sender, previousPage) 
     // Enable the user to reply emails
     replyEmail.addEventListener('click', () => {
         hideAllExcept(writeMailUi);
-
+        
         // Add the subject and recievers email-address to the write-mail-UI
         viewSubject.textContent.startsWith('Re') ? emailSubject.value = subject : emailSubject.value = `Re: ${subject}`;
-
         recieversMail.textContent = viewEmail.textContent;
-
-        // editor1.setHTMLCode(removeHTMLtags(viewContent.innerHTML
-        editor1.setAttribute('placeholder' , 'Reply email...');
     });
 
     // Scroll to page top for consistent visibility
