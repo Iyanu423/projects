@@ -75,7 +75,7 @@ Adesanya Iyanuoluwa
 
 Email: iyanu423@gmail.com
 Github: https://github.com/Iyanu423
-LinkdeIn: https://www.linkedin.com/in/iyanu423
+LinkdeIn: https://www.linkedin.com/in/iyanuoluwa-adesanya-a9178b341/
 
 
 ## Acknowledgements
