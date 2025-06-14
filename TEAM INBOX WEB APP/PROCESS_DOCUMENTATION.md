@@ -51,17 +51,12 @@ A key feature of the app is the integration of a rich text editor library locate
 - **Cause**: This was primarily due to browser caching issues or incompatibility with certain icon formats.
 - **Solution**: Clearing the browser cache and using latest versions of popular browsers like Chrome or Firefox ensured better compatibility and resolved the problem.
 
-### 2. Rich Text Editor Toolbar Unresponsiveness
-- **Description**: The toolbar of the integrated rich text editor occasionally became unresponsive, preventing users from applying formatting and using toolbar features.
-- **Cause**: This issue was linked to JavaScript event handling conflicts and temporary glitches in the editor's state.
-- **Workaround**: Refreshing the page or restarting the browser reset the editor state and restored full functionality.
-
-### 3. Inconsistent Dark Mode Styling
+### 2. Inconsistent Dark Mode Styling
 - **Description**: Dark mode styles were inconsistently applied across different pages, leading to some UI elements appearing in light mode even when dark mode was enabled.
 - **Cause**: This was due to missing or improperly linked dark mode CSS files on certain pages.
 - **Solution**: Ensured that the dark mode CSS files (`darkmode.css` and `loginpage-darkmode.css`) were properly linked and loaded on all relevant pages.
 
-### 4. Email Data Synchronization Issues
+### 3. Email Data Synchronization Issues
 - **Description**: Changes made to emails (such as marking as spam or deleting) were not always immediately reflected in the UI or persisted across sessions.
 - **Cause**: Since the app uses a local JSON file as a mock data source without backend integration, changes were only stored in memory and lost on page reload.
 - **Workaround**: Users were informed through the readme that the app is a demo and changes are temporary.
