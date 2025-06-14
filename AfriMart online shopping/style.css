@@ -815,6 +815,12 @@ main {
     border: none;
 }
 
+@media (max-width: 500px) {
+    #payment-details fieldset {
+        flex-wrap: wrap;
+    }
+}
+
 #payment-details fieldset label {
     position: absolute;
     inset: -10px 0 0 0;
