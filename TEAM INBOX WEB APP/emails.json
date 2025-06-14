@@ -192,7 +192,7 @@
     },
     {
       "id": 20,
-      "from": "kekepalmers@example.com",
+      "from": "martha@team.com",
       "to": "john.doe@example.com",
       "subject": "Re: Team Outing",
       "status": "Sent",
