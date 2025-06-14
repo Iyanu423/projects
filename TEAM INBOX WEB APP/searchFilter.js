@@ -1,16 +1,3 @@
-/**
- * This script implements the email search and filtering functionality for the Team Inbox Web App.
- * It handles user input from the search bar and filter checkboxes to dynamically filter and display emails.
- * 
- * Key features:
- * - Loads email data asynchronously from a JSON file.
- * - Filters emails based on search input matching sender, subject, or content.
- * - Supports filtering by email status categories (e.g., inbox, sent) and unread status.
- * - Highlights matching search terms in the displayed results.
- * - Provides user feedback when no results are found.
- * - Manages UI state for filter checkboxes including custom checkmark indicators.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const searchUI = document.getElementById('search-UI');
@@ -39,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Displays a user-friendly message and image indicating no search results were found.
-   * This provides visual feedback to the user when their search/filter yields no matches.
+   * This provides visual feedback to the user when their search/filter returns no matches.
    */
   function showEmptyMessage() {
     const emptySpan = document.createElement('span');
@@ -178,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Trigger filtering with updated filter states
+      // Trigger email filtering logic
       filterEmails(searchInput.value.trim(), selectedFilter, unreadFilterChecked);
     });
   });
