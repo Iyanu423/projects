@@ -721,7 +721,9 @@ function displayEmail(subject, pic, label, content, date, sender, previousPage) 
         
         // Add the subject and recievers email-address to the write-mail-UI
         viewSubject.textContent.startsWith('Re') ? emailSubject.value = subject : emailSubject.value = `Re: ${subject}`;
-        recieversMail.textContent = viewEmail.textContent;  
+        recieversMail.textContent = viewEmail.textContent;
+
+        // Reset email content
         editor1.setHTMLCode('');
     });
 
