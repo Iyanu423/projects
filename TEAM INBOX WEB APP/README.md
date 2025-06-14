@@ -65,8 +65,6 @@ To get started with the Team Inbox Web App locally, follow these steps:
 ## Known Issues and Their Fixes
 - **Issue:** Some icons may not display correctly on certain browsers.
   - **Fix:** Clear browser cache or try using the latest version of Chrome or Firefox.
-- **Issue:** Rich text editor toolbar occasionally becomes unresponsive.
-  - **Fix:** Refresh the page or restart the browser to reset the editor state.
 
 
 ## Author
