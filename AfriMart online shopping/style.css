@@ -160,7 +160,7 @@ nav span:hover {
 }
 
 #cart-summary {
-    border-radius:  20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
     background: white;
     scale: 0;
     position: absolute;
@@ -636,7 +636,7 @@ main {
     outline: none;
 }
 
-#success-msg button img{
+#success-msg button img {
     width: 10px;
 }
 
@@ -724,7 +724,7 @@ main {
     font-weight: var(--bold-font);
     font-size: 1.05rem;
     background: var(--very-deep-blue);
-     border: none;
+    border: none;
     outline: none;
 }
 
@@ -815,6 +815,13 @@ main {
     border: none;
 }
 
+@media (max-width: 500px) {
+    #payment-details fieldset {
+        flex-wrap: wrap;
+    }
+}
+
+
 #payment-details fieldset label {
     position: absolute;
     inset: -10px 0 0 0;
@@ -837,7 +844,12 @@ main {
 
 #payment-details fieldset div {
     position: relative;
-    flex: 1 300px;
+    width: 100%;
+    display: flex;   
+}
+
+#payment-details fieldset div input{
+   flex: 1 300px;
 }
 
 
