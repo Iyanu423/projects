@@ -71,17 +71,17 @@ Since the app uses a static JSON file as a mock data source without backend inte
 ## Challenges and Issues Faced During Development
 
 ### 1. Icon Display Issues
-- **Description**: Some icons failed to render correctly or appeared distorted on certain browsers, especially older versions or less common browsers.
+- **Description**: Some icons failed to render correctly on certain browsers, especially older versions or less common browsers.
 - **Cause**: This was primarily due to browser caching issues or incompatibility with certain icon formats.
 - **Solution**: Clearing the browser cache and using latest versions of popular browsers like Chrome or Firefox ensured better compatibility and resolved the problem.
 
 ### 2. Inconsistent Dark Mode Styling
 - **Description**: Dark mode styles were inconsistently applied across different pages, leading to some UI elements appearing in light mode even when dark mode was enabled.
-- **Cause**: This was due to missing or improperly linked dark mode CSS files on certain pages.
+- **Cause**: This was due to improperly linked dark mode CSS files on certain pages.
 - **Solution**: Ensured that the dark mode CSS files (`darkmode.css` and `loginpage-darkmode.css`) were properly linked and loaded on all relevant pages.
 
 ### 3. Email Data Synchronization Issues
-- **Description**: Changes made to emails (such as marking as spam or deleting) were not always immediately reflected in the UI or persisted across sessions.
+- **Description**: Changes made to emails (such as marking as spam or deleting) were not always immediately reflected in the UI
 - **Cause**: Since the app uses a local JSON file as a mock data source without backend integration, changes were only stored in memory and lost on page reload.
 - **Workaround**: Users were informed through the readme that the app is a demo and changes are temporary.
 - **Future Improvements**: Integrating a backend or local storage mechanism to persist changes would enhance functionality.
@@ -95,9 +95,6 @@ Testing was carried out manually due to the client-side nature of the app:
 - **Functional Testing**: Verified UI interactions such as email composing, sending, deleting, marking spam, and theme switching.
 - **Cross-Browser Testing**: Ensured compatibility across major browsers (Chrome, Firefox, Edge).
 - **Responsive Testing**: Tested UI responsiveness on various screen sizes including desktops, tablets, and mobile devices.
-- **Usability Testing**: Gathered feedback from users to improve navigation and feature accessibility.
-
-Automated testing is planned for future iterations, including unit tests for JavaScript functions and end-to-end tests using frameworks like Cypress or Selenium.
 
 ---
 
@@ -115,9 +112,7 @@ Automated testing is planned for future iterations, including unit tests for Jav
 
 - **Backend Integration**: Connect the app to a backend service or database to persist email data and user settings.
 - **User Authentication**: Implement secure login and user management.
-- **Real-time Updates**: Add WebSocket or polling mechanisms for live email updates.
 - **Automated Testing**: Introduce unit and integration tests for robustness.
-- **Performance Optimization**: Improve load times and resource usage.
 - **Accessibility Improvements**: Enhance support for screen readers and keyboard navigation.
 - **Additional Features**: Calendar integration, email scheduling , and profile picture editing
 
