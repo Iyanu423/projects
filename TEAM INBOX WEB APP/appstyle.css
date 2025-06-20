@@ -17,6 +17,51 @@
     --light-mode-gradient: linear-gradient(to right, rgba(175, 225, 205, .5), rgba(137, 30, 124, .1));
 }
 
+.preloader {
+    position: absolute;
+    margin: auto;
+    z-index: 20;
+    background: none;
+    border: none;
+    outline: none;
+    justify-items: center;
+    transition-duration: var(--smooth-transition);
+}
+
+.preloader::-webkit-scrollbar {
+    display: none;
+}
+
+.preloader::backdrop {
+    background: white;
+}
+
+.preloader>.spinner {
+    -webkit-margin-before: 50px;
+    margin-block-start: 50px;
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--global-deep-purple);
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    -webkit-animation: l3 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+.preloader span {
+    color: var(--global-deep-purple);
+    font-weight: var(--bold-font);
+    margin-block-start: 1rem;
+    display: block;
+}
+
 body {
     height: 1300px;
 }
