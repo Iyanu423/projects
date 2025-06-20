@@ -1778,12 +1778,9 @@ main {
         border-radius: 0;
         border-top: .5px solid gray;
         box-shadow: none;
-    }
-
-    #write-mail-UI {
         height: 100vh;
     }
-
+    
     .template-mail-content {
         inset-block-start: 10px;
         height: 17px;
@@ -1892,10 +1889,14 @@ main {
         inset: 0;
         z-index: 12;
         width: 100vw;
+        border-top: none;
     }
 
     #view-email-UI {
-        height: 100vh;
+        height: 1300px;
+        position: absolute;
+        inset: 0;
+        box-shadow: none;
     }
 
     #email-subject {
