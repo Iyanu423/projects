@@ -1,3 +1,13 @@
+/*========= PRELOADER ANIMATION ===========*/
+const preloader = document.querySelector('.preloader');
+window.addEventListener('load', () => {
+    preloader.showModal();
+
+    setTimeout(() => {
+        preloader.close();
+    }, 4000);
+});
+
 /*========= SIDEBAR MENU SECTION ==========*/
 
 const switchThemeOption = document.querySelector('#Theme-switcher');
