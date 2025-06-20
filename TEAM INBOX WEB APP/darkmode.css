@@ -16,6 +16,14 @@
     --dark-mode-gradient: linear-gradient(to right, rgba(187, 134, 252, .5), rgba(3, 218, 198, .1));
 }
 
+.preloader::backdrop {
+    background: black;
+}
+
+.preloader span{
+    color: white;
+}
+
 /* === Base Styles === */
 body {
     background-color: var(--background-color);
