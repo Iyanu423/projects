@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         preloader.close();
-    }, 4000);
+    }, 5000);
 });
 
 /*========= SIDEBAR MENU SECTION ==========*/
