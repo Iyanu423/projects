@@ -73,6 +73,7 @@ header>span {
     color: var(--global-deep-purple);
     font-weight: var(--bold-font);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Header first image (support icon) aligned to the right */
