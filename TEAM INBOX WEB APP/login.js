@@ -109,7 +109,7 @@ submitBtn.addEventListener('click', e => {
         }
     });
     
-    // Display success message and redirect the user to the main app
+    // Display the profile setup modal if all fields are valid
     if (valid) loginSuccess();
 });
 
@@ -122,16 +122,15 @@ function loginSuccess() {
 
         loaders[1].style.display = 'block';
 
-        // Display visual feedback to signify successful login
+        // Display the profile setup modal to signify successful login
         setTimeout(() => {
             
             loaders[1].style.display = 'none';
-
-            // Display the profile setup pop up modal
+            
             profileForm.showModal()
             profileForm.style.scale = 1;;
 
-            // Automatically scroll to the top of the page to ensure the profile setup dialog is consistently visible
+            // Automatically scroll to the top of the page to ensure the profile setup modal is consistently visible
             window.scroll({ top: 0, behavior: 'smooth' });
 
         }, 3000);
@@ -149,7 +148,7 @@ const saveBtn = document.querySelector('#profile-setup button');
 const saveSpan = document.querySelector('#profile-setup button span:first-child');
 const saveLoader = document.querySelector('#profile-setup button span:last-child');
 
-// Close the staff profile pop-up modal 
+// Close the staff profile modal 
 backToLogin.addEventListener('click', () => profileForm.close());
 
 
@@ -159,11 +158,11 @@ backToLogin.addEventListener('click', () => profileForm.close());
 
 saveBtn.addEventListener('click', () => {
 
-    // Display and hide selected elements to provide visual feedback
+    // Display the loading animation
     saveLoader.style.display = 'block';
 
     setTimeout(() => {
-        // Return elements to their intial states
+        // Hide the loading animation
         saveLoader.style.display = 'none';
 
         // Redirect the user to the main app
