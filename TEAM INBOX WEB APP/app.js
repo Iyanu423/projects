@@ -495,7 +495,7 @@ saveBtn.addEventListener('click', () => {
 
 // STAFF PROFILE MANAGEMENT
 
-// Open change email dialog on edit button click
+// Open change email modal on edit button click
 editBtn.addEventListener('click', () => {
     changeEmailDialog.showModal();
     changeEmailDialog.children[0].focus();
@@ -524,7 +524,7 @@ applyChangesBtn.addEventListener('click', () => {
     staffEmailInput.value = changeEmailDialog.children[0].value.trim().concat('@team.com');
     userEmail.textContent = staffEmailInput.value;
 
-    // Reset the email dialog input styles
+    // Reset the email modal input styles
     changeEmailDialog.children[0].value = '';
     changeEmailDialog.children[0].placeholder = 'Write new email...';
     changeEmailDialog.children[0].style.borderBottom = '2.5px solid var(--global-deep-purple)';
