@@ -1,5 +1,9 @@
 /*========== PAGE HEADER SECTION ==========*/
 
+// Reload page on logo click
+const logo = document.querySelector('header span:first-child');
+logo.addEventListener( 'click' , () => location.reload() );
+
 const getHelpIcon = document.querySelector('header img:first-of-type');
 const helpMenu = document.querySelector(' header aside');
 
