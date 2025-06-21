@@ -12,7 +12,6 @@ const mobileMenu = document.querySelector('#mobile-menu-icon');
 const mobileExit = document.querySelector('#mobile-exit-icon');
 const menuoption = document.querySelectorAll('.menu-option');
 
-
 // Flag variable to track whether the theme dropdown menu is open or closed
 let themeMenuOpen = false;
 
@@ -29,7 +28,6 @@ switchThemeOption.addEventListener('click', () => {
     !themeMenuOpen ?
         (themeMenu.style.height = '300px', dropDownIcon.style.rotate = '180deg', themeMenuOpen = true) : resetMenu();
 });
-
 
 const darkModeStylesheet = document.querySelector('#darkmode-style');
 
@@ -112,52 +110,13 @@ if (window.innerWidth <= 768) {
 }
 
 
-
 /*========== APP LAYOUT SETTINGS ==========*/
 
 const layoutIcon = document.querySelector('.setting-option:nth-of-type(2)');
 const layoutOptions = document.querySelectorAll('.applayout-menu li');
 const mainEle = document.querySelector('main');
 
-
-// CHANGE APP TO FULL SCREEN MODE
-const fullScreenIcon = document.querySelector('#fullscreen-icon');
-
-// Flag variable to monitor fullscreen state
-let fullScreen = false;
-
-fullScreenIcon.addEventListener('click', () => {
-
-    if (!fullScreen) {
-
-        // Enable fullscreen mode
-        document.documentElement.requestFullscreen();
-        fullScreenIcon.children[0].src = 'icons/icons8-exit-full-screen-78.png';
-        fullScreenIcon.children[1].textContent = 'Disable fullscreen';
-        displayNotif('Fullscreen enabled', 2000);
-
-        // Scroll to page top for consistent visibility
-        window.scroll({ top: 0, behavior: 'smooth' });
-
-        fullScreen = true;
-    }
-    else {
-        // Disable fullscreen mode
-        document.exitFullscreen();
-        fullScreenIcon.children[0].src = 'icons/icons8-full-screen-96.png';
-        fullScreenIcon.children[1].textContent = 'Fullscreen mode';
-        displayNotif('Disabled', 2000);
-
-        // Scroll to page top for consistent visibility
-        window.scroll({ top: 0, behavior: 'smooth' });
-
-        fullScreen = false;
-    }
-});
-
-
 // CHANGE APP LAYOUT DIRECTION
-
 // Show layout options menu on layout icon click
 layoutIcon.addEventListener('click', e => {
 
@@ -168,7 +127,6 @@ layoutIcon.addEventListener('click', e => {
     menu.setAttribute('style', 'height: 95px; box-shadow: 0 0 0 2px var(--faded-gray);display:block');
     arrow.style.rotate = '180deg';
 });
-
 
 // Hide layout options menu when a layout option is selected
 layoutOptions.forEach(option => {
@@ -181,7 +139,6 @@ layoutOptions.forEach(option => {
     });
 });
 
-
 // Move sidebar to the left
 layoutOptions[0].addEventListener('click', () => {
 
@@ -191,7 +148,6 @@ layoutOptions[0].addEventListener('click', () => {
         openMenu();
     }
 });
-
 
 // Move sidebar to the right
 layoutOptions[1].addEventListener('click', e => {
@@ -207,8 +163,6 @@ layoutOptions[1].addEventListener('click', e => {
             e.target.setAttribute('style', 'inset: 30px 0 0 50%;  translate: -50%; rotate: -180deg');
     };
 });
-
-
 
 
 /*========== HIDE AND DISPLAY USER INTERFACES ==========*/
@@ -233,14 +187,12 @@ const exitIcon = document.querySelector('#exit-icon');
 const acountMGTIcon = document.querySelector('.setting-option:first-of-type');
 const staffProfilePic = document.querySelector('#user-profile-image');
 
-
 // Clear all search results in the search UI except ( the search ui description header )
 function clearSearchUI() {
     while (searchUI.children.length > 1) {
         searchUI.removeChild(searchUI.lastChild);
     }
 };
-
 
 // Reset all email filters in the search UI when the user navigates to anoher user interface
 const filterCheckboxes = filtersWrapper.querySelectorAll('input[type="checkbox"]');
@@ -253,7 +205,6 @@ function clearFilters() {
     });
 };
 
-
 // This function hides all user interfaces except the UI or UI's passed in as an argument
 function hideAllExcept(...elements) {
     const all = [inbox, sent, drafts, spam, settings, profileUi, writeMailUi, viewMailUi, searchUI];
@@ -261,7 +212,6 @@ function hideAllExcept(...elements) {
         ui.style.display = elements.includes(ui) ? 'block' : 'none';
     });
 };
-
 
 // This function displays any UI passed in as an argument and resets the search UI
 function showandReset(ui) {
@@ -274,11 +224,9 @@ function showandReset(ui) {
     clearFilters();
 };
 
-
 // Event listeners to show and hide staff profile UI
 acountMGTIcon.addEventListener('click', () => profileUi.style.display = 'block');
 exitIcon.addEventListener('click', () => profileUi.style.display = 'none');
-
 
 // Hides all other user interfaces when the search input is clicked
 searchInput.addEventListener('click', e => {
@@ -287,7 +235,6 @@ searchInput.addEventListener('click', e => {
     filtersWrapper.setAttribute('style', 'height: 50px; border-bottom : 2px solid gray');
     hideAllExcept(searchUI);
 });
-
 
 
 /*--- Flag variable to track the page the user was interacting with before clicking an email
@@ -301,7 +248,6 @@ let previous = inbox;
 // Hides the viewMail UI when the the exitView icon is clicked
 exitViewUI.addEventListener('click', e => hideAllExcept(previous));
 
-
 // Display staff profile settings when the staff's profile picture is clicked
 staffProfilePic.addEventListener('click', () => {
     showandReset(settings);
@@ -311,19 +257,15 @@ staffProfilePic.addEventListener('click', () => {
 // Display write new mail UI and hide other UIs
 composeMailIcon.addEventListener('click', () => showandReset(writeMailUi));
 
-
 // DOM reference to select the inbox, sent , draft , spam and settings menu option
 const emailInterface = Array.from(mailCategories).slice(0, 5);
 
-// Display the different email UI's onclick
+// Display the different email UI's when their category option is clicked
 emailInterface.forEach((option, index) => {
 
     const uiArray = [inbox, sent, drafts, spam, settings];
     option.addEventListener('click', () => showandReset(uiArray[index]));
 });
-
-
-
 
 
 /*========== STAFF PROFILE AND EMAIL STATUS MANAGEMENT ==========*/
@@ -354,7 +296,6 @@ const cancelBtn = document.querySelector('.btn-wrapper button:first-child');
 const saveBtn = document.querySelector('.btn-wrapper button:last-child');
 const statusInput = document.querySelector('#write-status');
 
-
 // Display notification messages in the notification area
 function displayNotif(msg, delay) {
 
@@ -365,13 +306,11 @@ function displayNotif(msg, delay) {
     }, delay);
 }
 
-
 // Display the email status menu and hide the loading animation
 function displayStatusMenu() {
     statusMenu.setAttribute('style', 'scale: 1;box-shadow: 0 0 0 2px gray');
     settingLoader.style.scale = 0;
 }
-
 
 // Show email status menu on (mobile devices)
 mobileStatusIcon.addEventListener('click', e => {
@@ -388,7 +327,6 @@ mobileStatusIcon.addEventListener('click', e => {
     window.scroll({ top: 0, behavior: 'smooth' });
 });
 
-
 // Show the email status menu on status-icon click on (tablet and pc)
 statusIcon.addEventListener('click', e => {
 
@@ -399,7 +337,6 @@ statusIcon.addEventListener('click', e => {
     settingLoader.style.scale = 1;
     setTimeout(displayStatusMenu, 1000);
 });
-
 
 // Close the email status-menu when clicking outside the status icon, mobile status icon, and status menu
 document.addEventListener('click', e => {
@@ -414,7 +351,6 @@ document.addEventListener('click', e => {
         arrow.style.rotate = 'initial';
     }
 });
-
 
 // Update email status using preset values (Active , Away)
 statusMenuOption.forEach(option => {
@@ -434,15 +370,12 @@ statusMenuOption.forEach(option => {
     };
 });
 
-
 // CUSTOM EMAIL STATUS MAMNAGEMENT
-
 // Open custom email status dialog
 customStatusIcon.addEventListener('click', () => {
     customStatusMenu.showModal();
     statusInput.focus();
 });
-
 
 // Cancel custom email status input and reset styles
 cancelBtn.addEventListener('click', () => {
@@ -459,14 +392,12 @@ cancelBtn.addEventListener('click', () => {
     statusInput.style.borderBottom = '2px solid var(--global-deep-purple)';
 });
 
-
 // Apply custom email status presets on-click
 customPresets.forEach(preset => {
     preset.addEventListener('click', () => {
         statusInput.value = preset.textContent;
     });
 });
-
 
 // Save custom email status ( validation and visual feedback included ) 
 saveBtn.addEventListener('click', () => {
@@ -492,9 +423,7 @@ saveBtn.addEventListener('click', () => {
     return true;
 });
 
-
 // STAFF PROFILE MANAGEMENT
-
 // Open change email modal on edit button click
 editBtn.addEventListener('click', () => {
     changeEmailDialog.showModal();
@@ -504,10 +433,8 @@ editBtn.addEventListener('click', () => {
     window.scroll({ top: 0, behavior: 'smooth' });
 });
 
-
 // Regex pattern to validate email input for new email address
 const invalidEmailPattern = /(@|@team|@team\.com|\.com)/gi;
-
 
 // Apply changes to staff email ( validation and visual feedback included )
 applyChangesBtn.addEventListener('click', () => {
@@ -533,7 +460,6 @@ applyChangesBtn.addEventListener('click', () => {
     return true;
 });
 
-
 // Cancel email change process and reset input styles
 unsaveChanges.addEventListener('click', () => {
     changeEmailDialog.close();
@@ -541,8 +467,6 @@ unsaveChanges.addEventListener('click', () => {
     changeEmailDialog.children[0].placeholder = 'Write new email...';
     changeEmailDialog.children[0].style.borderBottom = '2.5px solid var(--global-deep-purple)';
 });
-
-
 
 
 /*========== WRITE NEW EMAIL SECTION ==========*/
@@ -563,7 +487,6 @@ const ccToggle = document.querySelector('.from-and-to:nth-of-type(2) img');
 const ccMenu = document.querySelector('#cc-wrapper');
 const ccField = document.querySelector('#cc-input span');
 const bccField = document.querySelector('#bcc-input span');
-
 
 // Flag variable to track CC and BCC fields visibility
 ccMenuOpen = false;
@@ -610,7 +533,6 @@ function createNewMail(mailContent, dateSent, appendAt, senderMail, mailStatus, 
     const ccField = document.createElement('span');
     const bccField = document.createElement('span');
 
-
     newMailWrapper.setAttribute('class', 'template-emails');
     pic.setAttribute('class', 'template-sender-pic');
     sender.setAttribute('class', 'template-sender-email');
@@ -624,7 +546,6 @@ function createNewMail(mailContent, dateSent, appendAt, senderMail, mailStatus, 
     ccField.setAttribute('class', 'cc-input-field');
     bccField.setAttribute('class', 'bcc-input-field');
 
-
     emailStatus.textContent = mailStatus;
     subject.textContent = mailSUbject;
     mailIsRead.textContent = isRead;
@@ -632,7 +553,7 @@ function createNewMail(mailContent, dateSent, appendAt, senderMail, mailStatus, 
     bccField.textContent = bcc;
 
     const mailString = senderMail;
-
+    
     markSpam.src = 'icons/dsdddsfdfsd.png';
     markSpam.addEventListener('click', e => {
         const mailElement = e.target.closest('aside');
@@ -731,12 +652,10 @@ function displayEmail(subject, pic, label, content, date, sender, previousPage) 
     window.scroll({ top: 0, behavior: 'smooth' });
 };
 
-
 // Generate real time dates
 function getRealDate() {
     return new Date().toISOString().split('T')[0];
 }
-
 
 // Reset all email fields in the write new mail UI ( except senders and recievers email address for demo purposes )
 function clearAllFields() {
@@ -746,7 +665,6 @@ function clearAllFields() {
     ccField.textContent = '';
     bccField.textContent = '';
 };
-
 
 // Display loading animation when an email is being sent
 function showSendingLoader() {
@@ -764,7 +682,6 @@ function showSendingLoader() {
 
 // Strip HTML tags from any string
 function removeHTMLtags(string) { return string.replace(/<[^>]*>/g, '') };
-
 
 // Event listener to send an email
 sendMsgIcon.addEventListener('click', e => {
@@ -789,14 +706,12 @@ sendMsgIcon.addEventListener('click', e => {
     }
 });
 
-
 // Discard email
 discardMsgIcon.addEventListener('click', () => {
     showandReset(inbox);
     // Reset all email fields
     clearAllFields();
 });
-
 
 // Event listener to save email as draft
 saveAsDraft.addEventListener('click', () => {
@@ -812,8 +727,7 @@ saveAsDraft.addEventListener('click', () => {
     clearAllFields();
 });
 
-
-// Event listeners to mark emails as spam
+// Event listener to mark emails as spam
 spamIcon.forEach(icon => {
     icon.addEventListener('click', e => {
         spam.insertAdjacentElement('afterbegin', e.target.closest('aside'));
@@ -821,16 +735,13 @@ spamIcon.forEach(icon => {
     });
 });
 
-
-// Event listeners to permanently delete emails
+// Event listener to permanently delete emails
 deleteMail.forEach(icon => {
     icon.addEventListener('click', e => {
         e.target.closest('aside').remove();
         displayNotif('Deleted', 2000);
     });
 });
-
-
 
 // Display the total number of emails in each email category
 function displayMailCount() {
@@ -861,12 +772,10 @@ function displayMailCount() {
 setInterval(displayMailCount, 100);
 
 
-
 /*========== AUTO POPULATE USER INTERFACES WITH EMAILS ==========*/
 
 // Automatically append emails to their respective email UI after the app launches
 getEmails();
-
 // Fetch emails from emails.JSON and populate UI
 async function getEmails() {
     
@@ -890,7 +799,6 @@ async function getEmails() {
         console.error(`ERROR MSG: ${error}`);
     };
 };
-
 
 
 /*========== LOG OUT SECTION ==========*/
