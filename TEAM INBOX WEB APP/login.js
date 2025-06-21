@@ -148,7 +148,7 @@ const saveBtn = document.querySelector('#profile-setup button');
 const saveSpan = document.querySelector('#profile-setup button span:first-child');
 const saveLoader = document.querySelector('#profile-setup button span:last-child');
 
-// Close the staff profile modal 
+// Close the profile setup modal 
 backToLogin.addEventListener('click', () => profileForm.close());
 
 
