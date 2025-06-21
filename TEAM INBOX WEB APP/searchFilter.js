@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /**
-   * Displays a user-friendly message and image indicating no search results were found.
+   * Display a user-friendly message and image indicating no search results were found.
    * This provides visual feedback to the user when their search/filter returns no matches.
    */
   function showEmptyMessage() {
@@ -38,34 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // HIGHLIGHT CHARACTERS THAT MATCH THE VALUES IN THE SEARCH INPUT
   function highlightMatch(text, search) {
     if (!search) return text;
-    // Escape special regex characters in search string to avoid errors
+    // Escape special regex characters in the search string to avoid errors
     const regex = new RegExp(`(${search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    // Add a yellow highlight to the matching text
     return text.replace(regex, '<span style="background-color: yellow;">$1</span>');
   }
-
 
   // FILTER AND DISPLAY EMAILS THAT MATCH THE SEARCH AND EMAIL FILTER CATEGORY
   async function filterEmails(searchValue, mainFilter, unreadFilter) {
     const emails = await loadEmails();
     clearSearchUI();
 
-    // If no search or filters are applied, show empty message and notify user
+    // If no search or filters are applied, show the empty message to notify the user
     if (!searchValue && !mainFilter && !unreadFilter) {
       showEmptyMessage();
       displayNotif('No search results found', 2000);
       return;
     }
 
-
     // Filter emails based on search and filter criteria
     const filteredEmails = emails.filter(email => {
-      // Check if email matches search input in from, subject, or content fields (case-insensitive)
+      // Check if an email's from, subject, or content fields matches the value in the search input (case-insensitive)
       const matchesSearch = !searchValue ||
         email.from.toLowerCase().includes(searchValue.toLowerCase()) ||
         email.subject.toLowerCase().includes(searchValue.toLowerCase()) ||
         email.content.toLowerCase().includes(searchValue.toLowerCase());
 
-      // Check if email matches the selected main filter category
+      // Check if an email matches the selected main filter category
       let matchesFilter = true;
       if (mainFilter) { matchesFilter = email.status.toLowerCase() === mainFilter.toLowerCase(); }
       if (unreadFilter) { matchesFilter = matchesFilter && email.isRead === false; }
@@ -81,8 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-
-    // For each filtered email, highlight matching search terms and display in UI
+    // For each filtered email, highlight matching search terms and display in the search UI
     filteredEmails.forEach(email => {
       const highlightedContent = highlightMatch(email.content, searchValue);
       const highlightedFrom = highlightMatch(email.from, searchValue);
@@ -91,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
       createNewMail(highlightedContent, email.timestamp, searchUI, highlightedFrom, email.status, email.subject, email.isRead);
     });
   }
-
 
   // INITIALIZE THE EMAIL SEARCH LOGIC WHEN THE SEARCH BAR RECEIVES INPUT
   searchInput.addEventListener('input', (e) => {
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Event listeners for all filter checkboxes.
    * Handles toggling of unread filter independently and exclusive selection of main filters.
-   * Updates UI checkmarks and triggers filtering on change.
+   * Updates UI checkmarks and triggers email filtering on change.
    */
   filterCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', (e) => {
@@ -165,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Trigger email filtering logic
+      // Trigger the email filtering logic after the search input recieves focus
       filterEmails(searchInput.value.trim(), selectedFilter, unreadFilterChecked);
     });
   });
