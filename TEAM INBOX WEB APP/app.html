@@ -69,7 +69,7 @@
   <!-- Layer for menu overlay on mobile devices -->
   <div id="menu-layer"></div>
 
-  <!-- Custom email status pop-up menu -->
+  <!-- Custom email status modal -->
   <dialog id="custom-status-menu">
     <input id="write-status" type="text" autocomplete="off" placeholder="Write custom status...">
     <b>📜 Suggestions</b>
@@ -89,11 +89,9 @@
     </div>
   </dialog>
 
-
-
-
+  
   <header>
-
+    
     <!-- Loading animation for email status menu -->
     <div id="settings-loader">
       <div class="spinner"></div>
@@ -111,7 +109,6 @@
       <div id="user-profile-image"></div>
       <div id="user-email-address">iyanu423@team.com</div>
     </section>
-
 
     <div id="status-wrapper">
       <!-- Email status icon with dropdown arrow -->
@@ -361,18 +358,13 @@
       <span class="setting-option"><img src="icons/icons8-user-96.png">User Profile</span>
       <span class="setting-option"><img src="icons/1162631.png">App layout<img
           src="icons/icons8-sort-down-100.png"></span>
-
+    
       <!-- Dropdown menu to display app layout options -->
       <ul style="display: none;" class="applayout-menu">
         <li><img src="icons/9802581.png">Side bar to left</li>
         <li><img src="icons/9802571.png">Side bar to right</li>
       </ul>
-
-      <!-- Fullscreen mode option -->
-      <span id="fullscreen-icon" class="setting-option"><img src="icons/icons8-full-screen-96.png"><b
-          style="font-weight: var(--bold-font);">Fullscreen
-          mode</b></span>
-
+      
       <span class="setting-option"><img src="icons/icons8-online-support-100.png">Contact Support</span>
       <span id="log-out" class="setting-option"><img src="icons/icons8-logout-64.png">Log out</span>
 
@@ -399,7 +391,7 @@
           </fieldset>
 
 
-          <!-- Change email address pop-up modal -->
+          <!-- Change email address modal -->
           <dialog id="email-change">
             <input type="text" placeholder="Write new email..." autocomplete="off">
             <span> <b>⚠</b> Please input your name only, the system automatically adds the "@team.com"
@@ -457,26 +449,19 @@
 
       <!-- Email subject -->
       <h1 id="view-subject"></h1>
-
       <!-- Senders profile picture and email address -->
       <div id="email-details">
         <span id="view-picture"></span>
-
         <span id="view-sender">
           <b>
-
             <!-- Email label e.g (inbox,spam) and senders email adress are displayed here -->
             <str></str>
           </b><b></b></span>
-
         <span id="view-date"></span>
-
       </div>
-
       <!-- View email content -->
       <aside id="view-content"></aside>
-
-
+      
     </section>
 
   </main>
@@ -487,7 +472,6 @@
     <h1>Confirm Logout ?</h1>
     <b>⚠ You would need to login again to access your account </b>
     <br>
-
     <button>Log out</button>
     <button>Cancel</button>
   </dialog>
