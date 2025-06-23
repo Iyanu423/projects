@@ -56,7 +56,7 @@ To get started with the Team Inbox Web App locally, follow these steps:
 5. Save the changes by clicking the "Save" button.
 
 ### Searching / Filtering Emails
-1. Locate the search bar at the top of the inbox or email list.
+1. Locate the search bar at the top of the email lists.
 2. Enter keywords, sender email address, email subject or email content to search for specific emails.
 3. Use available filter options (email category or read/unread status) to narrow down results.
 4. The email list will update dynamically to show matching emails based on your search and filter criteria.
