@@ -112,9 +112,8 @@ Testing was carried out manually due to the client-side nature of the app:
 
 - **Backend Integration**: Connect the app to a backend service or database to persist email data and user settings.
 - **User Authentication**: Implement secure login and user management.
-- **Automated Testing**: Introduce unit and integration tests for robustness.
 - **Accessibility Improvements**: Enhance support for screen readers and keyboard navigation.
-- **Additional Features**: Calendar integration, email scheduling , and profile picture editing
+- **Additional Features**: Additional email categorization, email scheduling and profile picture editing
 
 ---
 
