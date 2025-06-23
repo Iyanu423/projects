@@ -868,7 +868,7 @@ main {
 }
 
 
-/*-- These email properties would become visible when an email is clicked --*/
+/*-- These email properties are used to categorize and filter emails using javascript --*/
 .email-subject,
 .email-isRead,
 .email-status,
