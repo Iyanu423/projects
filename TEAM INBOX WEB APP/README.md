@@ -67,7 +67,7 @@ To get started with the Team Inbox Web App locally, follow these steps:
   - **Fix:** Clear browser cache or try using the latest version of Chrome or Firefox.
 
  - **Issue:** Google chrome browser flags the site as malicious.
-  - **Fix:** Select the details option from the pop up alert and click 'visit the site anyway'. The site is completely malware free so you have nothng to worry about.
+  - **Fix:** Select the details option from the pop up alert and click 'visit the site anyway'. The site is completely malware free and has been scanned throughly using                     https://www.sitelock.com/free-website-scan/ so you have nothng to worry about.
 
 
 ## Author
