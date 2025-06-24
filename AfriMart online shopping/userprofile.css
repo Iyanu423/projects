@@ -1,0 +1,199 @@
+:root {
+    --deep-blue-text: steelblue;
+    --grayish-text: hsl(219, 9%, 45%);
+    --generic-orange: hsl(26, 100%, 55%);
+    --nice-radius: 20px;
+    --bold-font: bold;
+    --very-deep-blue: hsl(218, 21%, 36%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Onest', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+     border-bottom: 2px solid var(--generic-orange);
+   
+}
+
+header h1 {
+    color: var(--deep-blue-text);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+header nav {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--grayish-text);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--generic-orange);
+}
+
+main {
+    box-shadow: 0 0 10px 1px var(--grayish-text);
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--nice-radius);
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.profile-info .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--generic-orange);
+}
+
+.profile-info h2 {
+    font-size: 1.8rem;
+    color: var(--deep-blue-text);
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    color: var(--grayish-text);
+    margin-bottom: 0.3rem;
+}
+
+.order-history, .saved-addresses, .saved-payments {
+    margin-bottom: 2rem;
+    color: var(--deep-blue-text);
+}
+
+.saved-addresses ul, .saved-payments ul {
+    list-style-type: none;
+    padding-block-start: 1rem;
+    color: var(--deep-blue-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.saved-addresses li, .saved-payments li {
+    margin-bottom: 0;
+    font-weight: 600; 
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: var(--grayish-text);
+    display: flex;
+}
+
+.edit-icon{
+   margin-left: auto;
+   color: var(--deep-blue-text);
+}
+
+.order-history h3, .settings h3 {
+    color: var(--deep-blue-text);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--generic-orange);
+    padding-bottom: 0.3rem;
+}
+
+footer {
+    background: var(--generic-orange);
+    color: white;
+    padding: 1rem;
+    margin-block-start: 5rem;
+}
+
+footer p {
+    font-weight: 600;
+    margin-block-start: 1rem;
+}
+
+footer h1 {
+    color: steelblue;
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.5rem;
+}
+
+footer nav img {
+    width: 30px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-block-start: .5rem;
+    font-weight: 500;
+}
+
+footer aside:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-start: 1.5rem;
+}
+
+.agreement {
+    margin-block-start: 2rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    font-weight: var(--bold-font);
+}
+
+footer aside:last-of-type {
+    border-top: 2px solid var(--grayish-text);
+    padding-block: 1rem;
+    margin-block-start: 1.5rem;
+    font-weight: 500;
+}
+
+footer aside span {
+    display: block;
+}
+
+footer aside span:last-child {
+    display: flex;
+    gap: 1rem;
+    margin-block-start: 1rem;
+}
+
+footer aside span:last-child str {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

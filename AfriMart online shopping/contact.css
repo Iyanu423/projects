@@ -1,0 +1,107 @@
+/* Replicating Google's contact page layout with site colors */
+body {
+    background-color: white;
+    color: var(--deep-blue-text);
+    font-family: 'Onest', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: var(--nice-radius);
+    box-shadow: 0 0 5px 3px rgba(200, 200, 200, .5);
+    background-color: white;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--deep-blue-text);
+}
+
+p.description {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--grayish-text);
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container>* {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: var(--bold-font);
+    color: var(--deep-blue-text);
+    margin-bottom: 0.3rem;
+    display: block;
+    margin-block-start: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid hsl(219, 9%, 80%);
+    border-radius: calc(var(--nice-radius) - 10px);
+    font-size: 1rem;
+    color: var(--very-deep-blue);
+    font-weight: 500;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--generic-orange);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    width: 100%;
+    margin-block-start: 1rem;
+    background-color: var(--generic-orange);
+    color: white;
+    font-weight: var(--bold-font);
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: calc(var(--nice-radius) - 10px);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(26, 100%, 45%);
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    #success-msg {
+        width: 320px;
+    }
+}

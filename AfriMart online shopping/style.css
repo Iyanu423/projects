@@ -126,6 +126,7 @@ nav span:hover {
     width: 25px;
     aspect-ratio: 1;
     outline-offset: 6px;
+    margin-block-start: 0;
 }
 
 .pulse-animation {
@@ -663,20 +664,12 @@ main {
     translate: -50%;
     background: white;
     z-index: 11;
-    margin-block-start: 1rem;
     padding: 1rem;
     padding-block-end: 0;
-    width: 500px;
+    width: 100%;
     height: max-content;
-    border-radius: calc(var(--nice-radius) - 10px);
     border: 2px solid var(--grayish-text);
     overflow: hidden;
-}
-
-@media (max-width: 500px) {
-    #payment-modal {
-        width: 320px;
-    }
 }
 
 #payment-modal>img {

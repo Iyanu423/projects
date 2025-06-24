@@ -234,7 +234,6 @@ footer nav img {
 }
 
 footer ul {
-    margin-block-start: 1.5rem;
     list-style: none;
 }
 
@@ -243,7 +242,23 @@ footer ul li {
     font-weight: 500;
 }
 
-footer aside {
+footer aside:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-start: 1.5rem;
+}
+
+
+.agreement {
+    margin-block-start: 2rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    font-weight: var(--bold-font);
+}
+
+footer aside:last-of-type {
     border-top: 2px solid var(--grayish-text);
     padding-block: 1rem;
     margin-block-start: 1.5rem;

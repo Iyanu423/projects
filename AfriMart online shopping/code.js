@@ -1,6 +1,7 @@
 /**
  * Main DOM element selectors
  */
+
 const cartSummary = document.querySelector('#cart-summary');
 const mainPhoto = document.querySelector('.main-photo');
 const minusIcon = document.querySelector('.counter-wrapper span:first-child');
@@ -26,7 +27,30 @@ payNowBtn.addEventListener('click', () => {
     window.scroll({
         top: 0,
         behavior: 'smooth'
-    })
+    });
+
+    // Save order details to localStorage
+    const orderDetails = prodArray.map(product => {
+        return {
+            name: product.querySelector('.selected-prod-name').textContent,
+            price: product.querySelector('.total-cost-wrapper').children[0].textContent,
+            quantity: product.querySelector('.total-cost-wrapper').children[2].textContent,
+            totalCost: product.querySelector('.total-cost-wrapper').querySelector('.total-cost').textContent
+        };
+    });
+
+    // Get existing order history from localStorage or initialize empty array
+    let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+    // Add new order with timestamp
+    orderHistory.push({
+        date: new Date().toLocaleString(),
+        items: orderDetails
+    });
+
+    // Save updated order history back to localStorage
+    localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+
     successModal.showModal();
 });
 
