@@ -158,6 +158,122 @@ body {
     margin: 0;
 }
 
+/* Contact section styles */
+.contact-section {
+    padding: 3rem 0;
+    background: #fff;
+    margin-top: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.contact-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 2rem;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group textarea {
+    padding: 1rem;
+    border: 1.5px solid #eee;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background: #fafafa;
+    transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border: 1.5px solid hsl(26, 100%, 55%);
+    outline: none;
+}
+.submit-button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Modern Footer */
+.modern-footer {
+    background: #222;
+    color: #fff;
+    padding: 2.5rem 1rem 1rem 1rem;
+    margin-top: 3rem;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem auto;
+    gap: 2rem;
+}
+.footer-brand {
+    flex: 1 1 300px;
+}
+.footer-brand .fancy-text {
+    font-size: 2rem;
+}
+.footer-brand .logo-accent {
+    font-size: 2rem;
+}
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+.footer-socials a img {
+    width: 36px;
+    filter: grayscale(1) brightness(1.2);
+    transition: filter 0.2s, transform 0.2s;
+}
+.footer-socials a:hover img {
+    filter: none;
+    transform: scale(1.1);
+}
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 1rem;
+    gap: 1rem;
+}
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
 
 /* Responsive Design */
 @media (max-width: 900px) {
