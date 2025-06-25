@@ -937,10 +937,6 @@ main {
         inset: 90px 0 0 50%;
     }
 
-    #avatar-icon {
-        display: none;
-    }
-
     #track-bar {
         width: 100%;
     }
