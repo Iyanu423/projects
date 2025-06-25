@@ -63,7 +63,7 @@ To get started with the Team Inbox Web App locally, follow these steps:
 
 
 ## Known Issues and Their Fixes
-- **Issue:** Some icons may not display correctly on certain browsers.
+- **Issue:** Some icons may not display correctly on certain browsers. This is the only issue that has persisted after the project completion.
   - **Fix:** Clear browser cache or try using the latest version of Chrome or Firefox.
     
 
