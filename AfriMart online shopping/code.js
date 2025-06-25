@@ -484,3 +484,19 @@ async function getProduts() {
 }
 
 window.onload = getProduts();
+
+
+
+
+// Alternative approach - direct onclick attribute
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutBtn = document.getElementById('logout-btn');
+    
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        });
+    }
+});
