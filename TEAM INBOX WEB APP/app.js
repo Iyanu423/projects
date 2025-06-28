@@ -205,7 +205,7 @@ function clearFilters() {
     });
 };
 
-// This function hides all user interfaces except the UI or UI's passed in as an argument
+// Hide all user interfaces except the UI or UI's passed in as an argument
 function hideAllExcept(...elements) {
     const all = [inbox, sent, drafts, spam, settings, profileUi, writeMailUi, viewMailUi, searchUI];
     all.forEach(ui => {
@@ -224,7 +224,7 @@ function showandReset(ui) {
     clearFilters();
 };
 
-// Event listeners to show and hide staff profile UI
+// Event listeners to show and hide the staff profile UI
 acountMGTIcon.addEventListener('click', () => profileUi.style.display = 'block');
 exitIcon.addEventListener('click', () => profileUi.style.display = 'none');
 
@@ -260,7 +260,7 @@ composeMailIcon.addEventListener('click', () => showandReset(writeMailUi));
 // DOM reference to select the inbox, sent , draft , spam and settings menu option
 const emailInterface = Array.from(mailCategories).slice(0, 5);
 
-// Display the different email UI's when their category option is clicked
+// Display the different email UI's when their category option is clicked from the sidebar menu
 emailInterface.forEach((option, index) => {
 
     const uiArray = [inbox, sent, drafts, spam, settings];
@@ -590,10 +590,11 @@ function createNewMail(mailContent, dateSent, appendAt, senderMail, mailStatus, 
         displayNotif('Deleted', 3000);
     });
 
+    // CREATE THE NEW EMAIL WRAPPER
     newMailWrapper.append(emailStatus, subject, mailIsRead, ccField, bccField, pic, sender, content, deleteMail, markSpam, date);
 
     // ALLOW THE USER TO VIEW THE FULL CONTENT OF A CLICKED EMAIL
-    newMailWrapper.addEventListener('click', (e) => {
+    newMailWrapper.addEventListener('click', e => {
 
         if (e.target.className === 'mrk-as-spam' || e.target.className === 'delete-mail') {
             return false;
