@@ -744,32 +744,24 @@ deleteMail.forEach(icon => {
     });
 });
 
+
 // Display the total number of emails in each email category
 function displayMailCount() {
+    const mailCategory = Array.from(mailCategories).slice(0, 4);
+    const mailUIs = [inbox, sent, drafts, spam];
+
+    mailCategory.forEach((option, i) => {
+        const counter = option.querySelector('b:nth-child(3)');
+        counter.textContent = mailUIs[i].children.length - 2;
+    });
+
     const emptyText = document.querySelectorAll('.empty-text');
-    const inboxCounter = document.querySelector('.menu-option:nth-of-type(1) b:nth-child(3)');
-    inboxCounter.textContent = inbox.children.length - 2;
 
-    const sentCounter = document.querySelector('.menu-option:nth-of-type(2)  b:nth-child(3)');
-    sentCounter.textContent = sent.children.length - 2;
-
-    const draftsCounter = document.querySelector('.menu-option:nth-of-type(3) b:nth-child(3)');
-    draftsCounter.textContent = drafts.children.length - 2;
-
-    const spamCounter = document.querySelector('.menu-option:nth-of-type(4)  b:nth-child(3)');
-    spamCounter.textContent = spam.children.length - 2;
-
-    // DISPLAY -EMPTY- MESSAGE IF AN EMAIL UI IS EMPTY
+    // DISPLAY - EMPTY - MESSAGE IF AN EMAIL UI HAS NO EMAILS
     emptyText.forEach(text => {
-        if (text.closest('section').children.length < 3) {
-            text.style.display = 'block';
-        } else {
-            text.style.display = 'none';
-        }
+        text.closest('section').children.length < 3 ? text.style.display = 'block' : text.style.display = 'none';
     });
 }
-
-// Update mail counts every 100 milliseconds
 setInterval(displayMailCount, 100);
 
 
