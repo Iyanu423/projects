@@ -1,6 +1,6 @@
 /*========== PAGE HEADER SECTION ==========*/
 
-// Reload page on logo click
+// Refresh page on logo click
 const logo = document.querySelector('header span:first-child');
 logo.addEventListener( 'click' , () => location.reload() );
 
