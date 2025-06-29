@@ -297,6 +297,11 @@ header {
     background: blue;
 }
 
+#search-preloader{
+    background: var(--background-color);
+}
+
+
 /* === Miscellaneous Styles === */
 #custom-status-menu {
     background: var(--background-color);
