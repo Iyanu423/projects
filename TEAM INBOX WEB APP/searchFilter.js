@@ -7,7 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedFilter = null; // CURRENTLY SELECTED EMAIL FILTER CATEGORY
   let unreadFilterChecked = false; // CURRENT STATE OF THE UNREAD FILTER CHECKBOX
 
+
+  // Loading animation for search results
+  function displayLoader() {
+    const loaderWrapper = document.createElement('aside');
+    const searchloader = document.createElement('div');
+    loaderWrapper.setAttribute('id', 'search-preloader');
+    searchloader.setAttribute('class', 'spinner');
+
+    loaderWrapper.append(searchloader);
+    searchUI.append(loaderWrapper);
+  }
+  
   async function loadEmails() {
+
+    displayLoader();
     const response = await fetch('emails.json');
     const data = await response.json();
     return data.emails;
