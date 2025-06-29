@@ -35,7 +35,7 @@ const darkModeStylesheet = document.querySelector('#darkmode-style');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     darkModeStylesheet.disabled = false;
-    // Update theme switcher UI radio buttons
+    // Update theme switcher radio buttons
     themeMenu.children[0].querySelector('input').checked = false;
     themeMenu.children[1].querySelector('input').checked = true;
 } else {
@@ -513,9 +513,9 @@ ccToggle.addEventListener('click', () => {
 * The date the email was sent
 * The UI that the email should be appended to
 * Senders email address
-* Email status checks if the email is an inbox , spam , sent or draft email
+* Email status to check if the email is an inbox , spam , sent or draft email
 * Email subject
-* Email is read or not
+* Email is read or unread
 * Profile picture of the sender (default alphabet is shown if sendersPicUrl returns false);*/
 
 function createNewMail(mailContent, dateSent, appendAt, senderMail, mailStatus, mailSUbject, isRead, cc, bcc, sendersPicUrl) {
@@ -687,14 +687,14 @@ function removeHTMLtags(string) { return string.replace(/<[^>]*>/g, '') };
 // Event listener to send an email
 sendMsgIcon.addEventListener('click', e => {
     if (emailContent.value === '' || recieversMail.textContent === '') {
-
-        // Prevent the email from being sent if there is no content or recievers email
+        
+        // Prevent the email from being sent if there is no email content or recievers email
         e.preventDefault();
         displayNotif('System won\'t send empty emails', 2000);
 
     } else {
 
-        // Append the sent email to the sent UI
+        // Create and append the sent email to the sent UI
         createNewMail(editor1.getHTMLCode().trim(), getRealDate(), sent, recieversMail.textContent, 'Sent', removeHTMLtags(emailSubject.value), true,
             ccField.textContent, bccField.textContent);
 
@@ -770,7 +770,7 @@ setInterval(displayMailCount, 100);
 
 // Automatically append emails to their respective email UI after the app launches
 getEmails();
-// Fetch emails from emails.JSON and populate UI
+// Fetch emails from emails.JSON and populate all email UI's
 async function getEmails() {
     
     try {
