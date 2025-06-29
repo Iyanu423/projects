@@ -63,8 +63,19 @@ To get started with the Team Inbox Web App locally, follow these steps:
 
 
 ## Known Issues and Their Fixes
-- **Issue:** Some icons may not display correctly on certain browsers. This is the only issue that has persisted after the project completion.
+- **Issue:** Some icons may not display correctly on certain browsers.
   - **Fix:** Clear browser cache or try using the latest version of Chrome or Firefox.
+
+- **Issue:** Inconsistent Dark Mode Styling
+  - **Fix:** Ensured that the dark mode CSS files (`darkmode.css` and `loginpage-darkmode.css`) were properly linked and loaded on all relevant pages.
+
+- **Issue:** Email Data Synchronization Issues
+  - **Workaround:** Users were informed through the readme that the app is a demo and changes are te+mporary.
+  - **Future Improvements:** Integrating a backend or local storage mechanism to persist changes would enhance functionality.
+
+- **Issue:** Emails JSON Loading Issue
+  - **Fix:** Run the app using a local web server (e.g., using `Live Server` extension or `python -m http.server`) to avoid CORS restrictions, or configure the browser to disable CORS for development purposes.
+
     
 
 ## Author
