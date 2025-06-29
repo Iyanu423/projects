@@ -958,6 +958,16 @@ main {
     border-top: 2px solid lightgray;
 }
 
+#search-preloader {
+    width: inherit;
+    height: inherit;
+    background: white;
+}
+
+#search-preloader>.spinner {
+    margin: 5rem auto;
+}
+
 /*-- Compose new email user interface --*/
 #write-mail-UI {
     display: none;
