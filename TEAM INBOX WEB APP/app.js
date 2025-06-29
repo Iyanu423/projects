@@ -194,7 +194,7 @@ function clearSearchUI() {
     }
 };
 
-// Reset all email filters in the search UI when the user navigates to anoher user interface
+// Reset all email filters in the search UI when the user navigates to another user interface
 const filterCheckboxes = filtersWrapper.querySelectorAll('input[type="checkbox"]');
 function clearFilters() {
     filterCheckboxes.forEach(cb => {
@@ -399,7 +399,7 @@ customPresets.forEach(preset => {
     });
 });
 
-// Save custom email status ( validation and visual feedback included ) 
+// Save custom email status
 saveBtn.addEventListener('click', () => {
 
     if (statusInput.value === '') {
@@ -436,7 +436,7 @@ editBtn.addEventListener('click', () => {
 // Regex pattern to validate email input for new email address
 const invalidEmailPattern = /(@|@team|@team\.com|\.com)/gi;
 
-// Apply changes to staff email ( validation and visual feedback included )
+// Apply changes to staff email
 applyChangesBtn.addEventListener('click', () => {
 
     // Error handling when an invalid email pattern is inputed by the user
@@ -747,12 +747,13 @@ deleteMail.forEach(icon => {
 
 // Display the total number of emails in each email category
 function displayMailCount() {
+    // DOM references for the email options from the sidebar menu and the email UI elements
     const mailCategory = Array.from(mailCategories).slice(0, 4);
     const mailUIs = [inbox, sent, drafts, spam];
 
     mailCategory.forEach((option, i) => {
         const counter = option.querySelector('b:nth-child(3)');
-        counter.textContent = mailUIs[i].children.length - 2;
+        counter.textContent = mailUIs[i].children.length - 2; // 2 is subtracted so that the ui description header and empty message element would be ignored
     });
 
     const emptyText = document.querySelectorAll('.empty-text');
