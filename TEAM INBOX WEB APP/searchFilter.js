@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Event listeners for all filter checkboxes.
-   * Handles toggling of unread filter independently and exclusive selection of main filters.
+   * Handles toggling of the unread filter independently and exclusive selection of main filters.
    * Updates UI checkmarks and triggers email filtering on change.
    */
   filterCheckboxes.forEach(checkbox => {
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle unread filter state
         unreadFilterChecked = e.target.checked;
 
-        // Update checkmark UI for unread filter
+        // Update checkmark for the unread filter
         const parent = e.target.parentElement;
         if (parent) {
           if (unreadFilterChecked) {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           selectedFilter = null;
 
-          // If unchecked, clear selected filter and remove checkmark
+          // If unchecked, clear selected filter and remove the checkmark
           const parent = e.target.parentElement;
           if (parent) {
             parent.querySelector('.checkmark-emoji')?.remove();
