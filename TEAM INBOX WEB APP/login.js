@@ -63,7 +63,7 @@ themeToggle.addEventListener('click', e => {
 
 /*========== STAFF LOGIN FORM HANDLING ==========*/
 
-// Each input field contains dummy data at the moment. You can clear the input fields to test for error handling 
+// Each input field contains dummy data at the moment. The input fields can be cleared to test for error handling 
 const formFields = document.querySelectorAll('form fieldset:not(form fieldset:last-of-type) input');
 const submitBtn = document.querySelector('form button:first-of-type');
 const newUserBtn = document.querySelector('form button:last-of-type');
@@ -122,7 +122,7 @@ function loginSuccess() {
 
         loaders[1].style.display = 'block';
 
-        // Display the profile setup modal to signify successful login
+        // Display the profile setup modal to indicate successful login
         setTimeout(() => {
             
             loaders[1].style.display = 'none';
@@ -150,7 +150,6 @@ const saveLoader = document.querySelector('#profile-setup button span:last-child
 
 // Close the profile setup modal 
 backToLogin.addEventListener('click', () => profileForm.close());
-
 
 
 /*========== SAVE STAFF PROFILE INFORMATION ==========*/
