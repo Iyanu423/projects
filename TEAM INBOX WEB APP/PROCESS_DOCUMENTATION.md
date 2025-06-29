@@ -8,7 +8,6 @@ Built using standard web technologies including HTML, CSS, and JavaScript, Team 
 
 This documentation provides a comprehensive overview of the development process, architecture, features, challenges, and future plans for the Team Inbox Web App.
 
----
 
 ## Development Process
 
@@ -25,6 +24,7 @@ The development of Team Inbox began with setting up a clean and modular project 
 - `icons/`: Folder containing icons used throughout the app, sourced from Icons8.
 
 The development workflow followed an iterative approach with frequent testing and UI refinements to ensure responsiveness and usability across devices.
+
 
 ### Tools and Technologies Used
 
@@ -72,8 +72,8 @@ Since the app uses a static JSON file as a mock data source without backend inte
 
 ### 1. Icon Display Issues
 - **Description**: Some icons failed to render correctly on certain browsers, especially older versions or less common browsers.
-- **Cause**: This was primarily due to browser caching issues or incompatibility with certain icon formats.
-- **Solution**: Clearing the browser cache and using latest versions of popular browsers like Chrome or Firefox ensured better compatibility and resolved the problem.
+- **Cause**: This was primarily due to browser caching issues and incompatibility with certain icon formats.
+- **Solution**: Clearing the browser cache and using latest versions of popular browsers like Chrome ensured better compatibility and resolved the problem.
 
 ### 2. Inconsistent Dark Mode Styling
 - **Description**: Dark mode styles were inconsistently applied across different pages, leading to some UI elements appearing in light mode even when dark mode was enabled.
@@ -85,6 +85,34 @@ Since the app uses a static JSON file as a mock data source without backend inte
 - **Cause**: Since the app uses a local JSON file as a mock data source without backend integration, changes were only stored in memory and lost on page reload.
 - **Workaround**: Users were informed through the readme that the app is a demo and changes are temporary.
 - **Future Improvements**: Integrating a backend or local storage mechanism to persist changes would enhance functionality.
+
+### 4. Emails JSON Loading Issue
+- **Description**: Email user interfaces could not be autopopulated from the `emails.json` file in Google Chrome.
+- **Cause**: Google Chrome's CORS policy restricts loading local JSON files via file:// protocol, blocking the request.
+- **Fix**: Run the app using a local web server (e.g., using `Live Server` extension or `python -m http.server`) to avoid CORS restrictions, or configure the browser to disable CORS for development purposes.
+
+---
+
+
+## JavaScript I am Proud Of
+
+One of the key functions that powers the entire Team Inbox Web App is the `createNewMail` function. This function is responsible for creating and appending new email elements to the user interface dynamically.
+
+### How `createNewMail` Works
+
+The `createNewMail` function accepts several parameters including the email content, date sent, the UI element to append the email to (such as inbox, sent, drafts, or spam), sender's email address, email status, subject, read status, CC, BCC, and optionally the sender's profile picture URL.
+
+Inside the function, it creates various DOM elements to represent different parts of an email item, such as the sender's picture or initial, sender's email, email content preview, subject, date sent, and action icons for deleting or marking emails as spam.
+
+Event listeners are attached to these elements to handle user interactions like deleting an email or marking it as spam. Clicking on the email (except on the delete or spam icons) triggers the display of the full email content in a dedicated view.
+
+The function then appends the newly created email element to the specified UI container, allowing the app to dynamically update the email lists without reloading the page.
+
+### Role in the App
+
+This function is central to the app's dynamic behavior, enabling the rendering of emails fetched from the local JSON file as well as newly composed, sent, drafted, or spam-marked emails. It abstracts the complexity of DOM manipulation and event handling into a reusable component, making the app modular and maintainable.
+
+By using `createNewMail`, the app ensures consistent email item creation and interaction handling across different email categories, powering the core user experience of managing emails efficiently.
 
 ---
 
