@@ -157,7 +157,7 @@ Testing was carried out manually due to the client-side nature of the app:
 
 5. **Test Email Data**: The app uses `emails.json` as a mock data source. Modify this file to test different email scenarios.
 
-6. **Troubleshooting**: Clear browser cache if icons or styles do not load correctly. Use developer tools to debug JavaScript errors.
+6. **Troubleshooting**: Clear browser cache and reload the page if icons or styles do not load correctly. Switch to a stable internet connection if the email search functionality is slow.
 
 ---
 
