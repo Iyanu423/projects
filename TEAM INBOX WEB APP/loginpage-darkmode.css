@@ -20,7 +20,6 @@
     --error-color: #ff6b6b;
 }
 
-/* Body styles for dark background and light text */
 body {
     background: var(--input-background);
     color: var(--default-text-color);
@@ -47,12 +46,10 @@ header>span {
     color: var(--global-deep-purple);
 }
 
-/* Invert icons in header for dark mode */
 header img {
     filter: invert(100%);
 }
 
-/* Remove outline from last header image */
 header img:last-of-type {
     outline: none;
 }
@@ -64,7 +61,6 @@ header aside {
     background: var(--form-background);
 }
 
-/* Help menu item borders and colors */
 header aside span:not(aside span:last-of-type) {
     border-bottom: 1px solid var(--faded-gray);
 }
@@ -73,7 +69,6 @@ header aside span {
     color: var(--default-text-color);
 }
 
-/* Help menu item hover effect */
 header aside span:hover {
     background: var(--global-light-purple);
     color: white;
@@ -90,31 +85,27 @@ h4 {
     color: var(--default-text-color);
 }
 
-/* Form container styles with dark background and shadow */
+/* Form container styles */
 form {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .7);
     background: var(--form-background);
 }
 
-/* Form labels styled with light text */
 form fieldset:not(form fieldset:last-of-type)>label {
     color: var(--default-text-color);
 }
 
-/* Form input fields styled for dark mode */
 form fieldset:not(form fieldset:last-of-type) input {
     box-shadow: 0 0 0 2px var(--input-border-color);
     color: var(--default-text-color);
     background-color: var(--input-background);
 }
 
-/* Input focus styles with purple outline */
 form fieldset:not(form fieldset:last-of-type) input:focus {
     outline: 2px solid var(--global-deep-purple);
     background-color: var(--input-background);
 }
 
-/* Placeholder text styled with faded gray */
 form fieldset:not(form fieldset:last-of-type) input::placeholder {
     color: var(--faded-gray);
 }
@@ -149,13 +140,13 @@ form button:hover {
     box-shadow: 0 0 5px 0 var(--faded-gray);
 }
 
-/* Primary button styles */
+/* Login button */
 form button:first-of-type {
     color: var(--button-primary-color);
     background: var(--button-primary-bg);
 }
 
-/* Secondary button styles */
+/* Create new user button */
 form button:last-of-type {
     color: var(--button-secondary-color);
     background: var(--button-secondary-bg);
