@@ -84,7 +84,6 @@ header img:last-of-type {
     outline: 3px solid var(--global-deep-purple);
 }
 
-/* Header images styled for size, shape, and interaction */
 header img {
     width: 25px;
     border-radius: 50%;
@@ -164,7 +163,6 @@ form fieldset:nth-of-type(2) {
     margin-block-start: 45px;
 }
 
-/* Fieldsets except last styled for layout and cursor */
 form fieldset:not(form fieldset:last-of-type) {
     position: relative;
     display: flex;
@@ -198,7 +196,6 @@ form fieldset:not(form fieldset:last-of-type) input:focus {
     border-color: initial;
 }
 
-/* Placeholder text styling */
 form fieldset:not(form fieldset:last-of-type) input::placeholder {
     font-weight: 500;
     font-size: 1rem;
