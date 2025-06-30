@@ -447,7 +447,7 @@ applyChangesBtn.addEventListener('click', () => {
         return false;
     }
 
-    // Apply the new email address
+    // Save the new email address and display it in the the staff profile UI and the ( user-email address field : top right corner of the app )
     staffEmailInput.value = changeEmailDialog.children[0].value.trim().concat('@team.com');
     userEmail.textContent = staffEmailInput.value;
 
