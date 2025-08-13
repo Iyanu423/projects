@@ -337,10 +337,6 @@ main {
         margin-inline: auto;
     }
 
-    footer aside {
-        text-align: center;
-    }
-
     footer aside span:last-child {
         justify-content: center;
     }
@@ -349,3 +345,4 @@ main {
     }
 
 }
+
