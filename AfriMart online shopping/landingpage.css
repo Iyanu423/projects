@@ -344,4 +344,8 @@ main {
     footer aside span:last-child {
         justify-content: center;
     }
+    footer aside:first-of-type {
+        display: initial;
+    }
+
 }
