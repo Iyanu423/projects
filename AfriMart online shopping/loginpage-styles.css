@@ -186,7 +186,7 @@ form fieldset:not(form fieldset:last-of-type) {
 form fieldset:not(form fieldset:last-of-type)>label {
     position: absolute;
     inset: -30px 0 0 2%;
-    color: rgba(61, 18, 245, .8);
+    color: var(--global-deep-blue);
     font-weight: var(--bold-font);
     font-size: .8rem;
 }
@@ -396,4 +396,5 @@ form .loader {
     100% {
         transform: scaleY(-1) rotate(-135deg)
     }
+
 }
