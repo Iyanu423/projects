@@ -338,7 +338,7 @@ main {
     }
 
     footer ul{
-        margin-block-start: 1.2rem;
+        margin-block-start: 1.3rem;
     }
 
     footer aside span:last-child {
@@ -349,5 +349,6 @@ main {
     }
 
 }
+
 
 
