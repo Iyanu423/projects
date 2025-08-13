@@ -186,7 +186,7 @@ form fieldset:not(form fieldset:last-of-type) {
 form fieldset:not(form fieldset:last-of-type)>label {
     position: absolute;
     inset: -30px 0 0 2%;
-    color: var(--global-deep-blue);
+    color: var(--global-deep-purple);
     font-weight: var(--bold-font);
     font-size: .8rem;
 }
@@ -398,3 +398,4 @@ form .loader {
     }
 
 }
+
